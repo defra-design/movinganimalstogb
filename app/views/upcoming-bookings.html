@@ -1,0 +1,54 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Your upcoming inspections
+      </h1>
+
+   <div class="box">
+<h2 class="govuk-heading-m">BD51 SMR</h2>
+<p>Tuesday 29 May</p>
+<p>9:00-11:00</p>
+<p>
+<a href="#" class="govuk-link">Edit</a>
+<a href="#" class="govuk-link">Cancel</a>
+</p>
+</div>
+
+
+   <div class="box">
+<h2 class="govuk-heading-m">SK78 QRU</h2>
+<p>Tuesday 29 May</p>
+<p>9:00-11:00</p>
+<p>
+<a href="#" class="govuk-link">Edit</a>
+<a href="#" class="govuk-link">Cancel</a>
+</p>
+</div>
+
+
+<button class="govuk-button" data-module="govuk-button" href="animal-selection">
+
+  Book another inspection
+</a>
+</button>
+
+    </div>
+  </div>
+
+{% endblock %}
