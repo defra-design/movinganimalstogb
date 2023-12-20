@@ -23,6 +23,7 @@
 
       {{ govukSummaryList({
         rows: [
+      
           {
             key: {
               text: "Name"
@@ -35,7 +36,7 @@
                 {
                   href: "#",
                   text: "Change",
-                  visuallyHiddenText: "Question 1"
+                  visuallyHiddenText: ""
                 }
               ]
             }
@@ -53,24 +54,6 @@
                 {
                   href: "#",
                   text: "Change",
-                  visuallyHiddenText: ""
-                }
-              ]
-            }
-          }
-          ,
-          {
-            key: {
-              text: "Contact number"
-            },
-            value: {
-              text: "07920614848"
-            },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: "Change",
                   visuallyHiddenText: "Contact number"
                 }
               ]
@@ -81,9 +64,9 @@
 
       <form action="/confirmation" method="post" novalidate>
 
-        {{ govukButton({
-          text: "Confirm and continue"
-        }) }}
+    <a href="phone-number.html" button type="submit" class="govuk-button" data-module="govuk-button">
+  Save and continue</a>
+</button>
 
       </form>
 

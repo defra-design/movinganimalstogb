@@ -17,36 +17,28 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">
-        Sign in using your DEFRA account
+        What is your CHED number?
       </h1>
 
+<p>This is the Common Health Entry Document. You can find it your IPAFFS account.</p>
       <form class="form" action="/path/of/next/page" method="post">
 
+       <div id="passport-issued-hint" class="govuk-hint">
+      Example: 490045667863
+    </div>
         <div class="govuk-form-group">
-  <h3 class="govuk-label-wrapper">
-    <label class="govuk-label govuk-label--m" for="event-name">
-      Government Gateway ID
-    </label>
-  </h3>
   <input class="govuk-input" id="event-name" name="eventName" type="text">
 </div>
 
-        <div class="govuk-form-group">
-  <h3 class="govuk-label-wrapper">
-    <label class="govuk-label govuk-label--m" for="event-name">
-      Password
-    </label>
-  </h3>
-  <input class="govuk-input" id="event-name" name="eventName" type="text">
-</div>
+  
 
       </form>
 
     </div>
   </div>
 
-  <a href="vehicle-type.html" button type="submit" class="govuk-button" data-module="govuk-button">
-  Sign in</a>
+  <a href="vehicle-registration-number.html" button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue</a>
 </button>
 
 {% endblock %}

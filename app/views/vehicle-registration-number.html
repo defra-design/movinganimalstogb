@@ -1,3 +1,4 @@
+
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
@@ -17,36 +18,32 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">
-        Sign in using your DEFRA account
+        What is your vehicle registration number?
       </h1>
 
+<p>You can skip this page if you do not know this information yet.</p>
       <form class="form" action="/path/of/next/page" method="post">
 
+       <div id="passport-issued-hint" class="govuk-hint">
+      Example: BD51 SMR
+    </div>
         <div class="govuk-form-group">
-  <h3 class="govuk-label-wrapper">
-    <label class="govuk-label govuk-label--m" for="event-name">
-      Government Gateway ID
-    </label>
-  </h3>
   <input class="govuk-input" id="event-name" name="eventName" type="text">
 </div>
 
-        <div class="govuk-form-group">
-  <h3 class="govuk-label-wrapper">
-    <label class="govuk-label govuk-label--m" for="event-name">
-      Password
-    </label>
-  </h3>
-  <input class="govuk-input" id="event-name" name="eventName" type="text">
-</div>
+  
 
       </form>
 
     </div>
   </div>
 
-  <a href="vehicle-type.html" button type="submit" class="govuk-button" data-module="govuk-button">
-  Sign in</a>
+  <a href="confirmation-2.html" button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue</a>
+</button>
+
+<a href="confirmation-2.html" button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Skip</a>
 </button>
 
 {% endblock %}
