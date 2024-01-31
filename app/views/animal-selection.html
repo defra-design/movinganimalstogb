@@ -27,95 +27,27 @@
       </h1>
     </legend>
 
-           <p>You can select multiple species. </p>
+           <p>You can add multiple animal species. </p>
 
-    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-        <label class="govuk-label govuk-checkboxes__label" for="waste">
-          Captive birds
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
-        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-          Dogs, cats and ferrets
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-          Equidae
-        </label>
-      </div>
-            <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-        <label class="govuk-label govuk-checkboxes__label" for="waste">
-          Cattle, bison, sheep and goats
-        </label>
-      </div>
-                  <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-        <label class="govuk-label govuk-checkboxes__label" for="waste">
-          Pig and wild boars
-        </label>
-      </div>
-                  <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-        <label class="govuk-label govuk-checkboxes__label" for="waste">
-          Live fish and aquatics
-        </label>
-      </div>
-                  <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-        <label class="govuk-label govuk-checkboxes__label" for="waste">
-          Primates
-        </label>
-      </div>
-                  <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-        <label class="govuk-label govuk-checkboxes__label" for="waste">
-          Insects
-        </label>
-      </div>
-                  <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-        <label class="govuk-label govuk-checkboxes__label" for="waste">
-          Reptiles and amphibians
-        </label>
-      </div>
-                  <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-        <label class="govuk-label govuk-checkboxes__label" for="waste">
-          Poultry, poultry eggs, and small game birds
-        </label>
-      </div>
-                  <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-        <label class="govuk-label govuk-checkboxes__label" for="waste">
-          Small mammals
-        </label>
-      </div>
-                  <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-        <label class="govuk-label govuk-checkboxes__label" for="waste">
-          Camelids, alpacas, and deer
-        </label>
-      </div>
-                  <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-        <label class="govuk-label govuk-checkboxes__label" for="waste">
-          Other animals
-        </label>
-      </div>
-    </div>
-  </fieldset>
-</div>
+              <input type="hidden" name="q" id="q-hidden" class="js-commodity-picker-target" autocomplete="off" />
+              <input type="hidden" name="resource_id" id="resource-id-hidden" value="" class="js-commodity-picker-resource-id" autocomplete="off" />
 
+      <div class="govuk-form-group">
+    <label class="govuk-label" for="address-postcode">
+      Animal species
+    </label>
+    <input class="govuk-input govuk-input--width-10" id="address-postcode" name="addressPostcode" type="text" autocomplete="postal-code">
+  </div></fieldset></div>
 
+  <a href=# button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Add another animal species </a>
+</button>
+
+<p>
     <a href="animal-number.html" button type="submit" class="govuk-button" data-module="govuk-button">
   Save and continue</a>
 </button>
+</p>
 
       </form>
 
