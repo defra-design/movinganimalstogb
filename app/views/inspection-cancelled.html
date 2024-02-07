@@ -1,0 +1,30 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Your inspection is cancelled
+      </h1>
+
+<p>You can book a new inspection at any time.</p>
+
+<a href="vehicle-type.html" button type="submit" class="govuk-button" data-module="govuk-button">
+  Book new inspection
+</button></a>
+
+</div>
+{% endblock %}
