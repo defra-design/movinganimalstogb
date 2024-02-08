@@ -7,12 +7,22 @@
 {% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-full-width">
 
       {{ govukPanel({
         titleText: "Your inspection is booked",
         html: "Your reference number<br><strong>QE9 O06CB ADO</strong>"
       }) }}
+
+                  <h2 class="govuk-heading-m">
+        Inspection details
+      </h2>
+
+<div class="govuk-inset-text">
+  <p>Tuesday 30th January 9:00-12:00</p>
+  <p>Animal species: Cattle</p>
+  <p>Number of animals: 36</p>
+</div>
 
       <h2 class="govuk-heading-m">
         What happens next
@@ -22,13 +32,23 @@
         We have sent you a confirmation email.
       </p>
 
-      <p>We will email the day before your arrival to ask you to add details about your inspection.</p>
+      <div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-visually-hidden">Warning</span>
+    We will email the day before your arrival to ask you to add details about your inspection.
+  </strong>
+</div>
 
 <p class="govuk-body">We will ask you for the:</p>
 <ul class="govuk-list govuk-list--bullet">
   <li>CHED-A number</li>
   <li>Vehicle registration number</li>
 </ul>
+
+      <h2 class="govuk-heading-m">
+        If your plans change
+      </h2>
 
 <p>You can cancel this booking anytime.</p>
 

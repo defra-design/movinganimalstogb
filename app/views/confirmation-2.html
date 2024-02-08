@@ -7,12 +7,22 @@
 {% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-full-width">
 
       {{ govukPanel({
         titleText: "Your details have been added",
         html: "Your reference number<br><strong>QE9 O06CB ADO</strong>"
       }) }}
+
+      <h2 class="govuk-heading-m">
+        Inpsection details
+      </h2>
+
+<div class="govuk-inset-text">
+  <p>Tuesday 30th January 9:00-12:00</p>
+  <p>Animal species: Cattle</p>
+  <p>Number of animals: 36</p>
+</div>
 
       <h2 class="govuk-heading-m">
         What happens next
@@ -22,13 +32,15 @@
         The vehicle should arrive at the following location:
       </p>
 
-      <p>Sevington border control post</p>
-      <p>Ashford TN25 6GE</p>
+  <p>Sevington Border Control Post</p>
+  <p>Ashford</p>
+  <p>TN25 6GE</p>
+</div>
 
-
-<h3 class="govuk-heading-s">If your journey changes</h3>
+    <h3 class="govuk-heading-s">If your journey changes</h3>
 <p>You can cancel the inspection at any time and start again.</p>
-
+      <div class="govuk-inset-text">
+    
     </div>
   </div>
 

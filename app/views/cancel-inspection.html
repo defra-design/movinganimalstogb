@@ -1,0 +1,37 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Are you sure you want to cancel your inspection?
+      </h1>
+
+      <div class="govuk-inset-text">
+  <p>Inspection reference: QE9 O06CB ADO</p>
+  <p>Date of inspection: Tuesday 30th January 9:00 - 12:00</p>
+  <p>Animal species: Cattle</p>
+  <p>Number of animals: 36</p>
+</div>
+
+<p>This action is not reversible. You can book a new inspection.</p>
+
+<a href="inspection-cancelled.html" button type="submit" class="govuk-button govuk-button--warning" data-module="govuk-button">
+  Cancel inspection
+</a></button>
+
+</div>
+{% endblock %}
