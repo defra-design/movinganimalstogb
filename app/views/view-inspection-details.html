@@ -1,0 +1,39 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        View inspection details
+      </h1>
+
+      <p>
+        Details of inspection will go here.
+      </p>
+
+    <a href="edit-inspection-details" button type="govuk-link" class="govuk-button" data-module="govuk-button">
+  Edit inspection details
+</a></button>
+
+
+    <a href="edit-inspection-details" button type="govuk-link" class="govuk-button" data-module="govuk-button">
+  Cancel inspection
+</a></button>
+
+    </div>
+  </div>
+
+{% endblock %}
