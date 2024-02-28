@@ -20,9 +20,81 @@
         Edit inspection details
       </h1>
 
-      <p>
-        Inspection details
-      </p>
+        {{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              text: "What type of vehicle will you use for this booking?"
+            },
+            value: {
+              text: "BE - A vehicle with a maximum authorised mass of 3,500kg with a trailer "
+            },
+            actions: {
+              items: [
+                {
+                  href: "vehicle-type.html",
+                  text: "Change",
+                  visuallyHiddenText: "Question 1"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "What animal species are you transporting?"
+            },
+            value: {
+              text: "Cattle"
+            },
+            actions: {
+              items: [
+                {
+                  href: "animal-selection",
+                  text: "Change",
+                  visuallyHiddenText: "Question 2"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "How many animals are you transporting"
+            },
+            value: {
+              text: "36"
+            },
+            actions: {
+              items: [
+                {
+                  href: "animal-selection",
+                  text: "Change",
+                  visuallyHiddenText: "Question 2"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Question 3"
+            },
+            value: {
+              text: "Answer 3"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Question 3"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
 
   
   <a href="edit-arrival-date.html" button class="govuk-button" data-module="govuk-button">
