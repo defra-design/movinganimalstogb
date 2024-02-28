@@ -1,0 +1,38 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Your delay has been logged
+      </h1>
+
+      <p>
+        We understand you will be delayed. If you have not started your journey, do not travel until you have contacted Sevington Border Control Facility on 020 8981 5550.
+      </p>
+
+      <p>If you are delayed, you have already started travelling, and you will arrive on the same day as your origincally booked inspection, please continue your journey to Sevington Border Control Facility. </p>
+
+      <p>The staff at Sevington Border Control Facility have been notified of your delay.</p>
+
+      <p>
+        Read more <a href="/path/of/page">about this topic</a>.
+      </p>
+
+    </div>
+  </div>
+
+{% endblock %}

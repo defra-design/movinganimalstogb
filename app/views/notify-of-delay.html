@@ -1,0 +1,46 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        What is your new arrival time?
+      </h1>
+
+      <form class="form" action="/path/of/next/page" method="post">
+
+        <p>
+          This can be an estimate. If you will be more than 24 hours late, please <a href="edit-arrival-date.html"> amend your arrival date.</a> </p>
+
+        <p>
+          Write the time in 24-hour time, for instance: 22:00, which is the same as 10:00pm
+        </p>
+
+        <div class="govuk-form-group">
+  <input class="govuk-input" id="event-name" name="eventName" type="text">
+</div>
+
+
+   <a href="delay-confirmation.html" button type="submit" class="govuk-button" data-module="govuk-button">
+  Save and continue</a>
+</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
