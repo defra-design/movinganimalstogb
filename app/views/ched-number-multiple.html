@@ -29,7 +29,10 @@
 
     <p>CHED-A</p>
         <div class="govuk-form-group">
-  <input class="govuk-input" id="event-name" name="eventName" type="text">
+          {{ govukInput({
+            name: 'Ched-Number',
+            value: data['Ched-Number']
+        }) }}
 </div>
 
 <p>CHED-A</p>
@@ -44,7 +47,7 @@
     </div>
   </div>
 
-    <a href="ched-number-multiple.html="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    <a href="ched-number-multiple.html" button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
     Add another CHED-A</a>
   </button>
 
