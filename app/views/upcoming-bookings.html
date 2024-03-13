@@ -14,28 +14,38 @@
 {% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-full-width">
 
       <h1 class="govuk-heading-l">
         Your upcoming inspections
       </h1>
 
-   <div class="box">
-<h2 class="govuk-heading-m">QE9 O06CB ADO</h2>
-<p>Tuesday 30th January</p>
-<p>9:00-12:00</p>
-<p>Animal species: Cattle</p>
-<p>Number of animals: 36</p>
-
-<a href="view-inspection-details.html" button type="submit" class="govuk-button" data-module="govuk-button">
-  View inspection details</a>
-</button>
-<a href="cancel-inspection.html" button type="submit" class="govuk-button govuk-button--warning" data-module="govuk-button">
-  Cancel inspection</a>
-</button>
-
-</div>
-
+<table class="govuk-table govuk-table--small-text-until-tablet">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Reference number</th>
+      <th scope="col" class="govuk-table__header">Date</th>
+      <th scope="col" class="govuk-table__header">Time</th>
+      <th scope="col" class="govuk-table__header">Vehicle type</th>
+      <th scope="col" class="govuk-table__header">Animal species</th>
+      <th scope="col" class="govuk-table__header">Number of animals</th>
+      <th scope="col" class="govuk-table__header">Edit</th>
+      <th scope="col" class="govuk-table__header">Cancel</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="inspection-details.html">QE9 O06CB ADO</a></th>
+      <td class="govuk-table__cell">30.01.24</td>
+      <td class="govuk-table__cell">9:00-12:00</td>
+      <td class="govuk-table__cell">C1: large van up to 7.5 tonnes</td>
+      <td class="govuk-table__cell">Cattle</td>
+      <td class="govuk-table__cell">7</td>
+      <td class="govuk-table__cell"><a href="inspection-details.html">Edit</a></td>
+      <td class="govuk-table__cell"><a href="cancel-inspectoin.html">Cancel</a></td>
+    </tr>
+  </tbody>
+</table>
 
 
 <a href="vehicle-type.html" button class="govuk-button" data-module="govuk-button" >
