@@ -15,53 +15,48 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-      <h1 class="govuk-fieldset__heading">
-        What type of vehicle will you use?
-      </h1>
-    </legend>
-
-      <p>You must book a separate inspection for each vehicle.</p>
+      <form action="/check-answers" method="post" novalidate>
       
-    <div class="govuk-radios" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="vehicle-type" name="vehicle-type" type="radio" value="Class B: car or small van">
-        <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
-          Class B: car or small van
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="vehicle-type" name="vehicle-type" type="radio" value="Class C1: large van up to 7.5 tonnes">
-        <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
-          Class C1: large van up to 7.5 tonnes
-        </label>
-      </div>
-            <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="vehicle-type" name="vehicle-type" type="radio" value="Class C: heavy goods vehicle over 7.5 tonnes">
-        <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
-          Class C: heavy goods vehicle over 7.5 tonnes
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="vehicle-type" name="vehicle-type" type="radio" value="Class CE: heavy goods vehicle over 7.5 tonnes towing a trailer">
-        <label class="govuk-label govuk-radios__label" for="vehicle-type">
+<form action="/your-check-your-answers-page" method="post" novalidate>
 
-          Class CE: heavy goods vehicle over 7.5 tonnes towing a trailer
+  
 
-        </label>
-      </div>
-    </div>
-  </fieldset>
-</div>
-   <a href="animal-selection.html" button type="submit" class="govuk-button" data-module="govuk-button">
-  Continue</a>
-</button>
+{{ govukRadios({
+  name: "VehicleType",
+  fieldset: {
+    legend: {
+      text: "What type of vehicle will you use?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  hint: {
+    text: "You must book a separate inspection for each vehicle."
+  },
+  items: [
+    {
+      value: "Class B: car or small van",
+      text: "Class B: car or small van"
+    },
+    {
+      value: "Class C1: large van up to 7.5 tonnes",
+      text: "Class C1: large van up to 7.5 tonnes"
+    },
+    {
+      value: "Class C: heavy goods vehicle over 7.5 tonnes",
+      text: "Class C: heavy goods vehicle over 7.5 tonnes"
+    },
+        {
+      value: "Class CE: heavy goods vehicle over 7.5 tonnes towing a trailer",
+      text: "Class CE: heavy goods vehicle over 7.5 tonnes towing a trailer"
+    }
+  ]
+}) }}
 
-      </form>
-
+{{ govukButton({
+  text: "Save and continue"
+}) }}
+</form>
     </div>
   </div>
 
