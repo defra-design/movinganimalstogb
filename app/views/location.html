@@ -15,37 +15,39 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-      <h1 class="govuk-fieldset__heading">
-        Which Border Control Facility will you report to?
-      </h1>
-    </legend>
+      <form action="/check-answers" method="post" novalidate>
       
-    <div class="govuk-radios" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
-        <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
-          Sevington, England
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
-        <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
-          Holyhead, Wales
-        </label>
-      </div>
-    </div>
-</div>
+<form action="/your-check-your-answers-page" method="post" novalidate>
 
-   <a href="vehicle-type.html" button type="submit" class="govuk-button" data-module="govuk-button">
-  Continue</a>
-</button>
+{{ govukRadios({
+  name: "WhichBorderControlFacility",
+  fieldset: {
+    legend: {
+      text: "Which Border Control Facility will you report to?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "sevington-england",
+      text: "Sevington, England"
+    },
+    {
+      value: "holyhead-wales",
+      text: "Holyhead, Wales"
+    },
+    {
+      value: "northern-ireland",
+      text: "Northern Ireland"
+    }
+  ]
+}) }}
 
-      </form>
-
+{{ govukButton({
+  text: "Save and continue"
+}) }}
+</form>
     </div>
   </div>
 
