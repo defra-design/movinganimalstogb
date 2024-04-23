@@ -15,9 +15,7 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
-
-      <form class="form" action="/path/of/next/page" method="post">
+      <form class="form" action="/animal-number" method="post">
 
         <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
@@ -27,27 +25,27 @@
       </h1>
     </legend>
 
-           <p>You can add multiple animal species. </p>
+           <p>You can add multiple animal species. (May need to say, if you need to add multiple, contact us.)</p>
 
               <input type="hidden" name="q" id="q-hidden" class="js-commodity-picker-target" autocomplete="off" />
-              <input type="hidden" name="resource_id" id="resource-id-hidden" value="" class="js-commodity-picker-resource-id" autocomplete="off" />
+              <input type="hidden" name="resource_id" id="resource-id-hidden" class="js-commodity-picker-resource-id" autocomplete="off" />
 
       <div class="govuk-form-group">
-    <label class="govuk-label" for="address-postcode">
+    <label class="govuk-label" for="animal-species">
       Animal species
     </label>
     <input class="govuk-input govuk-input--width-10" id="animal-species" name="animal-species" type="text" autocomplete="animal-species">
   </div></fieldset></div>
 
-  <a href=# button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  <!---"/<a href=# button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
   Add another species </a>
 </button>
+"--->
 
-<p>
-    <a href="animal-number.html" button type="submit" class="govuk-button" data-module="govuk-button">
-  Save and continue</a>
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue
 </button>
-</p>
+
 
       </form>
 

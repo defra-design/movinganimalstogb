@@ -15,12 +15,12 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form action="/check-answers" method="post" novalidate>
-      
-<form action="/your-check-your-answers-page" method="post" novalidate>
+      <form action="/vehicle-type" method="post" novalidate>
+    
 
 {{ govukRadios({
   name: "WhichBorderControlFacility",
+  value: data['WhichBorderControlFacility'],
   fieldset: {
     legend: {
       text: "Which Border Control Facility will you report to?",
@@ -34,12 +34,12 @@
       text: "Sevington, England"
     },
     {
-      value: "holyhead-wales",
+      value: "Holyhead, Wales",
       text: "Holyhead, Wales"
     },
     {
-      value: "northern-ireland",
-      text: "Northern Ireland"
+      value: "Belfast, Northern Ireland",
+      text: "Belfast, Northern Ireland"
     }
   ]
 }) }}

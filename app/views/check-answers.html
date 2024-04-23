@@ -25,7 +25,7 @@
         rows: [
           {
             key: {
-              text: "Which Border Control Facility will you report to?"
+              text: "Border Control Facility that you will report to"
             },
             value: {
               text: data['WhichBorderControlFacility']
@@ -33,9 +33,9 @@
             actions: {
               items: [
                 {
-                  href: "#",
+                  href: "location",
                   text: "Change",
-                  visuallyHiddenText: "Which Border Control Facility will you report to?"
+                  visuallyHiddenText: "Border Control Facility that you will report to"
                 }
               ]
             }
@@ -43,7 +43,7 @@
           ,
           {
             key: {
-              text: "What type of vehicle will you use?"
+              text: "Type of vehicle you will use"
             },
             value: {
               text: data['VehicleType']
@@ -51,9 +51,9 @@
             actions: {
               items: [
                 {
-                  href: "#",
+                  href: "vehicle-type",
                   text: "Change",
-                  visuallyHiddenText: "Question 2"
+                  visuallyHiddenText: "Type of vehicle you will use"
                 }
               ]
             }
@@ -61,17 +61,51 @@
           ,
           {
             key: {
-              text: "Question 3"
+              text: "Animal species you are transporting"
             },
             value: {
-              text: "Answer 3"
+              text: data['animal-selection']
             },
             actions: {
               items: [
                 {
-                  href: "#",
+                  href: "animal-selection",
                   text: "Change",
-                  visuallyHiddenText: "Question 3"
+                  visuallyHiddenText: "Animal species you are transporting"
+                }
+              ]
+            }
+          },
+           {
+            key: {
+              text: "Number of animals you are transporting"
+            },
+            value: {
+              text: data['animal-number']
+            },
+            actions: {
+              items: [
+                {
+                  href: "animal-number",
+                  text: "Change",
+                  visuallyHiddenText: "Number of animals you are transporting"
+                }
+              ]
+            }
+          },
+           {
+            key: {
+              text: "Time and date of your inspection"
+            },
+            value: {
+              text: "Tuesday 30th January 2024, 12.00"
+            },
+            actions: {
+              items: [
+                {
+                  href: "booking",
+                  text: "Change",
+                  visuallyHiddenText: "Time and date of your inspection"
                 }
               ]
             }

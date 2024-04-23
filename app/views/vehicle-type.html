@@ -15,14 +15,13 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form action="/check-answers" method="post" novalidate>
-      
-<form action="/your-check-your-answers-page" method="post" novalidate>
+      <form action="/animal-selection" method="post" novalidate>
 
   
 
 {{ govukRadios({
   name: "VehicleType",
+  value: data['VehicleType'],
   fieldset: {
     legend: {
       text: "What type of vehicle will you use?",
