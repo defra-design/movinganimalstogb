@@ -31,15 +31,16 @@
               <input type="hidden" name="resource_id" id="resource-id-hidden" class="js-commodity-picker-resource-id" autocomplete="off" />
 
       <div class="govuk-form-group">
-    <label class="govuk-label" for="animal-species">
-      Animal species
-    </label>
-    <input class="govuk-input govuk-input--width-10" 
-    name="animal-species" 
-    id="animal-species" 
-    type="text" 
-    value="{{animal-species}}"
-    autocomplete="none">
+    {{ govukInput({
+      label: {
+        text: "Animal species",
+        classes: "govuk-label"
+      },
+      name: 'animal-species',
+      value: data['animal-species'],
+      classes:"govuk-input govuk-input--width-10",
+      autocomplete:"off"
+  }) }}
   </div></fieldset></div>
 
 
