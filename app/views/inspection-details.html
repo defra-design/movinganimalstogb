@@ -16,106 +16,103 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">
 
       <h1 class="govuk-heading-xl">
-        Check your answers before sending your application
+        Inspection details
       </h1>
 
-<h2 class="govuk-heading-m">Application details</h2>
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-                    <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Previous application number
-            </dt>
-            <dd class="govuk-summary-list__value">
-              502135326
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> previous application number</span></a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Previous application number
-            </dt>
-            <dd class="govuk-summary-list__value">
-              502135326
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> previous application number</span></a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Previous application number
-            </dt>
-            <dd class="govuk-summary-list__value">
-              502135326
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> previous application number</span></a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Licence type
-            </dt>
-            <dd class="govuk-summary-list__value">
-              For personal use
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> licence type</span></a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Home address
-            </dt>
-            <dd class="govuk-summary-list__value">
-              72 Guild Street<br>London<br>SE23 6FH
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> home address</span></a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Licence period
-            </dt>
-            <dd class="govuk-summary-list__value">
-              Valid for 6 months
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> licence period</span></a>
-            </dd>
-          </div>
-        </dl>
-        <h2 class="govuk-heading-m">Now send your application</h2>
-        <p class="govuk-body">By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
-        <form action="/form-handler" method="post" novalidate>
-          <input type="hidden" name="answers-checked" value="true">
-          <button type="submit" class="govuk-button" data-module="govuk-button">
-            Accept and send
-          </button>
-        </form>
-      </div>
-    </div>
-  </main>
-</div>
+ {{ data | dump }}
 
-      <h2 class="govuk-heading-m">
-        Now send your application
-      </h2>
+      {{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              text: "Border Control Facility that you will report to"
+            },
+            value: {
+              text: data['WhichBorderControlFacility']
+            },
+            actions: {
+              items: [
+                {
+                  href: "location",
+                  text: "Change",
+                  visuallyHiddenText: "Border Control Facility that you will report to"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Type of vehicle you will use"
+            },
+            value: {
+              text: data['VehicleType']
+            },
+            actions: {
+              items: [
+                {
+                  href: "vehicle-type",
+                  text: "Change",
+                  visuallyHiddenText: "Type of vehicle you will use"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Animal species you are transporting"
+            },
+            value: {
+              text: data['animal-species']
+            },
+            actions: {
+              items: [
+                {
+                  href: "animal-selection",
+                  text: "Change",
+                  visuallyHiddenText: "Animal species you are transporting"
+                }
+              ]
+            }
+          },
+           {
+            key: {
+              text: "Number of animals you are transporting"
+            },
+            value: {
+              text: data['animal-number']
+            },
+            actions: {
+              items: [
+                {
+                  href: "animal-number",
+                  text: "Change",
+                  visuallyHiddenText: "Number of animals you are transporting"
+                }
+              ]
+            }
+          },
+           {
+            key: {
+              text: "Time and date of your inspection"
+            },
+            value: {
+              text: "Tuesday 30th January 2024, 12.00"
+            },
+            actions: {
+              items: [
+                {
+                  href: "booking",
+                  text: "Change",
+                  visuallyHiddenText: "Time and date of your inspection"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
 
-      <p>
-        By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.
-      </p>
-
-      <form action="/confirmation" method="post" novalidate>
-
-        {{ govukButton({
-          text: "Accept and send"
-        }) }}
-
-      </form>
 
     </div>
   </div>
