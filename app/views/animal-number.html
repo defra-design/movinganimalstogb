@@ -20,19 +20,26 @@
         How many animals are you transporting?
       </h1>
 
-      <form class="form" action="/path/of/next/page" method="post">
+      <form class="form" action="arrival-time" method="post">
 
         <p>
           This can be an estimate. You will not be able to edit this number later.
         </p>
   <div class="govuk-form-group">
-    <label class="govuk-label" for="address-postcode">
-      Number of animals
     </label>
-    <input class="govuk-input govuk-input--width-10" id="address-postcode" name="addressPostcode" type="text" autocomplete="postal-code">
+    {{ govukInput({
+      label: {
+        text: " Number of animals",
+        classes: "govuk-label"
+      },
+      name: 'animal-number',
+      value: data['animal-number'],
+      classes:"govuk-input govuk-input--width-10",
+      autocomplete:"off"
+  }) }}
   </div>
 
-<a href="phone-number.html" button type="submit" class="govuk-button" data-module="govuk-button">
+<button type="submit" class="govuk-button" data-module="govuk-button">
   Save and continue</a>
 </button>
 
