@@ -4,6 +4,8 @@
   Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
 {% block beforeContent %}
   {{ govukBackLink({
   text: "Back",
