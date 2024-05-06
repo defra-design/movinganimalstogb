@@ -1,0 +1,30 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        You have been signed out
+      </h1>
+
+      <p>
+        You can sign in <a href="https://cust-id-prototype.herokuapp.com/gov-gateway/sign-in?serviceHook=IDAMS">here</a>.
+      </p>
+
+    </div>
+  </div>
+
+{% endblock %}
