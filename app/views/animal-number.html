@@ -27,18 +27,20 @@
         <p>
           This can be an estimate.
         </p>
+
   <div class="govuk-form-group">
     </label>
-    {{ govukInput({
-      label: {
-        text: " Number of animals",
-        classes: "govuk-label"
-      },
-      name: 'animal-number',
-      value: data['animal-number'],
-      classes:"govuk-input govuk-input--width-10",
-      autocomplete:"off"
-  }) }}
+
+{{ govukInput({
+  label: {
+    text: "Number of animals"
+  },
+  classes: "govuk-input--width-3",
+  id: "width-3",
+  name: "animal-number",
+  value: data['animal-number'],
+  autocomplete:"off"
+}) }}
   </div>
 
 <button type="submit" class="govuk-button" data-module="govuk-button">

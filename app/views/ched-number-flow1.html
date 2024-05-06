@@ -17,7 +17,7 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">
-        What is your CHED-A number?
+        What is your CHED number?
       </h1>
 
 <p>This is the Common Health Entry Document for live animals. You can add multiple CHED numbers.</p>
@@ -33,17 +33,20 @@
     </div>
         <div class="govuk-form-group">
           {{ govukInput({
-            name: 'Ched-Number'
+            name: 'Ched-Number',
+            classes: "govuk-input--width-10"
         }) }}
 </div>
     </div>
   </div>
 
+
+
     <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-    Add another CHED-A
+    Add another CHED
   </button>
   <br>
-  <a href="vehicle-registration-number-flow1.html" button type="submit" class="govuk-button" data-module="govuk-button">
+  <a href="confirmation-2.html" button type="submit" class="govuk-button" data-module="govuk-button">
     Continue</a>
   </button>
 </div>
