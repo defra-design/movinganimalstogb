@@ -1,11 +1,16 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Upcoming bookings {{ serviceName }} – GOV.UK Prototype Kit
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
 <div class="login-nav login-border">
   <ul class="login-nav__list">
     <li class="login-nav__list-item-new">Prototype user Test</li>
@@ -17,7 +22,10 @@
     <li class="login-nav__list-item-new"><a href="#" class="govuk-link login-nav__link-new govuk-link--no-visited-state">Sign out</a></li>
   </ul>
 </div>
-
+{{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
 {% endblock %}
 
 {% block content %}
