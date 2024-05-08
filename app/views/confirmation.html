@@ -6,6 +6,12 @@
 {% endblock %}
 
 {% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
 <div class="login-nav login-border">
   <ul class="login-nav__list">
     <li class="login-nav__list-item-new">Prototype user Test</li>
