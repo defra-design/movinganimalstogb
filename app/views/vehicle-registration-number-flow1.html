@@ -47,9 +47,11 @@
       Example: 2-EHY-849
     </div>
         <div class="govuk-form-group">
-  <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
+          {{ govukInput({
+            name: 'vehicle-ref',
+            classes: "govuk-input--width-10"
+        }) }}
 </div>
-
 
       </form>
 
