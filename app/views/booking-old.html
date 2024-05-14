@@ -283,40 +283,154 @@
 
     <br>
 
-    {% from "govuk/components/radios/macro.njk" import govukRadios %}
+    <div class="appointment-slots" id="slots">
+      <h2 class="govuk-heading-l">Sevington</h2>
+      
+        
+      
 
-{{ govukRadios({
-  name: "AvailableTimes",
-  fieldset: {
-    legend: {
-      text: " ",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--l"
-    }
-  },
-  items: [
-    {
-      value: "9:00",
-      text: "9:00"
-    },
-    {
-      value: "11:30",
-      text: "11:30"
-    },
-    {
-      value: "2:00",
-      text: "2:00"
-    },
-    {
-      value: "3:30",
-      text: "3:00"
-    }
-  ]
-}) }}
+      
+        <p class="govuk-visually-hidden">Tuesday 30 January 2024</p>
+        
+          <h3 class="govuk-heading-m">Morning</h3>
+          <div class="morning-slots">
+            
+              <form method="post">
+                <input type="hidden" name="_csrf" value="hViefO0W-jRgGclFyjGRZmwvisrBbS2mgWdA">
+                
+                
+  
 
-<a href="check-answers.html" button type="submit" class="govuk-button" data-module="govuk-button">
+
+  
+    
+  
+
+<a href="check-answers.html" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  
+                  9:00 <span class="govuk-visually-hidden">am</span>
+                
+</a>
+
+                <input type="hidden" name="slotId" value="2024-01-30T09:00:00.000Z">
+              </form>
+            
+              <form method="post">
+                <input type="hidden" name="_csrf" value="hViefO0W-jRgGclFyjGRZmwvisrBbS2mgWdA">
+                
+                
+  
+
+
+  
+    
+  
+
+<a href="check-answers.html" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  
+                  10:00 <span class="govuk-visually-hidden">am</span>
+                
+</a>
+
+                <input type="hidden" name="slotId" value="2024-01-30T10:00:00.000Z">
+              </form>
+            
+              <form method="post">
+                <input type="hidden" name="_csrf" value="hViefO0W-jRgGclFyjGRZmwvisrBbS2mgWdA">
+                
+                
+  
+
+
+  
+    
+  
+
+<a href="check-answers.html" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  
+                  11:00 <span class="govuk-visually-hidden">am</span>
+                
+</a>
+
+                <input type="hidden" name="slotId" value="2024-01-30T11:00:00.000Z">
+              </form>
+            
+          </div>
+        
+        
+          <h3 class="govuk-heading-m">Afternoon</h3>
+          <div class="afternoon-slots">
+            
+              <form method="post">
+                <input type="hidden" name="_csrf" value="hViefO0W-jRgGclFyjGRZmwvisrBbS2mgWdA">
+                
+                
+  
+
+
+  
+    
+  
+
+<a href="check-answers.html" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  
+                  12:00 <span class="govuk-visually-hidden">pm</span>
+                
+</a>
+
+                <input type="hidden" name="slotId" value="2024-01-30T12:00:00.000Z">
+              </form>
+            
+              <form method="post">
+                <input type="hidden" name="_csrf" value="hViefO0W-jRgGclFyjGRZmwvisrBbS2mgWdA">
+                
+                
+  
+
+
+  
+    
+  
+
+<a href="check-answers.html" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  
+                  1:00 <span class="govuk-visually-hidden">pm</span>
+                
+</a>
+
+                <input type="hidden" name="slotId" value="2024-01-30T13:00:00.000Z">
+              </form>
+            
+              <form method="post">
+                <input type="hidden" name="_csrf" value="hViefO0W-jRgGclFyjGRZmwvisrBbS2mgWdA">
+                
+                
+  
+
+
+  
+    
+  
+
+<a href="check-answers.html" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  
+                  2:00 <span class="govuk-visually-hidden">pm</span>
+                
+</a>
+
+                <input type="hidden" name="slotId" value="2024-01-30T14:00:00.000Z">
+              </form>
+            
+          </div>
+        
+      
+    </div>
+  </div>
+</div>
+
+<!---<a href="check-answers.html" button type="submit" class="govuk-button" data-module="govuk-button">
   Continue </a>
-</button>
+</button>--->
 
 
         </main>
