@@ -38,21 +38,39 @@
         Check that these details are correct
       </h1>
 
-      {{ govukSummaryList({
+            {{ govukSummaryList({
         rows: [
+          {
+            key: {
+              text: "Border control post"
+            },
+            value: {
+              text: data['WhichBorderControlFacility']
+            },
+            actions: {
+              items: [
+                {
+                  href: "location",
+                  text: "",
+                  visuallyHiddenText: "Border control post"
+                }
+              ]
+            }
+          }
+          ,
           {
             key: {
               text: "Type of vehicle"
             },
             value: {
-              text: "Class CE: heavy goods vehicle over 7.5 tonnes towing a trailer "
+              text: data['VehicleType']
             },
             actions: {
               items: [
                 {
-                  href: "vehicle-type.html",
+                  href: "vehicle-type",
                   text: "Change",
-                  visuallyHiddenText: "Question 1"
+                  visuallyHiddenText: "Type of vehicle"
                 }
               ]
             }
@@ -60,53 +78,51 @@
           ,
           {
             key: {
-              text: "Animal species"
+              text: "Animal species "
             },
             value: {
-              text: "Cattle"
+              text: data['animal-species']
             },
             actions: {
               items: [
                 {
                   href: "animal-selection",
                   text: "Change",
-                  visuallyHiddenText: "Question 2"
+                  visuallyHiddenText: "Animal species"
                 }
               ]
             }
-          }
-          ,
-          {
+          },
+           {
             key: {
               text: "Number of animals"
             },
             value: {
-              text: "36"
+              text: data['animal-number']
             },
             actions: {
               items: [
                 {
-                  href: "animal-selection",
+                  href: "animal-number",
                   text: "Change",
-                  visuallyHiddenText: "Question 2"
+                  visuallyHiddenText: "Number of animals"
                 }
               ]
             }
-          }
-          ,
-          {
+          },
+           {
             key: {
-              text: "Inspection date and time"
+              text: "Time and date of your inspection"
             },
             value: {
-              text: "30 January 2024, 12:00pm"
+              text: "30 January 2024, 11:30am"
             },
             actions: {
               items: [
                 {
-                  href: "#",
+                  href: "booking",
                   text: "Change",
-                  visuallyHiddenText: "Question 3"
+                  visuallyHiddenText: "Time and date of your inspection"
                 }
               ]
             }
