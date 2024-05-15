@@ -34,36 +34,32 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form action="/vehicle-type-side-loader" method="post" novalidate>
+      <form action="/animal-selection" method="post" novalidate>
 {{ govukRadios({
-  name: "VehicleType",
-  value: data['VehicleType'],
+  name: "VehicleLoad",
+  value: data['VehicleLoad'],
   fieldset: {
     legend: {
-      text: "What type of vehicle will you use?",
+      text: "Is that vehicle a front-loader, or a side-loader?",
       isPageHeading: true,
       classes: "govuk-fieldset__legend--l"
     }
   },
   hint: {
-    text: "You must book a separate inspection for each vehicle."
+    text: ""
   },
   items: [
     {
-      value: "Class B: car or small van",
-      text: "Class B: car or small van"
+      value: "Front loading vehicle",
+      text: "Front loading vehicle"
     },
     {
-      value: "Class C1: large van up to 7.5 tonnes",
-      text: "Class C1: large van up to 7.5 tonnes"
+      value: "Side loading vehicle",
+      text: "Side loading vehicle"
     },
     {
-      value: "Class C: heavy goods vehicle over 7.5 tonnes",
-      text: "Class C: heavy goods vehicle over 7.5 tonnes"
-    },
-        {
-      value: "Class CE: heavy goods vehicle over 7.5 tonnes towing a trailer",
-      text: "Class CE: heavy goods vehicle over 7.5 tonnes towing a trailer"
+      value: "Vehicle can be uploaded side or front",
+      text: "Vehicle can be uploaded side or front"
     }
   ]
 }) }}
