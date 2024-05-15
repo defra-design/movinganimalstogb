@@ -36,7 +36,7 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">
 
       <h1 class="govuk-heading-xl">
-        Check your answers before sending your application
+        Check your answers before updating your inspection
       </h1>
 
       {{ govukSummaryList({
@@ -80,17 +80,17 @@
       }) }}
 
       <h2 class="govuk-heading-m">
-        Now send your application
+        Now send your updates
       </h2>
 
       <p>
-        By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.
+        By submitting these updates you are confirming that, to the best of your knowledge, the details you are providing are correct.
       </p>
 
       <form action="/confirmation-2" method="post" novalidate>
 
         {{ govukButton({
-          text: "Accept and send"
+          text: "Accept and send updates"
         }) }}
 
       </form>
