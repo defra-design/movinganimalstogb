@@ -1,0 +1,31 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+<h1 class="govuk-heading-l">Current booker prototypes</h1>
+
+<h2 class="govuk-heading-m">Booker not including DEFRA registration</h2>
+<a href=sign-in.html> <p>Link for booker not including DEFRA registration.</a><p>
+<p>This prototype only includes 'Book a live animal' service pages. It does not include the Customer Identity prototype.</p>
+
+<h2 class="govuk-heading-m">Booker excluding DEFRA registration</h2>
+<a href=> <p>Link for booker without DEFRA registration.</a><p>
+
+<p>This prototype is integrated with the Customer Identity prototype. This means the participant testing the prototype will have to input 2 passwords.</p>
+
+<h1 class="govuk-heading-l">Current admin prototypes</h1>
+
+<h2 class="govuk-heading-m">Admin prototype</h2>
+<a href=sign-in.html> <p>Link for admin prototype.</a><p>
+<p>This prototype only includes 'Book a live animal' service pages. It does not include the Customer Identity prototype.</p>
+
+<h1 class="govuk-heading-l">Older versions of booker prototypes</h1>
+
+<h1 class="govuk-heading-l">Older versions of admin prototypes</h1>
+
+{% endblock %}

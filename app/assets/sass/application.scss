@@ -77,6 +77,13 @@
   float: left;
 }
 
+.admin-box{
+  background-color: #1d70b8;
+  padding: 50px;
+  margin: 20px;
+  color: white;
+}
+
 /*** Small viewports ***/
 @media all and (max-width: 40.0625em) {
   .login-nav__details {
