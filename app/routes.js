@@ -39,6 +39,3 @@ router.post('/animal-number', function(request, response) {
         response.redirect("/animal-number")
     }
 })
-
-
-Charlie do some stuff here to do the routes.
