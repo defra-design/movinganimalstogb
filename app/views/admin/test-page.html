@@ -1,0 +1,165 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+{% from "govuk/components/tabs/macro.njk" import govukTabs %}
+{% from "govuk/components/table/macro.njk" import govukTable %}
+
+<div class="topnav">
+  <a class="active" href="#today-inspections">Today</a>
+  <a href="#tomorrow-inspections">Tomorrow</a>
+  <a href="#all-inspections">All inspections</a>
+</div>
+
+{% set todayHtml %}
+<h2 class="govuk-heading-l">Today</h2>
+
+ <h1 class="govuk-heading-l">Today's inspections</h1>
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-full">
+<div class="admin-box">
+<h2 class="govuk-heading-m">Outstanding inspections</h2>
+<h1 class="govuk-heading-l">20</h1>
+<a href="table-overview">View all outstanding inspections</a>
+</div>
+</div>
+
+<div class="govuk-grid-column-one-third">
+<div class="admin-box">
+<h2 class="govuk-heading-m">Shed C Small Animals Inspections</h2>
+<h1 class="govuk-heading-l">10</h1>
+<a href="table-overview">View all Shed C inspections</a>
+</div>
+</div>
+
+<div class="govuk-grid-column-one-third">
+<div class="admin-box">
+<h2 class="govuk-heading-m">Shed D Equine Inspections</h2>
+<h1 class="govuk-heading-l">6</h1>
+<a href="table-overview">View all Shed D inspections</a>
+</div>
+</div>
+
+<div class="govuk-grid-column-one-third">
+<div class="admin-box">
+<h2 class="govuk-heading-m">Shed E Livestock inspections</h2>
+<h1 class="govuk-heading-l">8</h1>
+<a href="table-overview">View all Shed E inspections</a>
+</div>
+</div>
+{% endset -%}
+
+{% set tomorrowHtml %}
+<h2 class="govuk-heading-l">Tomorrow</h2>
+
+<h2 class="govuk-heading-l">Today</h2>
+
+ <h1 class="govuk-heading-l">Today's inspections</h1>
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-full">
+<div class="admin-box">
+<h2 class="govuk-heading-m">Outstanding inspections</h2>
+<h1 class="govuk-heading-l">20</h1>
+<a href="table-overview">View all outstanding inspections</a>
+</div>
+</div>
+
+<div class="govuk-grid-column-one-third">
+<div class="admin-box">
+<h2 class="govuk-heading-m">Shed C Small Animals Inspections</h2>
+<h1 class="govuk-heading-l">10</h1>
+<a href="table-overview">View all Shed C inspections</a>
+</div>
+</div>
+
+<div class="govuk-grid-column-one-third">
+<div class="admin-box">
+<h2 class="govuk-heading-m">Shed D Equine Inspections</h2>
+<h1 class="govuk-heading-l">6</h1>
+<a href="table-overview">View all Shed D inspections</a>
+</div>
+</div>
+
+<div class="govuk-grid-column-one-third">
+<div class="admin-box">
+<h2 class="govuk-heading-m">Shed E Livestock inspections</h2>
+<h1 class="govuk-heading-l">8</h1>
+<a href="table-overview">View all Shed E inspections</a>
+</div>
+</div>
+{% endset -%}
+
+{% set AllInspectionsHtml %}
+<h2 class="govuk-heading-l">Today</h2>
+
+ <h1 class="govuk-heading-l">Today's inspections</h1>
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-full">
+<div class="admin-box">
+<h2 class="govuk-heading-m">Outstanding inspections</h2>
+<h1 class="govuk-heading-l">20</h1>
+<a href="table-overview">View all outstanding inspections</a>
+</div>
+</div>
+
+<div class="govuk-grid-column-one-third">
+<div class="admin-box">
+<h2 class="govuk-heading-m">Shed C Small Animals Inspections</h2>
+<h1 class="govuk-heading-l">10</h1>
+<a href="table-overview">View all Shed C inspections</a>
+</div>
+</div>
+
+<div class="govuk-grid-column-one-third">
+<div class="admin-box">
+<h2 class="govuk-heading-m">Shed D Equine Inspections</h2>
+<h1 class="govuk-heading-l">6</h1>
+<a href="table-overview">View all Shed D inspections</a>
+</div>
+</div>
+
+<div class="govuk-grid-column-one-third">
+<div class="admin-box">
+<h2 class="govuk-heading-m">Shed E Livestock inspections</h2>
+<h1 class="govuk-heading-l">8</h1>
+<a href="table-overview">View all Shed E inspections</a>
+</div>
+</div>
+{% endset -%}
+
+{{ govukTabs({
+  items: [
+    {
+      label: "Today",
+      id: "today",
+      panel: {
+        html: todayHtml
+      }
+    },
+    {
+      label: "Tomorrow",
+      id: "tomorrow",
+      panel: {
+        html: tomorrowHtml
+      }
+    },
+    {
+      label: "All inspections",
+      id: "all-inspections",
+      panel: {
+        html: AllInspectionsHtml
+      }
+    }
+  ]
+}) }}
+
+
+{% endblock %}
