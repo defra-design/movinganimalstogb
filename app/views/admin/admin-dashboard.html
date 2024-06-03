@@ -1,0 +1,50 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="topnav">
+  <a class="active" href="#today-inspections">Today</a>
+  <a href="#tomorrow-inspections">Tomorrow</a>
+  <a href="#all-inspections">All inspections</a>
+</div>
+
+<h1 class="govuk-heading-l">Today's inspections</h1>
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-full">
+<div class="admin-box">
+<h2 class="govuk-heading-m">Outstanding inspections</h2>
+<h1 class="govuk-heading-l">20</h1>
+<a href="today-outstanding-inspections">View all outstanding inspections</a>
+</div>
+</div>
+
+<div class="govuk-grid-column-one-third">
+<div class="admin-box">
+<h2 class="govuk-heading-m">Shed C Small Animals Inspections</h2>
+<h1 class="govuk-heading-l">10</h1>
+<a href="today-outstanding-inspections">View all Shed C inspections</a>
+</div>
+</div>
+
+<div class="govuk-grid-column-one-third">
+<div class="admin-box">
+<h2 class="govuk-heading-m">Shed D Equine Inspections</h2>
+<h1 class="govuk-heading-l">6</h1>
+<a href="today-outstanding-inspections">View all Shed D inspections</a>
+</div>
+</div>
+
+<div class="govuk-grid-column-one-third">
+<div class="admin-box">
+<h2 class="govuk-heading-m">Shed E Livestock inspections</h2>
+<h1 class="govuk-heading-l">8</h1>
+<a href="today-outstanding-inspections">View all Shed E inspections</a>
+</div>
+</div>
+
+{% endblock %}

@@ -78,10 +78,45 @@
 }
 
 .admin-box{
-  background-color: #1d70b8;
-  padding: 50px;
-  margin: 20px;
+  background-color:#1d70b8;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+.admin-box h1{
   color: white;
+}
+
+.admin-box h2{
+  color: white;
+}
+
+.admin-box a{
+  color: white;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #f3f2f1;
+}
+
+.topnav a {
+  float: left;
+  color: #1d70b8;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #f3f2f1;
+  color: black;
+  text-decoration: underline;  
+}
+
+.topnav a.active {
+  background-color: #f3f2f1;
 }
 
 /*** Small viewports ***/
