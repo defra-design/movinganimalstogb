@@ -97,7 +97,9 @@
 
 .topnav {
   overflow: hidden;
-  background-color: #f3f2f1;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #b1b4b6;
+  font-family: "GDS Transport"
 }
 
 .topnav a {
@@ -110,7 +112,6 @@
 }
 
 .topnav a:hover {
-  background-color: #f3f2f1;
   color: black;
   text-decoration: underline;  
 }
@@ -128,5 +129,7 @@
   .login-nav__list {
     float: none;
   }
+
+  
 
 }
