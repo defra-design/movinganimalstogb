@@ -108,6 +108,97 @@
           }
         ]
       }) }}
+       </h1>
+              <h2 class="govuk-heading-m">Vehicle details</h2>
+
+
+      {{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              text: "Vehicle registration number"
+            },
+            value: {
+              text: "5065 AULD"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Vehicle registration number"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Vehicle type"
+            },
+            value: {
+              text: "Class C - heavy goods vehicle (HGV) over 7.5 tonnes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Vehicle type"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Time"
+            },
+            value: {
+              text: "11:00am"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Time"
+                }
+                ,
+          {
+            key: {
+              text: "Shed"
+            },
+            value: {
+              text: "Shed C"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Shed"
+                }
+                ,
+          {
+            key: {
+              text: "Ched number"
+            },
+            value: {
+              text: "6000-5203"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "CHED number"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
 
       <h2 class="govuk-heading-m">
         Now send your application
