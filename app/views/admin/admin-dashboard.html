@@ -11,6 +11,7 @@
   },
   html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
+
 <div class="login-nav login-border">
   <ul class="login-nav__list">
     <li class="login-nav__list-item-new">Prototype user Test</li>
@@ -22,6 +23,7 @@
     <li class="login-nav__list-item-new"><a href="#" class="govuk-link login-nav__link-new govuk-link--no-visited-state">Sign out</a></li>
   </ul>
 </div>
+
 {% endblock %}
 
 <div class="login-nav login-border">
@@ -39,13 +41,25 @@
 
 {% block content %}
 
+<ul class="govuk-list">
+  <li>
+    <a class="#" href="#">Today</a>
+  </li>
+  <li>
+    <a class="#" href="#">Tomorrow</a>
+  </li>
+  <li>
+    <a class="#" href="#">All inspections</a>
+  </li>
+</ul>
+
 <h1 class="govuk-heading-l">Today's inspections</h1>
 
 <div class="govuk-grid-row">
 <div class="govuk-grid-column-full">
 <div class="admin-box">
 <h2 class="govuk-heading-m">Outstanding inspections</h2>
-<h1 class="govuk-heading-l">20</h1>
+<h1 class="govuk-heading-l">4</h1>
 <a href="table-overview">View all outstanding inspections</a>
 </div>
 </div>
