@@ -1,0 +1,221 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">
+        Inspection 0897654 details
+      </h1>
+              <h2 class="govuk-heading-m">Inspection details</h2>
+
+
+      {{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              text: "Summary"
+            },
+            value: {
+              text: "10 dogs"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Summary"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Date"
+            },
+            value: {
+              text: "May 29, 2024"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Date"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Time"
+            },
+            value: {
+              text: "11:00am"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Time"
+                }
+                ,
+          {
+            key: {
+              text: "Shed"
+            },
+            value: {
+              text: "Shed C"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Shed"
+                }
+                ,
+          {
+            key: {
+              text: "Ched number"
+            },
+            value: {
+              text: "6000-5203"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "CHED number"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+       </h1>
+              <h2 class="govuk-heading-m">Vehicle details</h2>
+
+
+      {{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              text: "Vehicle registration number"
+            },
+            value: {
+              text: "5065 AULD"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Vehicle registration number"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Vehicle type"
+            },
+            value: {
+              text: "Class C - heavy goods vehicle (HGV) over 7.5 tonnes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Vehicle type"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Time"
+            },
+            value: {
+              text: "11:00am"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Time"
+                }
+                ,
+          {
+            key: {
+              text: "Shed"
+            },
+            value: {
+              text: "Shed C"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Shed"
+                }
+                ,
+          {
+            key: {
+              text: "Ched number"
+            },
+            value: {
+              text: "6000-5203"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "CHED number"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-m">
+        Now send your application
+      </h2>
+
+      <p>
+        By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.
+      </p>
+
+      <form action="/confirmation" method="post" novalidate>
+
+        {{ govukButton({
+          text: "Accept and send"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}
