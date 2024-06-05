@@ -2,7 +2,29 @@
 For guidance on how to use layouts see:
 https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 #}
-
-{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
-
+{% extends "govuk-prototype-kit/layouts/govuk-branded.html" %}
+{% block header %}
+{{ govukHeader({
+  homepageUrl: "#",
+  serviceName: "Book A Live Animal Service",
+  serviceUrl: "#",
+  navigation: [
+    {
+      href: "#1",
+      text: "Navigation item 1",
+      active: true
+    },
+    {
+      href: "#2",
+      text: "Navigation item 2"
+    },
+    {
+      href: "#3",
+      text: "Navigation item 3"
+    }
+  ]
+}) }}
+{% endblock %}
+ 
+ 
 {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
