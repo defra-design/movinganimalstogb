@@ -6,34 +6,6 @@
 
 {% block beforeContent %}
 
-{% from "govuk/components/header/macro.njk" import govukHeader %}
-
-{{ govukHeader({
-  homepageUrl: "#",
-  serviceName: "Service name",
-  serviceUrl: "#",
-  navigation: [
-    {
-      href: "#",
-      text: "Navigation item 1",
-      active: true
-    },
-    {
-      href: "#",
-      text: "Navigation item 2"
-    },
-    {
-      href: "#",
-      text: "Navigation item 3"
-    },
-    {
-      href: "#",
-      text: "Navigation item 4"
-    }
-  ]
-}) }}
-
-
   {{ govukBackLink({
     text: "Back",
     href: "javascript:window.history.back()"
