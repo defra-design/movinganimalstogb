@@ -1,22 +1,146 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{%- from "govuk/components/tag/macro.njk" import govukTag -%}
 
 {% block content %}
 
-<h1 class="govuk-heading-l">Today's inspections</h1>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
 
-<h2 class="govuk-heading-m">Search for an inspection</h2>
-<p>Enter the reference number, animal type, or CHED</p>
-<div class="govuk-form-group">
-  <input class="govuk-input" id="event-name" name="eventName" type="text">
-</div>
-  <button type="search" class="govuk-button" data-module="govuk-button">
-  Search
-</button>
+      <h1 class="govuk-heading-l">
+        Today's inspections
+      </h1>
 
-<iframe class="airtable-embed" src="https://airtable.com/embed/appRMk0y4uZRjpeB3/shrz7qoQMASPuHIIA?viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+      {%- from "govuk/components/table/macro.njk" import govukTable -%}
+
+{{ govukTable({
+  attributes: {
+    'data-module': 'moj-sortable-table'
+  },
+  head: [
+    {
+      text: "Ref number",
+      attributes: {
+        "aria-sort": "ascending"
+      }
+    },
+    {
+      text: "Time",
+      attributes: {
+        "aria-sort": "ascending"
+      }
+    },
+    {
+      text: "Shed",
+      attributes: {
+        "aria-sort": "ascending"
+      }
+    },
+    {
+      text: "Summary",
+      attributes: {
+        "aria-sort": "ascending"
+      }
+    },
+    {
+      text: "Location",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Vehicle registration number",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Status",
+      attributes: {
+        "aria-sort": "none"
+      }
+    }
+  ],
+  rows: [
+    [
+    {
+        text: "5060 AULD",
+                attributes: {
+          "data-sort-value": "6961"
+        }
+      },
+      {
+        text: "8:00-8:30",
+        attributes: {
+          "data-sort-value": "8"
+        }
+      },
+      {
+        text: "C",
+            attributes: {
+          "data-sort-value": "C"
+        }
+      },
+      {
+        text: "11 Dogs",
+        attributes: {
+          "data-sort-value": "Dogs"
+        }
+      },
+      {
+        text: "Departed"
+      },
+      {
+        text: "2-EHY-849",
+        attributes: {
+          "data-sort-value": "6961"
+        }
+      },
+      {
+        text: "Done"
+      }
+    ]
+  ]
+}) }}
+
+<td class="govuk-table__cell">
+        {{govukTag({
+          text: "Pending",
+          classes: "govuk-tag--blue"
+        })}}
+      </td>
+
+      {{ govukTag({
+  text: "Completed"
+}) }}
+
+      {{ govukTag({
+  text: "Pending"
+}) }}
+
+      {{ govukTag({
+  text: "Pending"
+}) }}
+
+
+<strong class="govuk-tag govuk-tag--grey">
+          Inactive
+        </strong>
+        
+<p>Trying to get the lower-case GOV.UK design system tags working. These tags are displayed capital but in the design system they are lower-case. I haven't worked out how to display a tag within the table.</p>
+
+    </div>
+  </div>
 
 {% endblock %}

@@ -1,0 +1,35 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+<!--{%- from "moj/components/search/macro.njk" import mojSearch -%}-->
+
+{% block content %}
+
+<h1 class="govuk-heading-l">Search for an inspection</h1>
+<p>Enter the reference number, animal type, or CHED</p>
+
+<p>Note to self: this is the componant: <a href="https://design-patterns.service.justice.gov.uk/components/search/"> MoJ search bar</a>
+
+{{ mojSearch({
+  action: '#',
+  method: 'post',
+  input: {
+    id: 'search',
+    name: 'search'
+  },
+  label: {
+    text: 'Find a person',
+    classes: 'govuk-!-font-weight-bold'
+  },
+  hint: {
+    text: 'You can search by name, date of birth or national insurance number'
+  },
+  button: {
+    text: 'Search'
+  }
+}) }}
+
+{% endblock %}
