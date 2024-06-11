@@ -1,0 +1,79 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        How long do Captive Birds take to inspect?
+      </h1>
+
+      <form class="form" action="/path/of/next/page" method="post">
+
+        <div class="govuk-form-group">
+  <h2 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="event-name">
+      Marshalling time
+    </label>
+  </h1>
+  <input class="govuk-input" id="event-name" name="eventName" type="text">
+</div>
+
+        <div class="govuk-form-group">
+  <h2 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="event-name">
+      Set up time
+    </label>
+  </h1>
+  <input class="govuk-input" id="event-name" name="eventName" type="text">
+</div>
+
+        <div class="govuk-form-group">
+  <h2 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="event-name">
+      Inspection time
+    </label>
+  </h1>
+  <input class="govuk-input" id="event-name" name="eventName" type="text">
+</div>
+
+        <div class="govuk-form-group">
+  <h2 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="event-name">
+      Clean up time
+    </label>
+  </h1>
+  <input class="govuk-input" id="event-name" name="eventName" type="text">
+</div>
+
+        <div class="govuk-form-group">
+  <h2 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="event-name">
+      Total inspection length
+    </label>
+  </h1>
+  <input class="govuk-input" id="event-name" name="eventName" type="text">
+</div>
+
+        {{ govukButton({
+          text: "Save and continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

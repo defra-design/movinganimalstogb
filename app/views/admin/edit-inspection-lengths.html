@@ -1,0 +1,294 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-xl">
+        Edit inspection lengths
+      </h1>
+
+   <p class="govuk-body">You can change:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li><b>Marshalling time</b>: the time it takes to marshall the vehicle into the bay. </li>
+  <li><b>Set up time</b>: the time it takes to set up the bay for this animal.</li>
+  <li><b>Inspection time</b>: the time it takes for these animals to be inspected.</li>
+  <li><b>Clean up time</b>: the time it takes for this animal to be cleaned up after.</li>
+</ul>
+<p> Making changes to these parameters will effect slot lengths for bookings yet to be created. It is not possible to change the parameters for bookings which have already been created. However, you can edit individual inspection lengths on the <a href='inspection-details'>inspection details</a> page. Which will then notify the person who made the booking. 
+</p>
+</div>
+
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-m">
+        Shed C - small animals
+      </h2>
+
+      {{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              text: "Captive birds"
+            },
+            value: {
+              text: "240 minutes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Captive birds"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Cats"
+            },
+            value: {
+              text: "30 minutes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Cats"
+                }
+              ]
+            }
+          }
+          ,
+           {
+            key: {
+              text: "Dogs"
+            },
+            value: {
+              text: "30 minutes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Dogs"
+                }
+              ]
+            }
+          }
+          ,
+           {
+            key: {
+              text: "Ferrets"
+            },
+            value: {
+              text: "30 minutes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Ferrets"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Live fish"
+            },
+            value: {
+              text: "120 minutes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Live fish"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Aquatics"
+            },
+            value: {
+              text: "120 minutes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Aquatics"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Monkeys"
+            },
+            value: {
+              text: "120 minutes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Monkeys"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Other insects"
+            },
+            value: {
+              text: "20 minutes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Other inspects"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Other reptiles and amphibians"
+            },
+            value: {
+              text: "60 minutes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Other reptiles and amphibians"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Poultry"
+            },
+            value: {
+              text: "80 minutes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Poultry"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Poultry eggs"
+            },
+            value: {
+              text: "30 minutes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Poultry eggs"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Small game birds"
+            },
+            value: {
+              text: "240 minutes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Small game birds"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Small mammals"
+            },
+            value: {
+              text: "30 minutes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Small mammals"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-m">
+        Now send your application
+      </h2>
+
+      <p>
+        By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.
+      </p>
+
+      <form action="/confirmation" method="post" novalidate>
+
+        {{ govukButton({
+          text: "Accept and send"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}
