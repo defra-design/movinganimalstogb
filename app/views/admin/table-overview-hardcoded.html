@@ -6,6 +6,27 @@
 
 {% block beforeContent %}
 
+{{ mojPrimaryNavigation({
+  label: 'Primary navigation',
+  items: [
+    {
+      text: 'Today',
+      href: '#1',
+      active: true
+    },
+    {
+      text: 'Tomorrow',
+      href: '#2'
+    },
+    {
+      text: 'All inspections',
+      href: '#3'
+    }
+  ]
+}) }}
+
+{%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
+
   {{ govukBackLink({
     text: "Back",
     href: "javascript:window.history.back()"
@@ -139,7 +160,7 @@
           Inactive
         </strong>
         
-<p>Trying to get the lower-case GOV.UK design system tags working. These tags are displayed capital but in the design system they are lower-case. I haven't worked out how to display a tag within the table.</p>
+<p>I haven't worked out how to display a tag within the table.</p>
 
     </div>
   </div>
