@@ -1,0 +1,19 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<a href="#" class="govuk-back-link">Back</a>
+
+<h1 class="govuk-heading-l">No inspections available</h1>
+
+<p>There are no inspections available within a 7-day window of the arrival date that you selected.</p>
+
+<a href="#" button type="submit" class="govuk-button" data-module="govuk-button">
+  See next available date
+</a></button>
+
+{% endblock %}
