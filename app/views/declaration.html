@@ -7,10 +7,41 @@
 {% block content %}
 
 
-I solomnly swear I won't game the booking system.
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Declaration</h1>
+        <p class="govuk-body">
+          There are a limited number of inspections available at each border control post. It is important that you only book inspections that you need. Border control posts will be tracking misuse of bookings. 
+        </p>
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-visually-hidden">Warning</span>
+    I declare that I will not book more inspections than I need. I understand that doing so may result in penalty.
+  </strong>
+</div>
+   <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+          Yes, I understand and agree
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+          No, I do not wish to continue
+        </label>
+      </div>
+      </div>
+    </div>
+  </main>
+</div>
 
 <a href="location" button type="submit" class="govuk-button" data-module="govuk-button">
-  Save and continue</a>
+  Confirm</a>
 </button>
 
 
