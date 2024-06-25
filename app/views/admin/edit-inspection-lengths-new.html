@@ -1,0 +1,377 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-xl">
+        Change inspection lengths
+      </h1>
+<p> Changing the length of an inspection will affect all future bookings. To change the length of an inspection that is already booked, go to the individual inspection details page. 
+</p>
+
+      <h2 class="govuk-heading-m">
+        Shed C - small animals
+      </h2>
+
+      <table class="govuk-table" data-module="moj-multi-select" data-multi-select-checkbox="#select-all">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col" id="select-all"></th>
+      <th class="govuk-table__header" scope="col">Animal type</th>
+      <th class="govuk-table__header" scope="col">Marshalling time</th>
+      <th class="govuk-table__header" scope="col">Set up time</th>
+      <th class="govuk-table__header" scope="col">Inspection time</th>
+      <th class="govuk-table__header" scope="col">Clean up time</th>
+      <th class="govuk-table__header govuk-table__header--numeric" scope="col">Total inspection length</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row govuk-table__row--selected">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-aconcagua">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-aconcagua">
+            <span class="govuk-visually-hidden">Select Captive birds</span>
+          </label>
+        </div>
+      </td>
+      <td class="govuk-table__cell">Captive birds</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">120</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-denali" value="denali">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-denali">
+            <span class="govuk-visually-hidden">Select Cats</span>
+          </label>
+        </div>
+      </td>
+      </td>
+      <td class="govuk-table__cell">Cats</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">120</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-elbrus" value="elbrus">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-elbrus">
+            <span class="govuk-visually-hidden">Select Dogs</span>
+          </label>
+        </div>
+      </td>
+      <td class="govuk-table__cell">Dogs</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">120</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-everest" value="everest">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-everest">
+            <span class="govuk-visually-hidden">Select Ferrets</span>
+          </label>
+        </div>
+      </td>
+      <td class="govuk-table__cell">Ferrets</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">120</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-kilimanjaro" value="kilimanjaro">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-kilimanjaro">
+            <span class="govuk-visually-hidden">Select Live fish</span>
+          </label>
+        </div>
+      </td>
+      <td class="govuk-table__cell">Live fish</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">120</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-puncak-jaya" value="puncak-jaya">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-puncak-jaya">
+            <span class="govuk-visually-hidden">Select Aquatics</span>
+          </label>
+        </div>
+      </td>
+      <td class="govuk-table__cell">Aquatics</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">120</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-vinson" value="vinson">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-vinson">
+            <span class="govuk-visually-hidden">Select Monkeys</span>
+          </label>
+        </div>
+      </td>
+      <td class="govuk-table__cell">Monkeys</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">120</td>
+    </tr>
+  </tbody>
+</table>
+
+<a href="change-inspection-length" button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
+  Change selected animal inspection lengths </a>
+</button>
+
+      <h2 class="govuk-heading-m">
+        Shed D - equine
+      </h2>
+
+
+      <table class="govuk-table" data-module="moj-multi-select" data-multi-select-checkbox="#select-all">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col" id="select-all"></th>
+      <th class="govuk-table__header" scope="col">Animal type</th>
+      <th class="govuk-table__header" scope="col">Marshalling time</th>
+      <th class="govuk-table__header" scope="col">Set up time</th>
+      <th class="govuk-table__header" scope="col">Inspection time</th>
+      <th class="govuk-table__header" scope="col">Clean up time</th>
+      <th class="govuk-table__header govuk-table__header--numeric" scope="col">Total inspection length</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row govuk-table__row--selected">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-aconcagua">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-aconcagua">
+            <span class="govuk-visually-hidden">Select Equidae</span>
+          </label>
+        </div>
+      </td>
+      <td class="govuk-table__cell">Equidae</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">120</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-denali" value="denali">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-denali">
+            <span class="govuk-visually-hidden">Select Ungulates - Camelids</span>
+          </label>
+        </div>
+      </td>
+      </td>
+      <td class="govuk-table__cell">Ungulates - Camelids</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">120</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-elbrus" value="elbrus">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-elbrus">
+            <span class="govuk-visually-hidden">Select Ungulates Alpacas</span>
+          </label>
+        </div>
+      </td>
+      <td class="govuk-table__cell">Ungulates - Alpacas</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">120</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-everest" value="everest">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-everest">
+            <span class="govuk-visually-hidden">Select Ungulates - Deer</span>
+          </label>
+        </div>
+      </td>
+      <td class="govuk-table__cell">Ungulates - Deer</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">120</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<a href="change-inspection-length" button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
+  Change selected animal inspection lengths </a>
+</button>
+
+
+      <h2 class="govuk-heading-m">
+        Shed E - farmed livestock
+      </h2>
+
+
+      <table class="govuk-table" data-module="moj-multi-select" data-multi-select-checkbox="#select-all">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col" id="select-all"></th>
+      <th class="govuk-table__header" scope="col">Animal type</th>
+      <th class="govuk-table__header" scope="col">Marshalling time</th>
+      <th class="govuk-table__header" scope="col">Set up time</th>
+      <th class="govuk-table__header" scope="col">Inspection time</th>
+      <th class="govuk-table__header" scope="col">Clean up time</th>
+      <th class="govuk-table__header govuk-table__header--numeric" scope="col">Total inspection length</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row govuk-table__row--selected">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-aconcagua">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-aconcagua">
+            <span class="govuk-visually-hidden">Farmed livestock - cattle</span>
+          </label>
+        </div>
+      </td>
+      <td class="govuk-table__cell">Cattle</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">120</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-denali" value="denali">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-denali">
+            <span class="govuk-visually-hidden">Farmed livestock - bison</span>
+          </label>
+        </div>
+      </td>
+      </td>
+      <td class="govuk-table__cell">Farmed livestock - bison</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">120</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-elbrus" value="elbrus">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-elbrus">
+            <span class="govuk-visually-hidden">Select Farmed livestock - sheep</span>
+          </label>
+        </div>
+      </td>
+      <td class="govuk-table__cell">Farmed livestock - sheep</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">120</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-everest" value="everest">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-everest">
+            <span class="govuk-visually-hidden">Farmed livestock - goats</span>
+          </label>
+        </div>
+      </td>
+      <td class="govuk-table__cell">Farmed livestock - goats</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">120</td>
+    </tr>
+        <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-everest" value="everest">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-everest">
+            <span class="govuk-visually-hidden">Farmed livestock - pigs</span>
+          </label>
+        </div>
+      </td>
+      <td class="govuk-table__cell">Farmed livestock - pigs</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">120</td>
+    </tr>
+        <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-everest" value="everest">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-everest">
+            <span class="govuk-visually-hidden">Farmed livestock - wild boar</span>
+          </label>
+        </div>
+      </td>
+      <td class="govuk-table__cell">Farmed livestock - wild boar</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">120</td>
+    </tr>
+  </tbody>
+</table>
+
+<a href="change-inspection-length" button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
+  Change selected animal inspection lengths </a>
+</button>
+
+    </div>
+  </div>
+{% endblock %}
