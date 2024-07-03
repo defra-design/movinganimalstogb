@@ -1,0 +1,81 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Changing how the Border Control Facility operates
+      </h1>
+
+      <p>
+        As a manager in your Border Control Facility, you can click here to configure parameters around inspections.
+      </p>
+
+            <h2 class="govuk-heading-m">
+        Editing inspection parameters
+      </h1>
+
+ <p class="govuk-body">
+<a href="edit-inspection-lengths-new" class="govuk-link">Edit inspection lengths</a>
+</p>
+ <p class="govuk-body">
+<a href="edit-inspection-lengths-new" class="govuk-link">Edit rest time between animal inspections</a>
+</p>
+
+           <h2 class="govuk-heading-m">
+        Ability to create new bookings
+      </h1>
+
+ <p class="govuk-body">
+<a href="close-bays-sheds" class="govuk-link">Change availability of sheds and bays</a>
+</p>
+ <p class="govuk-body">
+<a href="edit-inspection-lengths-new" class="govuk-link">Change availability of the Border Control Facility</a>
+</p>
+
+           <h2 class="govuk-heading-m">
+        Re-opening the Border Control Facility
+      </h1>
+
+ <p class="govuk-body">
+<a href="edit-inspection-lengths-new" class="govuk-link">Re-open a bay</a>
+</p>
+ <p class="govuk-body">
+<a href="edit-inspection-lengths-new" class="govuk-link">Re-open a shed</a>
+</p>
+ <p class="govuk-body">
+<a href="edit-inspection-lengths-new" class="govuk-link">Re-open a site</a>
+</p>
+
+           <h2 class="govuk-heading-m">
+        Changing amount of concurrent inspections in a bay
+      </h1>
+
+ <p class="govuk-body">
+<a href="edit-inspection-lengths-new" class="govuk-link">Edit how many concurrent inspections take place in a bay</a>
+</p>
+
+           <h2 class="govuk-heading-m">
+        Reporting
+      </h1>
+
+ <p class="govuk-body">
+<a href="edit-inspection-lengths-new" class="govuk-link">Export a report</a>
+</p>
+    </div>
+  </div>
+
+{% endblock %}
