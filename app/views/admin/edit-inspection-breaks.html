@@ -16,9 +16,9 @@
     <div class="govuk-grid-column-full">
 
       <h1 class="govuk-heading-xl">
-        Change inspection lengths
+        Change animal inspection breaks
       </h1>
-<p> Changing the length of an inspection will affect all future bookings. To change the length of an inspection that is already booked, go to the individual inspection details page. 
+<p> This changes the amount of down-time between inspections for particular animals. To change the length of an inspection that is already booked, go to the individual inspection details page. 
 </p>
 
       <h2 class="govuk-heading-m">
@@ -30,11 +30,7 @@
     <tr class="govuk-table__row">
       <th class="govuk-table__header" scope="col" id="select-all"></th>
       <th class="govuk-table__header" scope="col">Animal type</th>
-      <th class="govuk-table__header" scope="col">Marshalling time</th>
-      <th class="govuk-table__header" scope="col">Unloading time</th>
-      <th class="govuk-table__header" scope="col">Inspection time</th>
-      <th class="govuk-table__header" scope="col">Clean up time</th>
-      <th class="govuk-table__header govuk-table__header--numeric" scope="col">Total inspection length</th>
+      <th class="govuk-table__header" scope="col">Break between inspections</th>
     </tr>
   </thead>
   <tbody class="govuk-table__body">
@@ -48,11 +44,7 @@
         </div>
       </td>
       <td class="govuk-table__cell">Captive birds</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">120 mins</td>
+      <td class="govuk-table__cell">0 mins</td>
     </tr>
     <tr class="govuk-table__row">
       <td class="govuk-table__cell">
@@ -65,12 +57,7 @@
       </td>
       </td>
       <td class="govuk-table__cell">Cats</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">120 mins</td>
-    </tr>
+      <td class="govuk-table__cell">0 mins</td>    </tr>
     <tr class="govuk-table__row">
       <td class="govuk-table__cell">
         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
@@ -81,11 +68,7 @@
         </div>
       </td>
       <td class="govuk-table__cell">Dogs</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">120 mins</td>
+      <td class="govuk-table__cell">0 mins</td>
     </tr>
     <tr class="govuk-table__row">
       <td class="govuk-table__cell">
@@ -97,11 +80,7 @@
         </div>
       </td>
       <td class="govuk-table__cell">Ferrets</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">120 mins</td>
+            <td class="govuk-table__cell">0 mins</td>
     </tr>
     <tr class="govuk-table__row">
       <td class="govuk-table__cell">
@@ -113,12 +92,7 @@
         </div>
       </td>
       <td class="govuk-table__cell">Live fish</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">120 mins</td>
-    </tr>
+            <td class="govuk-table__cell">0 mins</td>    </tr>
     <tr class="govuk-table__row">
       <td class="govuk-table__cell">
         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
@@ -129,11 +103,7 @@
         </div>
       </td>
       <td class="govuk-table__cell">Aquatics</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">120 mins</td>
+            <td class="govuk-table__cell">0 mins</td>
     </tr>
     <tr class="govuk-table__row">
       <td class="govuk-table__cell">
@@ -145,17 +115,13 @@
         </div>
       </td>
       <td class="govuk-table__cell">Monkeys</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">120 mins</td>
+            <td class="govuk-table__cell">0 mins</td>
     </tr>
   </tbody>
 </table>
 
-<a href="change-inspection-length" button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
-  Change selected animal inspection lengths </a>
+<a href="change-inspection-break-length" button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
+  Change selected inspection breaks</a>
 </button>
 
       <h2 class="govuk-heading-m">
@@ -168,11 +134,7 @@
     <tr class="govuk-table__row">
       <th class="govuk-table__header" scope="col" id="select-all"></th>
       <th class="govuk-table__header" scope="col">Animal type</th>
-      <th class="govuk-table__header" scope="col">Marshalling time</th>
-      <th class="govuk-table__header" scope="col">Set up time</th>
-      <th class="govuk-table__header" scope="col">Inspection time</th>
-      <th class="govuk-table__header" scope="col">Clean up time</th>
-      <th class="govuk-table__header govuk-table__header--numeric" scope="col">Total inspection length</th>
+          <th class="govuk-table__header" scope="col">Break between inspections</th>
     </tr>
   </thead>
   <tbody class="govuk-table__body">
@@ -186,12 +148,7 @@
         </div>
       </td>
       <td class="govuk-table__cell">Equidae</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">120 mins</td>
-    </tr>
+      <td class="govuk-table__cell">0 mins</td>    </tr>
     <tr class="govuk-table__row">
       <td class="govuk-table__cell">
         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
@@ -203,11 +160,7 @@
       </td>
       </td>
       <td class="govuk-table__cell">Ungulates - Camelids</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">120 mins</td>
+      <td class="govuk-table__cell">0 mins</td>
     </tr>
     <tr class="govuk-table__row">
       <td class="govuk-table__cell">
@@ -219,11 +172,7 @@
         </div>
       </td>
       <td class="govuk-table__cell">Ungulates - Alpacas</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">120 mins</td>
+      <td class="govuk-table__cell">0 mins</td>
     </tr>
     <tr class="govuk-table__row">
       <td class="govuk-table__cell">
@@ -235,18 +184,14 @@
         </div>
       </td>
       <td class="govuk-table__cell">Ungulates - Deer</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">120 mins</td>
+      <td class="govuk-table__cell">0 mins</td>
     </tr>
   </tbody>
 </table>
 
 
-<a href="change-inspection-length" button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
-  Change selected animal inspection lengths </a>
+<a href="change-inspection-break-length" button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
+  Change selected inspection breaks</a>
 </button>
 
 
@@ -260,12 +205,7 @@
     <tr class="govuk-table__row">
       <th class="govuk-table__header" scope="col" id="select-all"></th>
       <th class="govuk-table__header" scope="col">Animal type</th>
-      <th class="govuk-table__header" scope="col">Marshalling time</th>
-      <th class="govuk-table__header" scope="col">Set up time</th>
-      <th class="govuk-table__header" scope="col">Inspection time</th>
-      <th class="govuk-table__header" scope="col">Clean up time</th>
-      <th class="govuk-table__header govuk-table__header--numeric" scope="col">Total inspection length</th>
-    </tr>
+      <th class="govuk-table__header" scope="col">Break between inspections</th>
   </thead>
   <tbody class="govuk-table__body">
     <tr class="govuk-table__row govuk-table__row--selected">
@@ -278,11 +218,7 @@
         </div>
       </td>
       <td class="govuk-table__cell">Cattle</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">120 mins</td>
+      <td class="govuk-table__cell">0 mins</td>
     </tr>
     <tr class="govuk-table__row">
       <td class="govuk-table__cell">
@@ -295,11 +231,7 @@
       </td>
       </td>
       <td class="govuk-table__cell">Farmed livestock - bison</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">120 mins</td>
+      <td class="govuk-table__cell">0 mins</td>
     </tr>
     <tr class="govuk-table__row">
       <td class="govuk-table__cell">
@@ -311,11 +243,7 @@
         </div>
       </td>
       <td class="govuk-table__cell">Farmed livestock - sheep</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">120 mins</td>
+      <td class="govuk-table__cell">0 mins</td>
     </tr>
     <tr class="govuk-table__row">
       <td class="govuk-table__cell">
@@ -327,11 +255,7 @@
         </div>
       </td>
       <td class="govuk-table__cell">Farmed livestock - goats</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">120 mins</td>
+      <td class="govuk-table__cell">0 mins</td>
     </tr>
         <tr class="govuk-table__row">
       <td class="govuk-table__cell">
@@ -343,11 +267,7 @@
         </div>
       </td>
       <td class="govuk-table__cell">Farmed livestock - pigs</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">120 mins</td>
+      <td class="govuk-table__cell">4320 mins</td>
     </tr>
         <tr class="govuk-table__row">
       <td class="govuk-table__cell">
@@ -359,17 +279,13 @@
         </div>
       </td>
       <td class="govuk-table__cell">Farmed livestock - wild boar</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell">30 mins</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">120 mins</td>
+      <td class="govuk-table__cell">4320 mins</td>
     </tr>
   </tbody>
 </table>
 
-<a href="change-inspection-length" button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
-  Change selected animal inspection lengths </a>
+<a href="change-inspection-break-length" button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
+  Change selected inspection breaks</a>
 </button>
 
     </div>
