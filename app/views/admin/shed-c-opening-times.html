@@ -1,0 +1,315 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<h1 class="govuk-heading-l">Shed C Availability</h1>
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  name: "MondayOpeningHours",
+  fieldset: {
+    legend: {
+      text: "Monday opening hours",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "Open",
+      text: "Open"
+    },
+    {
+      value: "Closed",
+      text: "Closed"
+    }
+  ]
+}) }}
+
+
+{{ govukInput({
+  label: {
+    text: "Opening time"
+  },
+  classes: "govuk-input--width-4",
+  id: "width-4",
+  name: "width4"
+}) }}
+
+{{ govukInput({
+  label: {
+    text: "Closing time"
+  },
+  classes: "govuk-input--width-4",
+  id: "width-4",
+  name: "width4"
+}) }}
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  name: "TuesdayOpeningHours",
+  fieldset: {
+    legend: {
+      text: "Tuesday opening hours",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "Open",
+      text: "Open"
+    },
+    {
+      value: "Closed",
+      text: "Closed"
+    }
+  ]
+}) }}
+
+{{ govukInput({
+  label: {
+    text: "Opening time"
+  },
+  classes: "govuk-input--width-4",
+  id: "width-4",
+  name: "width4"
+}) }}
+
+{{ govukInput({
+  label: {
+    text: "Closing time"
+  },
+  classes: "govuk-input--width-4",
+  id: "width-4",
+  name: "width4"
+}) }}
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  name: "WednesdayOpeningHours",
+  fieldset: {
+    legend: {
+      text: "Wednesday opening hours",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "Open",
+      text: "Open"
+    },
+    {
+      value: "Closed",
+      text: "Closed"
+    }
+  ]
+}) }}
+
+{{ govukInput({
+  label: {
+    text: "Opening time"
+  },
+  classes: "govuk-input--width-4",
+  id: "width-4",
+  name: "width4"
+}) }}
+
+{{ govukInput({
+  label: {
+    text: "Closing time"
+  },
+  classes: "govuk-input--width-4",
+  id: "width-4",
+  name: "width4"
+}) }}
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  name: "ThursdayOpeningHours",
+  fieldset: {
+    legend: {
+      text: "Thursday opening hours",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "Open",
+      text: "Open"
+    },
+    {
+      value: "Closed",
+      text: "Closed"
+    }
+  ]
+}) }}
+
+{{ govukInput({
+  label: {
+    text: "Opening time"
+  },
+  classes: "govuk-input--width-4",
+  id: "width-4",
+  name: "width4"
+}) }}
+
+{{ govukInput({
+  label: {
+    text: "Closing time"
+  },
+  classes: "govuk-input--width-4",
+  id: "width-4",
+  name: "width4"
+}) }}
+
+
+{{ govukRadios({
+
+  classes: "govuk-radios--inline",
+  name: "FridayOpeningHours",
+  fieldset: {
+    legend: {
+      text: "Friday opening hours",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "Open",
+      text: "Open"
+    },
+    {
+      value: "Closed",
+      text: "Closed"
+    }
+  ]
+}) }}
+
+{{ govukInput({
+  label: {
+    text: "Opening time"
+  },
+  classes: "govuk-input--width-4--inline",
+  id: "width-4",
+  name: "width4"
+}) }}
+
+{{ govukInput({
+  label: {
+    text: "Closing time"
+  },
+  classes: "govuk-input--width-4",
+  id: "width-4",
+  name: "width4"
+}) }}
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  name: "SaturdayOpeningHours",
+  fieldset: {
+    legend: {
+      text: "Saturday opening hours",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "Open",
+      text: "Open"
+    },
+    {
+      value: "Closed",
+      text: "Closed"
+    }
+  ]
+}) }}
+
+{{ govukInput({
+  label: {
+    text: "Opening time"
+  },
+  classes: "govuk-input--width-4",
+  id: "width-4",
+  name: "width4"
+}) }}
+
+{{ govukInput({
+  label: {
+    text: "Closing time"
+  },
+  classes: "govuk-input--width-4",
+  id: "width-4",
+  name: "width4"
+}) }}
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  name: "SundayOpeningHours",
+  fieldset: {
+    legend: {
+      text: "Sunday opening hours",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "Open",
+      text: "Open"
+    },
+    {
+      value: "Closed",
+      text: "Closed"
+    }
+  ]
+}) }}
+
+{{ govukInput({
+  label: {
+    text: "Opening time"
+  },
+  classes: "govuk-input--width-4",
+  id: "width-4",
+  name: "width4"
+}) }}
+
+{{ govukInput({
+  label: {
+    text: "Closing time"
+  },
+  classes: "govuk-input--width-4",
+  id: "width-4",
+  name: "width4"
+}) }}
+
+    </div>
+  </div>
+
+  <a href="shed-opening-times-days" button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
+  Save changes</a>
+</button>
+
+  <p><a href="close-bays-sheds">Cancel</a></p>
+
+{% endblock %}

@@ -1,0 +1,156 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Change opening times at your Border Control Post
+      </h1>
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Shed C - small animals</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Day</th>
+      <th scope="col" class="govuk-table__header">Availability</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Monday</th>
+      <td class="govuk-table__cell">9:00am - 5:00pm</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Tuesday</th>
+      <td class="govuk-table__cell">9:00am - 5:00pm</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Wednesday</th>
+      <td class="govuk-table__cell">9:00am - 5:00pm</td>
+    </tr>
+        <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Thursday</th>
+      <td class="govuk-table__cell">9:00am - 5:00pm</td>
+    </tr>
+        <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Friday</th>
+      <td class="govuk-table__cell">9:00am - 5:00pm</td>
+    </tr>
+        <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Saturday</th>
+      <td class="govuk-table__cell">9:00am - 5:00pm</td>
+    </tr>
+        <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Sunday</th>
+      <td class="govuk-table__cell">9:00am - 5:00pm</td>
+    </tr>
+  </tbody>
+</table>
+
+<a href="shed-c-opening-times" button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
+  Change Shed C availability </a>
+</button>
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Shed D - equine</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Day</th>
+      <th scope="col" class="govuk-table__header">Availability</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Monday</th>
+      <td class="govuk-table__cell">9:00am - 5:00pm</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Tuesday</th>
+      <td class="govuk-table__cell">9:00am - 5:00pm</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Wednesday</th>
+      <td class="govuk-table__cell">9:00am - 5:00pm</td>
+    </tr>
+        <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Thursday</th>
+      <td class="govuk-table__cell">9:00am - 5:00pm</td>
+    </tr>
+        <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Friday</th>
+      <td class="govuk-table__cell">9:00am - 5:00pm</td>
+    </tr>
+        <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Saturday</th>
+      <td class="govuk-table__cell">9:00am - 5:00pm</td>
+    </tr>
+        <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Sunday</th>
+      <td class="govuk-table__cell">9:00am - 5:00pm</td>
+    </tr>
+  </tbody>
+</table>
+
+<a href="shed-c-opening-times" button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
+  Change Shed D availability </a>
+</button>
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Shed E - farmed livestock</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Day</th>
+      <th scope="col" class="govuk-table__header">Availability</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Monday</th>
+      <td class="govuk-table__cell">9:00am - 5:00pm</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Tuesday</th>
+      <td class="govuk-table__cell">9:00am - 5:00pm</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Wednesday</th>
+      <td class="govuk-table__cell">9:00am - 5:00pm</td>
+    </tr>
+        <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Thursday</th>
+      <td class="govuk-table__cell">9:00am - 5:00pm</td>
+    </tr>
+        <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Friday</th>
+      <td class="govuk-table__cell">9:00am - 5:00pm</td>
+    </tr>
+        <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Saturday</th>
+      <td class="govuk-table__cell">9:00am - 5:00pm</td>
+    </tr>
+        <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Sunday</th>
+      <td class="govuk-table__cell">9:00am - 5:00pm</td>
+    </tr>
+  </tbody>
+</table>
+
+<a href="shed-c-opening-times" button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
+  Change Shed E availability </a>
+</button>
+
+    </div>
+  </div>
+{% endblock %}
