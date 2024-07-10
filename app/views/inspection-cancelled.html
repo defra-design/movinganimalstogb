@@ -24,10 +24,6 @@
   </ul>
 </div>
 
-  {{ govukBackLink({
-  text: "Back",
-  href: "javascript:window.history.back()"
-}) }}
 {% endblock %}
 
 {% block content %}
@@ -38,6 +34,13 @@
       <h1 class="govuk-heading-l">
         Your inspection is cancelled
       </h1>
+
+            <div class="govuk-inset-text">
+  <p>Inspection reference: QE9 O06CB ADO</p>
+  <p>Date of inspection: Tuesday 30th January 9:00 - 12:00</p>
+  <p>Animal species: Cattle</p>
+  <p>Number of animals: 36</p>
+</div>
 
 <a href="location.html" button type="submit" class="govuk-button" data-module="govuk-button">
   Book new inspection
