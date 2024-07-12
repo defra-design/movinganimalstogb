@@ -18,29 +18,11 @@
 
 <h1 class="govuk-heading-l">Shed C Availability</h1>
 
+<p><a href="shed-c-open-days">Change open days</a><p>
+
 {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
-{{ govukRadios({
-  classes: "govuk-radios--inline",
-  name: "MondayOpeningHours",
-  fieldset: {
-    legend: {
-      text: "Monday opening hours",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--m"
-    }
-  },
-  items: [
-    {
-      value: "Open",
-      text: "Open"
-    },
-    {
-      value: "Closed",
-      text: "Closed"
-    }
-  ]
-}) }}
+<h2 class="govuk-heading-m">Monday</h2>
 
 {{ govukDateInput({
       id: "open-close-times",
@@ -51,27 +33,7 @@
       ]
     }) }}
 
-{{ govukRadios({
-  classes: "govuk-radios--inline",
-  name: "TuesdayOpeningHours",
-  fieldset: {
-    legend: {
-      text: "Tuesday opening hours",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--m"
-    }
-  },
-  items: [
-    {
-      value: "Open",
-      text: "Open"
-    },
-    {
-      value: "Closed",
-      text: "Closed"
-    }
-  ]
-}) }}
+    <h2 class="govuk-heading-m">Tuesday</h2>
 
 {{ govukDateInput({
       id: "open-close-times",
@@ -82,27 +44,7 @@
       ]
     }) }}
 
-{{ govukRadios({
-  classes: "govuk-radios--inline",
-  name: "WednesdayOpeningHours",
-  fieldset: {
-    legend: {
-      text: "Wednesday opening hours",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--m"
-    }
-  },
-  items: [
-    {
-      value: "Open",
-      text: "Open"
-    },
-    {
-      value: "Closed",
-      text: "Closed"
-    }
-  ]
-}) }}
+        <h2 class="govuk-heading-m">Wednesday</h2>
 
 {{ govukDateInput({
       id: "open-close-times",
@@ -113,27 +55,7 @@
       ]
     }) }}
 
-{{ govukRadios({
-  classes: "govuk-radios--inline",
-  name: "ThursdayOpeningHours",
-  fieldset: {
-    legend: {
-      text: "Thursday opening hours",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--m"
-    }
-  },
-  items: [
-    {
-      value: "Open",
-      text: "Open"
-    },
-    {
-      value: "Closed",
-      text: "Closed"
-    }
-  ]
-}) }}
+            <h2 class="govuk-heading-m">Thursday</h2>
 
 {{ govukDateInput({
       id: "open-close-times",
@@ -144,28 +66,7 @@
       ]
     }) }}
 
-{{ govukRadios({
-
-  classes: "govuk-radios--inline",
-  name: "FridayOpeningHours",
-  fieldset: {
-    legend: {
-      text: "Friday opening hours",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--m"
-    }
-  },
-  items: [
-    {
-      value: "Open",
-      text: "Open"
-    },
-    {
-      value: "Closed",
-      text: "Closed"
-    }
-  ]
-}) }}
+                <h2 class="govuk-heading-m">Friday</h2>
 
 {{ govukDateInput({
       id: "open-close-times",
@@ -176,27 +77,7 @@
       ]
     }) }}
 
-{{ govukRadios({
-  classes: "govuk-radios--inline",
-  name: "SaturdayOpeningHours",
-  fieldset: {
-    legend: {
-      text: "Saturday opening hours",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--m"
-    }
-  },
-  items: [
-    {
-      value: "Open",
-      text: "Open"
-    },
-    {
-      value: "Closed",
-      text: "Closed"
-    }
-  ]
-}) }}
+                    <h2 class="govuk-heading-m">Saturday</h2>
 
 {{ govukDateInput({
       id: "open-close-times",
@@ -207,27 +88,7 @@
       ]
     }) }}
 
-{{ govukRadios({
-  classes: "govuk-radios--inline",
-  name: "SundayOpeningHours",
-  fieldset: {
-    legend: {
-      text: "Sunday opening hours",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--m"
-    }
-  },
-  items: [
-    {
-      value: "Open",
-      text: "Open"
-    },
-    {
-      value: "Closed",
-      text: "Closed"
-    }
-  ]
-}) }}
+                        <h2 class="govuk-heading-m">Sunday</h2>
 
 {{ govukDateInput({
       id: "open-close-times",
@@ -237,11 +98,12 @@
         {label: "Closing time", name: "closing-time", classes:"govuk-input--width-4"}
       ]
     }) }}
+
 
     </div>
   </div>
 
-  <a href="shed-opening-times-days" button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
+  <a href="shed-opening-availability" button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
   Save changes</a>
 </button>
 
