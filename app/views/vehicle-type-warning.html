@@ -1,0 +1,67 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Vehicle type {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="/vehicle-type-side-loader" method="post" novalidate>
+
+        <h1 class="govuk-heading-l">
+What type of vehicle will you use?</h1>
+  <div id="event-name-hint" class="govuk-hint">
+ You must book a separate inspection for each vehicle. 
+  </div>
+
+<div class="govuk-inset-text">
+  If you change your vehicle type, you will be prompted to select a new time and date for your inspection.
+</div>
+
+{{ govukRadios({
+  name: "VehicleType",
+  value: data['VehicleType'],
+  items: [
+    {
+      value: "Class B: car or small van",
+      text: "Class B: car or small van"
+    },
+    {
+      value: "Class C1: large van up to 7.5 tonnes",
+      text: "Class C1: large van up to 7.5 tonnes"
+    },
+    {
+      value: "Class C: heavy goods vehicle over 7.5 tonnes",
+      text: "Class C: heavy goods vehicle over 7.5 tonnes"
+    },
+        {
+      value: "Class CE: heavy goods vehicle over 7.5 tonnes towing a trailer",
+      text: "Class CE: heavy goods vehicle over 7.5 tonnes towing a trailer"
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  text: "Save and continue"
+}) }}
+</form>
+    </div>
+  </div>
+
+{% endblock %}
