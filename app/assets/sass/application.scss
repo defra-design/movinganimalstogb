@@ -5,6 +5,11 @@
 
 // Add extra styles here
 
+.grey-box {
+    height: auto;
+    background-color: f3f2f1;
+}
+
 .box {
   height: auto;
   border: 3px solid black;
@@ -93,6 +98,12 @@
 
 .admin-box a{
   color: white;
+}
+
+.search-box{
+  background-color:#F3F2F1;
+  padding: 20px;
+  margin-bottom: 25px;
 }
 
 .topnav {
