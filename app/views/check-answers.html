@@ -23,7 +23,7 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">
 
       <h1 class="govuk-heading-xl">
-        Check your answers before booking your inspection
+        Check your answers
       </h1>
 
       {{ govukSummaryList({
@@ -66,7 +66,7 @@
           ,
           {
             key: {
-              text: "Vehicle unloading"
+              text: "Vehicle unloading type"
             },
             value: {
               text: data['VehicleLoad']
@@ -76,7 +76,7 @@
                 {
                   href: "vehicle-type-side-loader",
                   text: "Change",
-                  visuallyHiddenText: "Vehicle unloading"
+                  visuallyHiddenText: "Vehicle unloading type"
                 }
               ]
             }
@@ -135,7 +135,7 @@
           },
            {
             key: {
-              text: "CHED Number"
+              text: "CHED number"
             },
             value: {
               text: "CHEDA.GB.2024.1984055"
@@ -145,14 +145,14 @@
                 {
                   href: "ched-number-flow1",
                   text: "Change",
-                  visuallyHiddenText: "Time and date of your inspection"
+                  visuallyHiddenText: "Ched number"
                 }
               ]
             }
           },
           {
             key: {
-              text: "Vehicle Reference Number (VRN)"
+              text: "Vehicle Registration Number (VRN)"
             },
             value: {
               text: "WF10 3YG"
@@ -162,7 +162,7 @@
                 {
                   href: "vehicle-registration-number-flow1",
                   text: "Change",
-                  visuallyHiddenText: "Time and date of your inspection"
+                  visuallyHiddenText: "Vehicle Registration Number"
                 }
               ]
             }
@@ -171,11 +171,11 @@
       }) }}
 
       <h2 class="govuk-heading-m">
-        Now book your inspection
+        Now, book your inspection
       </h2>
 
       <p>
-        By booking your inspection, you are confirming that you will not make more bookings than you need. You understand that doing so may result in penalty.
+        By doing so, you are confirming that you will not make more bookings than you need. You understand that doing so may result in penalty.
       </p>
 
       <form action="/confirmation" method="post" novalidate>
