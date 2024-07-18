@@ -9,11 +9,9 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-<h1 class="govuk-heading-l">Change ability for people to create new bookings at Sevinton</h1>
+<h1 class="govuk-heading-l">Change site availability</h1>
 
-<p>If you need to stop Sevington from receiving live animals for inspection, you can stop people from creating new bookings here.</p>
-
-<p>If you need to cancel all bookings which have already been created, you can do so on the <a href="all-inspections-table-overview">All inspections page.</a></p>
+<p>Turn availability off to stop new inspection inspections. To cancel existing inspections, go to the <a href="all-inspections-table-overview">All inspections page.</a></p>
 
 
 {% from "govuk/components/radios/macro.njk" import govukRadios %}
@@ -22,7 +20,7 @@
   name: "NewBookingsAbility",
   fieldset: {
     legend: {
-      text: "Ability for people to make new inspection bookings",
+      text: "Site availability",
       isPageHeading: true,
       classes: "govuk-fieldset__legend--m"
     }
@@ -42,7 +40,7 @@
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
 <a href="confirm-no-new-bookings" button type="submit" class="govuk-button" data-module="govuk-button">
-  Update booking ability</a>
+  Change site availability</a>
 </button>
 
 <p><a href="super-admin-controls">Cancel</a></p>
