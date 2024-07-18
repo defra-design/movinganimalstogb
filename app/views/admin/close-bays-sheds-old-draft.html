@@ -1,0 +1,271 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-xl">
+        Review availability of bays and sheds
+      </h1>
+<p>
+  This shows which sheds are available for people to create new inspection bookings. To cancel bookings which have already been created, go to <a href="all-inspections-table-overview">All inspections.</a>
+</p>
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Shed C - small animals</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Bay</th>
+      <th scope="col" class="govuk-table__header">Availability</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">First 6 weeks</th>
+      <td class="govuk-table__cell">£109.80 per week</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Next 33 weeks</th>
+      <td class="govuk-table__cell">£109.80 per week</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Total estimated pay</th>
+      <td class="govuk-table__cell">£4,282.20</td>
+    </tr>
+  </tbody>
+</table>
+
+      <table class="govuk-table" data-module="moj-multi-select" data-multi-select-checkbox="#select-all">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col" id="select-all"></th>
+      <th class="govuk-table__header" scope="col">Bay</th>
+      <th class="govuk-table__header" scope="col">Availability</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row govuk-table__row--selected">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-aconcagua">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-aconcagua">
+            <span class="govuk-visually-hidden">Select Bay 1</span>
+          </label>
+        </div>
+      </td>
+      <td class="govuk-table__cell">Bay 1</td>
+      <td class="govuk-table__cell">Available for new bookings</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-denali" value="denali">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-denali">
+            <span class="govuk-visually-hidden">Select Bay 2</span>
+          </label>
+        </div>
+      </td>
+      </td>
+      <td class="govuk-table__cell">Bay 2</td>
+      <td class="govuk-table__cell">Availabile for new bookings</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-elbrus" value="elbrus">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-elbrus">
+            <span class="govuk-visually-hidden">Select Bay 3</span>
+          </label>
+        </div>
+      </td>
+      <td class="govuk-table__cell">Bay 3</td>
+      <td class="govuk-table__cell">Available for new bookings</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-everest" value="everest">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-everest">
+            <span class="govuk-visually-hidden">Select Bay 4</span>
+          </label>
+        </div>
+      </td>
+      <td class="govuk-table__cell">Bay 4</td>
+      <td class="govuk-table__cell">Available for new bookings</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-kilimanjaro" value="kilimanjaro">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-kilimanjaro">
+            <span class="govuk-visually-hidden">Select Bay 5</span>
+          </label>
+        </div>
+      </td>
+      <td class="govuk-table__cell">Bay 5</td>
+      <td class="govuk-table__cell">Available for new bookings</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-puncak-jaya" value="puncak-jaya">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-puncak-jaya">
+            <span class="govuk-visually-hidden">Select Bay 6</span>
+          </label>
+        </div>
+      </td>
+      <td class="govuk-table__cell">Bay 6</td>
+      <td class="govuk-table__cell">Available for new bookings</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-vinson" value="vinson">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-vinson">
+            <span class="govuk-visually-hidden">Select Bay 7</span>
+          </label>
+        </div>
+      </td>
+      <td class="govuk-table__cell">Bay 7</td>
+      <td class="govuk-table__cell">Available for new bookings</td>
+    </tr>
+     <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-vinson" value="vinson">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-vinson">
+            <span class="govuk-visually-hidden">Select Bay 8/span>
+          </label>
+        </div>
+      </td>
+      <td class="govuk-table__cell">Bay 8</td>
+      <td class="govuk-table__cell">Available for new bookings</td>
+    </tr>
+  </tbody>
+</table>
+
+<a href="change-inspection-length" button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
+  Change selected availability </a>
+</button>
+
+
+      <h2 class="govuk-heading-m">
+        Shed D - equine
+      </h2>
+
+ <table class="govuk-table" data-module="moj-multi-select" data-multi-select-checkbox="#select-all">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col" id="select-all"></th>
+      <th class="govuk-table__header" scope="col">Bay</th>
+      <th class="govuk-table__header" scope="col">Availability</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row govuk-table__row--selected">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-aconcagua">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-aconcagua">
+            <span class="govuk-visually-hidden">Select Bay 1</span>
+          </label>
+        </div>
+      </td>
+      <td class="govuk-table__cell">Bay 1</td>
+      <td class="govuk-table__cell">Available for new bookings</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-denali" value="denali">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-denali">
+            <span class="govuk-visually-hidden">Select Bay 2</span>
+          </label>
+        </div>
+      </td>
+      </td>
+      <td class="govuk-table__cell">Bay 2</td>
+      <td class="govuk-table__cell">Availabile for new bookings</td>
+    </tr>
+      </td>
+  </tbody>
+</table>
+
+<a href="change-inspection-length" button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
+  Change selected availability </a>
+</button>
+
+<h2 class="govuk-heading-m">
+        Shed E -  farmed livestock 
+      </h2>
+
+ <table class="govuk-table" data-module="moj-multi-select" data-multi-select-checkbox="#select-all">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col" id="select-all"></th>
+      <th class="govuk-table__header" scope="col">Section</th>
+      <th class="govuk-table__header" scope="col">Availability</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row govuk-table__row--selected">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-aconcagua">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-aconcagua">
+            <span class="govuk-visually-hidden">Select Cattle section</span>
+          </label>
+        </div>
+      </td>
+      <td class="govuk-table__cell">Cattle section</td>
+      <td class="govuk-table__cell">Available for new bookings</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-denali" value="denali">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-denali">
+            <span class="govuk-visually-hidden">Select Pig section</span>
+          </label>
+        </div>
+      </td>
+      </td>
+      <td class="govuk-table__cell">Pig section</td>
+      <td class="govuk-table__cell">Availabile for new bookings</td>
+    </tr>
+      </td>
+      <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-denali" value="denali">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-denali">
+            <span class="govuk-visually-hidden">Select Sheep section</span>
+          </label>
+        </div>
+      </td>
+      </td>
+      <td class="govuk-table__cell">Sheep section</td>
+      <td class="govuk-table__cell">Availabile for new bookings</td>
+    </tr>
+      </td>
+  </tbody>
+</table>
+
+<a href="change-inspection-length" button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
+  Change selected availability </a>
+</button>
+
+    </div>
+  </div>
+{% endblock %}

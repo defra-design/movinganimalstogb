@@ -1,4 +1,4 @@
-{% extends "layouts/main.html" %}
+{% extends "layouts/main-booker.html" %}
 
 {% block pageTitle %}
   CHED number – {{ serviceName }} – GOV.UK Prototype Kit
@@ -11,18 +11,6 @@
   },
   html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
-<div class="login-nav login-border">
-  <ul class="login-nav__list">
-    <li class="login-nav__list-item-new">Prototype user Test</li>
-    {% if data.build == "development" %}
-    {% else %}
-    {% set _accountLink = _accountLink or "../../account?returnURL=application" %}
-    <li class="login-nav__list-item-new"><a href="upcoming-bookings" class="govuk-link login-nav__link-new "govuk-link--no-visited-state profile">All bookings</a></li>
-    <li class="login-nav__list-item-new"><a href='putmanageaccounthere' class="govuk-link login-nav__link-new govuk-link--no-visited-state profile">Manage account</a></li>
-    {% endif %}
-    <li class="login-nav__list-item-new"><a href="#" class="govuk-link login-nav__link-new govuk-link--no-visited-state">Sign out</a></li>
-  </ul>
-</div>
 
   {{ govukBackLink({
   text: "Back",
@@ -35,15 +23,12 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
+      <span class="govuk-caption-l">Optional information</span>
       <h1 class="govuk-heading-l">
         What is the CHED number?
       </h1>
 
 <p>This is the Common Health Entry Document for live animals. You can add multiple CHED numbers.</p>
-
-
-<p>Leave this blank if you don't know the number yet.</p>
-
 
       <form class="form" action="ched-number-multiple" method="post">
 
@@ -65,9 +50,14 @@
     Add another CHED number
   </button>
   <br>
-  <a href="check-answers-vrn-ched.html" button type="submit" class="govuk-button" data-module="govuk-button">
+  <a href="vehicle-registration-number-flow1.html" button type="submit" class="govuk-button" data-module="govuk-button">
     Save and continue</a>
   </button>
+
+<p><a href="vehicle-registration-number-flow1.html">
+Skip</a></p>
+
 </div>
+
 </form>
 {% endblock %}

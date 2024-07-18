@@ -1,0 +1,74 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Changing how the Border Control Post operates
+      </h1>
+
+      <p>
+        As a manager in your Border Control Post, you can click here to configure parameters around inspections.
+      </p>
+
+            <h2 class="govuk-heading-m">
+        Change inspection parameters
+      </h1>
+
+ <p class="govuk-body">
+<a href="edit-inspection-lengths-new" class="govuk-link">Change inspection lengths</a>
+</p>
+ <p class="govuk-body">
+<a href="edit-inspection-breaks" class="govuk-link">Change biosecurity stand-stills</a>
+</p>
+
+
+<h2 class="govuk-heading-m">
+        Opening times at your Border Control Post
+      </h1>
+
+       <p class="govuk-body">
+<a href="shed-opening-availability" class="govuk-link">Change opening times</a>
+</p>
+
+           <h2 class="govuk-heading-m">
+        Reporting
+      </h1>
+
+ <p class="govuk-body">
+<a href="#" class="govuk-link">Export a report</a>
+</p>
+    </div>
+  </div>
+
+           <h2 class="govuk-heading-m">
+        Availability of site
+      </h1>
+
+ <p class="govuk-body">
+<a href="no-new-bookings" class="govuk-link">Change availability of the Border Control Post</a>
+</p>
+
+           <h2 class="govuk-heading-m">
+        Changing amount of concurrent inspections in a bay
+      </h1>
+
+ <p class="govuk-body">
+<a href="#" class="govuk-link">Edit how many concurrent inspections take place in a bay</a>
+</p>
+
+
+{% endblock %}

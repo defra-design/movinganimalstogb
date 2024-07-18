@@ -1,4 +1,4 @@
-{% extends "layouts/main.html" %}
+{% extends "layouts/main-booker.html" %}
 
 {% block pageTitle %}
   Content page template – {{ serviceName }} – GOV.UK Prototype Kit
@@ -11,18 +11,6 @@
   },
   html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
-<div class="login-nav login-border">
-  <ul class="login-nav__list">
-    <li class="login-nav__list-item-new">Prototype user Test</li>
-    {% if data.build == "development" %}
-    {% else %}
-    {% set _accountLink = _accountLink or "../../account?returnURL=application" %}
-    <li class="login-nav__list-item-new"><a href="upcoming-bookings" class="govuk-link login-nav__link-new "govuk-link--no-visited-state profile">All bookings</a></li>
-    <li class="login-nav__list-item-new"><a href='putmanageaccounthere' class="govuk-link login-nav__link-new govuk-link--no-visited-state profile">Manage account</a></li>
-    {% endif %}
-    <li class="login-nav__list-item-new"><a href="#" class="govuk-link login-nav__link-new govuk-link--no-visited-state">Sign out</a></li>
-  </ul>
-</div>
 
 {{ govukBackLink({
     text: "Back",
@@ -46,6 +34,8 @@
       <th scope="col" class="govuk-table__header">Date and time</th>
       <th scope="col" class="govuk-table__header">Vehicle type</th>
       <th scope="col" class="govuk-table__header">Summary</th>
+      <th scope="col" class="govuk-table__header">CHED</th>
+      <th scope="col" class="govuk-table__header">VRN</th>
       <th scope="col" class="govuk-table__header">Change</th>
       <th scope="col" class="govuk-table__header">Cancel</th>
     </tr>
@@ -56,6 +46,8 @@
       <td class="govuk-table__cell">30 January 2024, 11:30am</td>
       <td class="govuk-table__cell">C1: large van up to 7.5 tonnes</td>
       <td class="govuk-table__cell">30 Cattle</td>
+      <td class="govuk-table__cell">490045 667863 </td>
+      <td class="govuk-table__cell">2-EHY-849</td>
       <td class="govuk-table__cell"><a href="inspection-details.html">Change</a></td>
       <td class="govuk-table__cell"><a href="cancel-inspection.html">Cancel</a></td>
     </tr>

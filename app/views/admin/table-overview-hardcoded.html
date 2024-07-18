@@ -11,8 +11,8 @@
   items: [
     {
       text: 'Today',
-      href: '#1',
-      active: true
+      href: '#1'
+
     },
     {
       text: 'Tomorrow',
@@ -20,7 +20,8 @@
     },
     {
       text: 'All inspections',
-      href: '#3'
+      href: '#3',
+      active: true
     }
   ]
 }) }}
@@ -41,8 +42,131 @@
     <div class="govuk-grid-column-full">
 
       <h1 class="govuk-heading-l">
-        Today's inspections
+        All inspections
       </h1>
+
+      <div class=search-box>
+
+<div class="moj-search">
+  <form action="#" method="post">
+    <div class="govuk-form-group">
+      <h2 class="govuk-heading-m">Search for an inspection</h2>
+      <p>Search by reference number, animal type, or CHED</p>
+      <input class="govuk-input moj-search__input " id="search" name="search" type="search" aria-describedby="search-hint">
+    </div>
+    <button type="submit" class="govuk-button moj-search__button " data-module="govuk-button">
+      Search
+    </button>
+  </form>
+  <p> </p>
+
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+<div class="govuk-form-group">
+      <h2 class="govuk-heading-m">Filter by shed</h2>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published" selected>All sheds</option>
+    <option value="Shed C">Shed C</option>
+    <option value="Shed D">Shed D</option>
+    <option value="Shed E">Shed E</option>
+  </select>
+</div>
+    </div>
+  </main>
+</div>
+
+<h2 class="govuk-heading-m">Filter by date</h2>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+<div class="govuk-form-group">
+        <h3 class="govuk-heading-s">From</h3>
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+    <div class="govuk-date-input" id="passport-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+        </div>
+      </div>
+ </div>
+  </fieldset>
+</div>
+  </div>
+
+  <div class="govuk-grid-column-one-half">
+    <div class="govuk-form-group">
+        <h3 class="govuk-heading-s">To</h3>
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+    <div class="govuk-date-input" id="passport-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+        </div>
+           </div>
+              </div>
+              </div>
+
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+ <button type="submit" class="govuk-button" data-module="govuk-button">
+  Apply filter
+</button>
+      </div>
+    </div>
+  </main>
+</div>
+             
+
+</div>
+</div>
+</div>
+</div>
+
+<p>11 results for ‘dog’ in ‘Shed C’ between 11.04.2024 and 11.06.204</p>
 
       {%- from "govuk/components/table/macro.njk" import govukTable -%}
 

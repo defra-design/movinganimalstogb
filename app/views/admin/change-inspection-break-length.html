@@ -1,0 +1,46 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Change biosecurity stand-still time for selected animals
+      </h1>
+
+      <form class="form" action="/path/of/next/page" method="post">
+
+  {{ govukInput({
+  classes: "govuk-input--width-5",
+  id: "minutes",
+  name: "minutes",
+  suffix: {
+    text: "mins"
+  },
+  spellcheck: false
+}) }}
+
+ <a href="confirm-inspection-break-length" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+  Save and continue
+    <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+  </svg>
+</a>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

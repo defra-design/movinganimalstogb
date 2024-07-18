@@ -1,0 +1,54 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+<h1 class="govuk-heading-l">Change ability for people to create new bookings at Sevinton</h1>
+
+<p>If you need to stop Sevington from receiving live animals for inspection, you can stop people from creating new bookings here.</p>
+
+<p>If you need to cancel all bookings which have already been created, you can do so on the <a href="all-inspections-table-overview">All inspections page.</a></p>
+
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  name: "NewBookingsAbility",
+  fieldset: {
+    legend: {
+      text: "Ability for people to make new inspection bookings",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "On",
+      text: "On"
+    },
+    {
+      value: "Off",
+      text: "Off"
+    }
+  ]
+}) }}
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+<a href="confirm-no-new-bookings" button type="submit" class="govuk-button" data-module="govuk-button">
+  Update booking ability</a>
+</button>
+
+<p><a href="super-admin-controls">Cancel</a></p>
+
+  </div>
+</div>
+
+
+{% endblock %}

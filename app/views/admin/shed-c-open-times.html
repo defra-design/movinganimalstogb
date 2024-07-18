@@ -1,0 +1,112 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<h1 class="govuk-heading-l">Shed C Availability</h1>
+
+<p><a href="shed-c-open-days">Change open days</a><p>
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+<h2 class="govuk-heading-m">Monday</h2>
+
+{{ govukDateInput({
+      id: "open-close-times",
+      namePrefix: "open-close-times",
+      items: [
+        {label: "Opening time", name: "opening-time", classes:"govuk-input--width-4"},
+        {label: "Closing time", name: "closing-time", classes:"govuk-input--width-4"}
+      ]
+    }) }}
+
+    <h2 class="govuk-heading-m">Tuesday</h2>
+
+{{ govukDateInput({
+      id: "open-close-times",
+      namePrefix: "open-close-times",
+      items: [
+        {label: "Opening time", name: "opening-time", classes:"govuk-input--width-4"},
+        {label: "Closing time", name: "closing-time", classes:"govuk-input--width-4"}
+      ]
+    }) }}
+
+        <h2 class="govuk-heading-m">Wednesday</h2>
+
+{{ govukDateInput({
+      id: "open-close-times",
+      namePrefix: "open-close-times",
+      items: [
+        {label: "Opening time", name: "opening-time", classes:"govuk-input--width-4"},
+        {label: "Closing time", name: "closing-time", classes:"govuk-input--width-4"}
+      ]
+    }) }}
+
+            <h2 class="govuk-heading-m">Thursday</h2>
+
+{{ govukDateInput({
+      id: "open-close-times",
+      namePrefix: "open-close-times",
+      items: [
+        {label: "Opening time", name: "opening-time", classes:"govuk-input--width-4"},
+        {label: "Closing time", name: "closing-time", classes:"govuk-input--width-4"}
+      ]
+    }) }}
+
+                <h2 class="govuk-heading-m">Friday</h2>
+
+{{ govukDateInput({
+      id: "open-close-times",
+      namePrefix: "open-close-times",
+      items: [
+        {label: "Opening time", name: "opening-time", classes:"govuk-input--width-4"},
+        {label: "Closing time", name: "closing-time", classes:"govuk-input--width-4"}
+      ]
+    }) }}
+
+                    <h2 class="govuk-heading-m">Saturday</h2>
+
+{{ govukDateInput({
+      id: "open-close-times",
+      namePrefix: "open-close-times",
+      items: [
+        {label: "Opening time", name: "opening-time", classes:"govuk-input--width-4"},
+        {label: "Closing time", name: "closing-time", classes:"govuk-input--width-4"}
+      ]
+    }) }}
+
+                        <h2 class="govuk-heading-m">Sunday</h2>
+
+{{ govukDateInput({
+      id: "open-close-times",
+      namePrefix: "open-close-times",
+      items: [
+        {label: "Opening time", name: "opening-time", classes:"govuk-input--width-4"},
+        {label: "Closing time", name: "closing-time", classes:"govuk-input--width-4"}
+      ]
+    }) }}
+
+
+    </div>
+  </div>
+
+  <a href="shed-opening-availability" button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
+  Save changes</a>
+</button>
+
+  <p><a href="close-bays-sheds">Cancel</a></p>
+
+{% endblock %}

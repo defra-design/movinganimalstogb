@@ -1,4 +1,4 @@
-{% extends "layouts/main.html" %}
+{% extends "layouts/main-booker.html" %}
 
 {% block pageTitle %}
   Confirmation – {{ serviceName }} – GOV.UK Prototype Kit
@@ -12,18 +12,7 @@
   },
   html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
-<div class="login-nav login-border">
-  <ul class="login-nav__list">
-    <li class="login-nav__list-item-new">Prototype user Test</li>
-    {% if data.build == "development" %}
-    {% else %}
-    {% set _accountLink = _accountLink or "../../account?returnURL=application" %}
-    <li class="login-nav__list-item-new"><a href="upcoming-bookings" class="govuk-link login-nav__link-new "govuk-link--no-visited-state profile">All bookings</a></li>
-    <li class="login-nav__list-item-new"><a href='putmanageaccounthere' class="govuk-link login-nav__link-new govuk-link--no-visited-state profile">Manage account</a></li>
-    {% endif %}
-    <li class="login-nav__list-item-new"><a href="#" class="govuk-link login-nav__link-new govuk-link--no-visited-state">Sign out</a></li>
-  </ul>
-</div>
+
 {% endblock %}
 
 {% block content %}
@@ -46,7 +35,7 @@
 </ul>
  </p>
       <h2 class="govuk-heading-m">
-        Next, add your vehicle reference number (VRN) and CHED number
+        If you have not added the CHED and VRN, add it later
       </h2>
 <p>
     We need these details at least 24 hours before your arrival. We will email you 24 hours before your arrival time reminding you to add these details.
@@ -54,26 +43,10 @@
 
 <p>We will use the VRN to recognise your vehicle and allow it into the border control post. We will use the CHED number to connect your inspection with the rest of your import documents. </p>
 
-<a href="vehicle-registration-number-flow1.html" button type="submit" class="govuk-button" data-module="govuk-button">
-  Add details</a>
-</button>
-
-
-<!-- <<p class="govuk-body">We will ask for the:</p>
-<ul class="govuk-list govuk-list--bullet">
-  <li>CHED-A numbers</li>
-  <li>Vehicle registration number</li>
-</ul>-->
-
-      <!--<h2 class="govuk-heading-m">
+      <h2 class="govuk-heading-m">
         Change or cancel your booking
       </h2>
-<p>You can change your arrival date or time anytime. You can also cancel your booking and start again.</p>-->
-
-
-<!--<<p class="govuk-body">
-<a href="email.html" class="govuk-link">Amend your booking</a>
-</p>-->
+<p>You can change your arrival date or time anytime. You can also cancel your booking and start again.</p>
 
     </div>
   </div>

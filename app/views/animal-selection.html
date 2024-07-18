@@ -1,4 +1,4 @@
-{% extends "layouts/main.html" %}
+{% extends "layouts/main-booker.html" %}
 
 {% block pageTitle %}
   Animal species – {{ serviceName }} – GOV.UK Prototype Kit
@@ -32,7 +32,7 @@
       </h1>
     </legend>
 
-           <!---<p>You can add multiple animal species.</p>--->
+           <p>You can add multiple animal species.</p>
 
               <input type="hidden" name="q" id="q-hidden" class="js-commodity-picker-target" autocomplete="off" />
               <input type="hidden" name="resource_id" id="resource-id-hidden" class="js-commodity-picker-resource-id" autocomplete="off" />
@@ -49,6 +49,11 @@
       autocomplete:"off"
   }) }}
   </div></fieldset></div>
+
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    Add another animal species
+  </button>
+  <br>
 
 <button type="submit" class="govuk-button" data-module="govuk-button">
   Save and continue

@@ -1,0 +1,189 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<h1 class="govuk-heading-l">Shed C Availability</h1>
+
+<p><a href="shed-c-open-times">Change open times</a><p>
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  name: "Monday",
+  fieldset: {
+    legend: {
+      text: "Monday",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "Open",
+      text: "Open"
+    },
+    {
+      value: "Closed",
+      text: "Closed"
+    }
+  ]
+}) }}
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  name: "Tuesday",
+  fieldset: {
+    legend: {
+      text: "Tuesday",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "Open",
+      text: "Open"
+    },
+    {
+      value: "Closed",
+      text: "Closed"
+    }
+  ]
+}) }}
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  name: "Wednesday",
+  fieldset: {
+    legend: {
+      text: "Wednesday",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "Open",
+      text: "Open"
+    },
+    {
+      value: "Closed",
+      text: "Closed"
+    }
+  ]
+}) }}
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  name: "Thursday",
+  fieldset: {
+    legend: {
+      text: "Thursday",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "Open",
+      text: "Open"
+    },
+    {
+      value: "Closed",
+      text: "Closed"
+    }
+  ]
+}) }}
+
+{{ govukRadios({
+
+  classes: "govuk-radios--inline",
+  name: "Friday",
+  fieldset: {
+    legend: {
+      text: "Friday",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "Open",
+      text: "Open"
+    },
+    {
+      value: "Closed",
+      text: "Closed"
+    }
+  ]
+}) }}
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  name: "Saturday",
+  fieldset: {
+    legend: {
+      text: "Saturday",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "Open",
+      text: "Open"
+    },
+    {
+      value: "Closed",
+      text: "Closed"
+    }
+  ]
+}) }}
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  name: "Sunday",
+  fieldset: {
+    legend: {
+      text: "Sunday",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "Open",
+      text: "Open"
+    },
+    {
+      value: "Closed",
+      text: "Closed"
+    }
+  ]
+}) }}
+
+    </div>
+  </div>
+
+  <a href="shed-opening-availability" button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
+  Save changes</a>
+</button>
+
+  <p><a href="close-bays-sheds">Cancel</a></p>
+
+{% endblock %}

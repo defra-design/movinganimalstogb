@@ -17,46 +17,68 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">
-        How long do Captive Birds take to inspect?
+        Change inspection length and breaks for selected animals
       </h1>
 
-      <form class="form" action="/path/of/next/page" method="post">
+{% from "govuk/components/input/macro.njk" import govukInput %}
 
-        <div class="govuk-form-group">
-  <h2 class="govuk-label-wrapper">
-    <label class="govuk-label govuk-label--m" for="event-name">
-      Marshalling time
-    </label>
-  </h1>
-  <input class="govuk-input govuk-input--width-3" id="event-name" name="eventName" type="text" for="width-3">
-</div>
+{{ govukInput({
+  label: {
+    text: "Marshalling time, in minutes"
+  },
+  classes: "govuk-input--width-5",
+  id: "minutes",
+  name: "minutes",
+  suffix: {
+    text: "mins"
+  },
+  spellcheck: false
+}) }}
 
-        <div class="govuk-form-group">
-  <h2 class="govuk-label-wrapper">
-    <label class="govuk-label govuk-label--m" for="event-name">
-      Set up time
-    </label>
-  </h1>
-  <input class="govuk-input govuk-input--width-3" id="event-name" name="eventName" type="text">
-</div>
+{% from "govuk/components/input/macro.njk" import govukInput %}
 
-        <div class="govuk-form-group">
-  <h2 class="govuk-label-wrapper">
-    <label class="govuk-label govuk-label--m" for="event-name">
-      Inspection time
-    </label>
-  </h1>
-  <input class="govuk-input govuk-input--width-3" id="event-name" name="eventName" type="text">
-</div>
+{{ govukInput({
+  label: {
+    text: "Set up time, in minutes"
+  },
+  classes: "govuk-input--width-5",
+  id: "minutes",
+  name: "minutes",
+  suffix: {
+    text: "mins"
+  },
+  spellcheck: false
+}) }}
 
-        <div class="govuk-form-group">
-  <h2 class="govuk-label-wrapper">
-    <label class="govuk-label govuk-label--m" for="event-name">
-      Clean up time
-    </label>
-  </h1>
-  <input class="govuk-input govuk-input--width-3" id="event-name" name="eventName" type="text">
-</div>
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "Inspection time, in minutes"
+  },
+  classes: "govuk-input--width-5",
+  id: "minutes",
+  name: "minutes",
+  suffix: {
+    text: "mins"
+  },
+  spellcheck: false
+}) }}
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "Clean-up time, in minutes"
+  },
+  classes: "govuk-input--width-5",
+  id: "minutes",
+  name: "minutes",
+  suffix: {
+    text: "mins"
+  },
+  spellcheck: false
+}) }}
 
         <div class="govuk-form-group">
   <h2 class="govuk-label-wrapper">
@@ -66,7 +88,7 @@
 <p>240 minutes</p>
 </div>
 
- <a href="edit-inspection-lengths" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+ <a href="confirm-inspection-length" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
   Save and continue
     <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
   </svg>

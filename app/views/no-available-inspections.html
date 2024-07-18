@@ -1,4 +1,4 @@
-{% extends "layouts/main.html" %}
+{% extends "layouts/main-booker.html" %}
 
 {% block pageTitle %}
   GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
@@ -12,8 +12,8 @@
 
 <p>There are no inspections available within a 7-day window of the arrival date that you selected.</p>
 
-<a href="booking" button type="submit" class="govuk-button" data-module="govuk-button">
-  See next available date
+<a href="arrival-time" button type="submit" class="govuk-button" data-module="govuk-button">
+  Choose a new arrival date
 </a></button>
 
 {% endblock %}

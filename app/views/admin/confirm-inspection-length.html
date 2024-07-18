@@ -1,0 +1,31 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Cancel inspection – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Confirm inspection length change
+      </h1>
+
+<p>Are you sure you want to change the inspection lengths?</p>
+
+<a href="edit-inspection-lengths-new.html" button type="submit" class="govuk-button govuk-button--warning" data-module="govuk-button">
+  Change inspection lengths
+</a></button>
+
+</div>
+{% endblock %}

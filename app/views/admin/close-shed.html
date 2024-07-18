@@ -1,0 +1,108 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">
+        Availability of sheds for new bookings
+      </h1>
+
+      <p>This shows which sheds are available for people to create new inspection bookings. 
+
+      <p>To cancel bookings which have already been created, go to <a href="#">All inspections</a>.</p>
+
+      {{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              text: "Shed C - Bay 1"
+            },
+            value: {
+              text: "Available for new inspection bookings"
+
+            },
+            actions: {
+              items: [
+                {
+                  href: "close-shed-c",
+                  text: "Change",
+                  visuallyHiddenText: "Shed D"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Shed C"
+            },
+            value: {
+              text: "Available for new inspection bookings"
+
+            },
+            actions: {
+              items: [
+                {
+                  href: "close-shed-c",
+                  text: "Change",
+                  visuallyHiddenText: "Shed D"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Shed D"
+            },
+            value: {
+              text: "Open for new inspection bookings"
+            },
+            actions: {
+              items: [
+                {
+                  href: "close-shed-c",
+                  text: "Change",
+                  visuallyHiddenText: "Shed D"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Shed E"
+            },
+            value: {
+              text: "Open for new inspection bookingsn"
+            },
+            actions: {
+              items: [
+                {
+                  href: "close-shed-c",
+                  text: "Change",
+                  visuallyHiddenText: "Shed E"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+
+
+    </div>
+  </div>
+{% endblock %}

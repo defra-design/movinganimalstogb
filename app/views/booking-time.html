@@ -1,8 +1,22 @@
-{% extends "layouts/main.html" %}
+{% extends "layouts/main-booker.html" %}
 
 {% block pageTitle %}
   GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
 
 {% block content %}
 
@@ -44,7 +58,7 @@
 
 
 <div class="govuk-button-group">
-  <a href="check-answers" button type="submit" class="govuk-button" data-module="govuk-button">
+  <a href="ched-number-flow1" button type="submit" class="govuk-button" data-module="govuk-button">
     Continue</a>
   </button>
 </div>

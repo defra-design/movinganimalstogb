@@ -1,0 +1,207 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<h1 class="govuk-heading-l">Shed C Availability</h1>
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  name: "bay1Availability",
+  fieldset: {
+    legend: {
+      text: "Bay 1 Availability",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "Available",
+      text: "Available"
+    },
+    {
+      value: "Unavailable",
+      text: "Unavailable"
+    }
+  ]
+}) }}
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  name: "bay2Availability",
+  fieldset: {
+    legend: {
+      text: "Bay 2 Availability",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "Available",
+      text: "Available"
+    },
+    {
+      value: "Unavailable",
+      text: "Unavailable"
+    }
+  ]
+}) }}
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  name: "bay3Availability",
+  fieldset: {
+    legend: {
+      text: "Bay 3 Availability",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "Available",
+      text: "Available"
+    },
+    {
+      value: "Unavailable",
+      text: "Unavailable"
+    }
+  ]
+}) }}
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  name: "bay4Availability",
+  fieldset: {
+    legend: {
+      text: "Bay 4 Availability",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "Available",
+      text: "Available"
+    },
+    {
+      value: "Unavailable",
+      text: "Unavailable"
+    }
+  ]
+}) }}
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  name: "bay5Availability",
+  fieldset: {
+    legend: {
+      text: "Bay 5 Availability",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "Available",
+      text: "Available"
+    },
+    {
+      value: "Unavailable",
+      text: "Unavailable"
+    }
+  ]
+}) }}
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  name: "bay6Availability",
+  fieldset: {
+    legend: {
+      text: "Bay 6 Availability",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "Available",
+      text: "Available"
+    },
+    {
+      value: "Unavailable",
+      text: "Unavailable"
+    }
+  ]
+}) }}
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  name: "bay7Availability",
+  fieldset: {
+    legend: {
+      text: "Bay 7 Availability",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "Available",
+      text: "Available"
+    },
+    {
+      value: "Unavailable",
+      text: "Unavailable"
+    }
+  ]
+}) }}
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  name: "bay8Availability",
+  fieldset: {
+    legend: {
+      text: "Bay 8 Availability",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "Available",
+      text: "Available"
+    },
+    {
+      value: "Unavailable",
+      text: "Unavailable"
+    }
+  ]
+}) }}
+    </div>
+  </div>
+
+  <a href="close-bays-sheds" button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
+  Save changes</a>
+</button>
+
+  <p><a href="close-bays-sheds">Cancel</a></p>
+
+{% endblock %}

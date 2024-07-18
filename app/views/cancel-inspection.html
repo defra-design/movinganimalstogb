@@ -1,4 +1,4 @@
-{% extends "layouts/main.html" %}
+{% extends "layouts/main-booker.html" %}
 
 {% block pageTitle %}
   Cancel inspection – {{ serviceName }} – GOV.UK Prototype Kit
@@ -33,6 +33,10 @@
 <a href="inspection-cancelled.html" button type="submit" class="govuk-button govuk-button--warning" data-module="govuk-button">
   Cancel inspection
 </a></button>
+
+<p>
+<a href="javascript:window.history.back()">Return to inspection details</a>
+</p>
 
 </div>
 {% endblock %}

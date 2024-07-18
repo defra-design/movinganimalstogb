@@ -1,0 +1,205 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ mojPrimaryNavigation({
+  label: 'Primary navigation',
+  items: [
+    {
+      text: 'Today',
+      href: '#1'
+
+    },
+    {
+      text: 'Tomorrow',
+      href: '#2'
+    },
+    {
+      text: 'All inspections',
+      href: '#3',
+      active: true
+    }
+  ]
+}) }}
+
+{%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
+
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{%- from "govuk/components/tag/macro.njk" import govukTag -%}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+<h1 class="govuk-heading-l">All inspections</h1>
+
+<div class="moj-search">
+  <form action="#" method="post">
+    <div class="govuk-form-group">
+      <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
+        Search inspections by reference number, animal type, or CHED
+      </label>
+      <input class="govuk-input moj-search__input " id="search" name="search" type="search" aria-describedby="search-hint">
+    </div>
+    </div>
+     </div>
+
+    <div class="govuk-form-group">
+      <h3 class="govuk-heading-s">Filter by shed</h3>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published" selected>All sheds</option>
+    <option value="Shed C">Shed C</option>
+    <option value="Shed D">Shed D</option>
+    <option value="Shed E">Shed E</option>
+  </select>
+</div>
+
+    <button type="submit" class="govuk-button moj-search__button " data-module="govuk-button">
+      Search
+    </button>
+
+  </form>
+</div>
+
+
+  </div>
+</div>
+
+{%- from "govuk/components/table/macro.njk" import govukTable -%}
+
+{{ govukTable({
+  attributes: {
+    'data-module': 'moj-sortable-table'
+  },
+  head: [
+    {
+      text: "Ref number",
+      attributes: {
+        "aria-sort": "ascending"
+      }
+    },
+    {
+      text: "Time",
+      attributes: {
+        "aria-sort": "ascending"
+      }
+    },
+    {
+      text: "Shed",
+      attributes: {
+        "aria-sort": "ascending"
+      }
+    },
+    {
+      text: "Summary",
+      attributes: {
+        "aria-sort": "ascending"
+      }
+    },
+    {
+      text: "Location",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Vehicle registration number",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Status",
+      attributes: {
+        "aria-sort": "none"
+      }
+    }
+  ],
+  rows: [
+    [
+    {
+        text: "5060 AULD",
+                attributes: {
+          "data-sort-value": "6961"
+        }
+      },
+      {
+        text: "8:00-8:30",
+        attributes: {
+          "data-sort-value": "8"
+        }
+      },
+      {
+        text: "C",
+            attributes: {
+          "data-sort-value": "C"
+        }
+      },
+      {
+        text: "11 Dogs",
+        attributes: {
+          "data-sort-value": "Dogs"
+        }
+      },
+      {
+        text: "Departed"
+      },
+      {
+        text: "2-EHY-849",
+        attributes: {
+          "data-sort-value": "6961"
+        }
+      },
+      {
+        text: "Done"
+      }
+    ]
+  ]
+}) }}
+
+<td class="govuk-table__cell">
+        {{govukTag({
+          text: "Pending",
+          classes: "govuk-tag--blue"
+        })}}
+      </td>
+
+      {{ govukTag({
+  text: "Completed"
+}) }}
+
+      {{ govukTag({
+  text: "Pending"
+}) }}
+
+      {{ govukTag({
+  text: "Pending"
+}) }}
+
+
+<strong class="govuk-tag govuk-tag--grey">
+          Inactive
+        </strong>
+        
+<p>I haven't worked out how to display a tag within the table.</p>
+
+      </div>
+    </div>
+  </main>
+</div>
+    </div>
+  </div>
+
+{% endblock %}

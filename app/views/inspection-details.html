@@ -1,4 +1,4 @@
-{% extends "layouts/main.html" %}
+{% extends "layouts/main-booker.html" %}
 
 {% block pageTitle %}
   Inspection details {{ serviceName }} – GOV.UK Prototype Kit
@@ -11,18 +11,6 @@
   },
   html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
-<div class="login-nav login-border">
-  <ul class="login-nav__list">
-    <li class="login-nav__list-item-new">Prototype user Test</li>
-    {% if data.build == "development" %}
-    {% else %}
-    {% set _accountLink = _accountLink or "../../account?returnURL=application" %}
-    <li class="login-nav__list-item-new"><a href="upcoming-bookings" class="govuk-link login-nav__link-new "govuk-link--no-visited-state profile">All bookings</a></li>
-    <li class="login-nav__list-item-new"><a href='putmanageaccounthere' class="govuk-link login-nav__link-new govuk-link--no-visited-state profile">Manage account</a></li>
-    {% endif %}
-    <li class="login-nav__list-item-new"><a href="#" class="govuk-link login-nav__link-new govuk-link--no-visited-state">Sign out</a></li>
-  </ul>
-</div>
 
   {{ govukBackLink({
     text: "Back",
@@ -78,6 +66,24 @@
           ,
           {
             key: {
+              text: "Vehicle unloading"
+            },
+            value: {
+              text: data['VehicleLoad']
+            },
+            actions: {
+              items: [
+                {
+                  href: "vehicle-type-side-loader",
+                  text: "Change",
+                  visuallyHiddenText: "Vehicle unloading"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
               text: "Animal species"
             },
             value: {
@@ -112,7 +118,7 @@
           },
            {
             key: {
-              text: "Time and date of inspection"
+              text: "Time and date"
             },
             value: {
               text: "30 January 2024, 11:30am"
@@ -137,7 +143,7 @@
             actions: {
               items: [
                 {
-                  href: "booking",
+                  href: "ched-number-flow1",
                   text: "Change",
                   visuallyHiddenText: "Time and date of your inspection"
                 }
@@ -154,7 +160,7 @@
             actions: {
               items: [
                 {
-                  href: "booking",
+                  href: "vehicle-registration-number-flow1",
                   text: "Change",
                   visuallyHiddenText: "Time and date of your inspection"
                 }
