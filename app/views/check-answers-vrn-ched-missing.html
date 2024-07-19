@@ -23,7 +23,7 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">
 
       <h1 class="govuk-heading-xl">
-        Check your answers before booking your inspection
+        Check your answers
       </h1>
 
       {{ govukSummaryList({
@@ -66,7 +66,7 @@
           ,
           {
             key: {
-              text: "Vehicle unloading"
+              text: "Vehicle unloading type"
             },
             value: {
               text: data['VehicleLoad']
@@ -76,7 +76,7 @@
                 {
                   href: "vehicle-type-side-loader",
                   text: "Change",
-                  visuallyHiddenText: "Vehicle unloading"
+                  visuallyHiddenText: "Vehicle unloading type"
                 }
               ]
             }
@@ -135,34 +135,34 @@
           },
            {
             key: {
-              text: "CHED Number"
+              text: "CHED number"
             },
             value: {
-              text: "Something to go here"
+              text: "You must add this before arrival"
             },
             actions: {
               items: [
                 {
                   href: "ched-number-flow1",
-                  text: "Change",
-                  visuallyHiddenText: "Time and date of your inspection"
+                  text: "Add",
+                  visuallyHiddenText: "Add"
                 }
               ]
             }
           },
           {
             key: {
-              text: "Vehicle Reference Number (VRN)"
+              text: "Vehicle registration number (VRN)"
             },
             value: {
-              text: "Something to go here"
+              text: "You must add this before arrival"
             },
             actions: {
               items: [
                 {
                   href: "vehicle-registration-number-flow1",
-                  text: "Change",
-                  visuallyHiddenText: "Time and date of your inspection"
+                  text: "Add",
+                  visuallyHiddenText: "Add"
                 }
               ]
             }
@@ -171,12 +171,13 @@
       }) }}
 
       <h2 class="govuk-heading-m">
-        Now book your inspection
+        Now, book your inspection
       </h2>
 
       <p>
         By booking your inspection, you are confirming that you will not make more bookings than you need. You understand that doing so may result in penalty.
       </p>
+
 
       <form action="/confirmation" method="post" novalidate>
 
