@@ -17,14 +17,14 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">
-        Change inspection length and breaks for selected animals
+        Change how long an inspection lasts
       </h1>
 
 {% from "govuk/components/input/macro.njk" import govukInput %}
 
 {{ govukInput({
   label: {
-    text: "Marshalling time, in minutes"
+    text: "Marshalling"
   },
   classes: "govuk-input--width-5",
   id: "minutes",
@@ -39,7 +39,7 @@
 
 {{ govukInput({
   label: {
-    text: "Set up time, in minutes"
+    text: "Set up"
   },
   classes: "govuk-input--width-5",
   id: "minutes",
@@ -54,7 +54,7 @@
 
 {{ govukInput({
   label: {
-    text: "Inspection time, in minutes"
+    text: "Inspection"
   },
   classes: "govuk-input--width-5",
   id: "minutes",
@@ -69,7 +69,7 @@
 
 {{ govukInput({
   label: {
-    text: "Clean-up time, in minutes"
+    text: "Clean-up time"
   },
   classes: "govuk-input--width-5",
   id: "minutes",
@@ -83,7 +83,7 @@
         <div class="govuk-form-group">
   <h2 class="govuk-label-wrapper">
     <label class="govuk-label govuk-label--m" for="event-name">
-      Total inspection length
+      Total inspection time
     </label>
 <p>240 minutes</p>
 </div>
