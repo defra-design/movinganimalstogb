@@ -21,43 +21,80 @@
 
 <table class="govuk-table">
   <caption class="govuk-table__caption govuk-table__caption--m">Shed C: Small animals</caption>
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header">Day</th>
-      <th scope="col" class="govuk-table__header">Opening times</th>
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Monday</th>
-      <td class="govuk-table__cell">8:00am - 6:00pm</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Tuesday</th>
-      <td class="govuk-table__cell">8:00am - 6:00pm</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Wednesday</th>
-      <td class="govuk-table__cell">8:00am - 6:00pm</td>
-    </tr>
-        <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Thursday</th>
-      <td class="govuk-table__cell">8:00am - 6:00pm</td>
-    </tr>
-        <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Friday</th>
-      <td class="govuk-table__cell">8:00am - 6:00pm</td>
-    </tr>
-        <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Saturday</th>
-      <td class="govuk-table__cell">8:00am - 6:00pm</td>
-    </tr>
-        <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Sunday</th>
-      <td class="govuk-table__cell">8:00am - 6:00pm</td>
-    </tr>
-  </tbody>
-</table>
+
+{% from "govuk/components/table/macro.njk" import govukTable %}
+
+{{ govukTable({
+  caption: "Dates and amounts",
+  captionClasses: "govuk-table__caption--m",
+  firstCellIsHeader: true,
+  head: [
+    {
+      text: "Day"
+    },
+    {
+      text: "Opening times"
+    }
+  ],
+  rows: [
+  [
+      {
+        text: "Monday"
+      },
+      {
+        text: "8:00am - 6:00pm"
+      }
+    ],
+    [
+      {
+        text: "Tuesday"
+      },
+      {
+        text: "8:00am - 6:00pm"
+      }
+    ],
+    [
+      {
+        text: "Wednesday"
+      },
+      {
+        text: "8:00am - 6:00pm"
+      }
+    ],
+    [
+      {
+        text: "Thursday"
+      },
+      {
+        text: "8:00am - 6:00pm"
+      }
+    ],
+    [
+      {
+        text: "Friday"
+      },
+      {
+        text: "8:00am - 6:00pm"
+      }
+    ],
+      [
+      {
+        text: "Saturday"
+      },
+      {
+        text: "8:00am - 6:00pm"
+      }
+    ],
+    [
+      {
+        text: "Sunday"
+      },
+      {
+        text: "8:00am - 6:00pm"
+      }
+    ]
+  ]
+}) }}
 
 <a href="shed-c-open-days" button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
   Change Shed C opening times</a>
