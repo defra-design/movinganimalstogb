@@ -22,12 +22,13 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">Holiday closures</h1>
+      <h1 class="govuk-heading-l">Add a bank holiday closure</h1>
 
-      <p>On these days, no new inspections can be booked.</p>
+      <p>Pause inspections for an entire day, from midnight to 11:59pm.
+</p>
 
 <table class="govuk-table">
-  <caption class="govuk-table__caption govuk-table__caption--m">Upcoming holidays</caption>
+  <caption class="govuk-table__caption govuk-table__caption--m">Upcoming bank holiday closures</caption>
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
       <th scope="col" class="govuk-table__header">Date</th>
@@ -67,7 +68,7 @@
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
 {{ govukButton({
-  text: "Save and continue",
+  text: "Add another date",
   href: "new-holiday"
 }) }}
 
