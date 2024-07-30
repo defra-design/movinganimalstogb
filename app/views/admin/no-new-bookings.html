@@ -9,9 +9,9 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-<h1 class="govuk-heading-l">Change site availability</h1>
+<h1 class="govuk-heading-l">Pause new bookings</h1>
 
-<p>Turn site availability off to stop new inspection bookings. To cancel existing inspections, go to <a href="all-inspections-table-overview">All inspections</a>.</p>
+<p>Select Pause to stop all new inspection bookings. Select Unpause to resume. To cancel existing inspections, go to <a href="all-inspections-table-overview">All inspections</a>.</p>
 
 
 {% from "govuk/components/radios/macro.njk" import govukRadios %}
@@ -20,19 +20,19 @@
   name: "NewBookingsAbility",
   fieldset: {
     legend: {
-      text: "Site availability",
+      text: "Pause or unpause new inspection bookings",
       isPageHeading: true,
       classes: "govuk-fieldset__legend--m"
     }
   },
   items: [
     {
-      value: "On",
-      text: "On"
+      value: "Pause",
+      text: "Pause"
     },
     {
-      value: "Off",
-      text: "Off"
+      value: "Unpause",
+      text: "Unpause"
     }
   ]
 }) }}
@@ -40,7 +40,7 @@
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
 <a href="confirm-no-new-bookings" button type="submit" class="govuk-button" data-module="govuk-button">
-  Change site availability</a>
+  Pause new bookings</a>
 </button>
 
 <p><a href="super-admin-controls">Cancel</a></p>
