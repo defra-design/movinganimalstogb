@@ -5,10 +5,18 @@
 {% endblock %}
 
 {% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
   {{ govukBackLink({
   text: "Back",
   href: "javascript:window.history.back()"
 }) }}
+
 {% endblock %}
 
 {% block content %}
@@ -18,12 +26,14 @@
 
       <form class="form" action="/path/of/next/page" method="post">
 
+<h1 class="govuk-heading-l">Close a shed temporarily</h1>
+
+<h1 class="govuk-heading-m">Which shed would you like to close?</h1>
   
 {{ govukRadios({
   name: "ShedToClose",
   fieldset: {
     legend: {
-      text: "Select shed to close",
       isPageHeading: true,
       classes: "govuk-fieldset__legend--l"
     }
@@ -40,12 +50,17 @@
     {
       value: "Shed E",
       text: "Shed E"
+    },
+        {
+      value: "All sheds",
+      text: "All sheds"
     }
   ]
 }) }}
 
         {{ govukButton({
-          text: "Continue"
+          text: "Continue",
+          href: "shed-pause-date-select"
         }) }}
 
       </form>

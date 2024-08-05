@@ -1,0 +1,44 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-l">Which dates would you like to close?</h1>
+
+{% from "govuk/components/date-input/macro.njk" import govukDateInput %}
+
+<h1 class="govuk-heading-m">From</h1>
+
+{{ govukDateInput({
+  id: "start-close-date",
+  namePrefix: "start-close-date",
+  fieldset: {
+    legend: {
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  }
+}) }}
+
+<h1 class="govuk-heading-m">To</h1>
+
+{{ govukDateInput({
+  id: "start-close-date",
+  namePrefix: "start-close-date",
+  fieldset: {
+    legend: {
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  }
+}) }}
+
+        {{ govukButton({
+          text: "Save changes",
+          href: "shed-pause-check-answers-2"
+        }) }}
+
+{% endblock %}
