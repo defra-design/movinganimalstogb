@@ -22,7 +22,8 @@
 
 {{ govukRadios({
   classes: "govuk-radios--inline",
-  name: "Monday",
+  name: "shed-c-monday-day-availability",
+  value: data['shed-c-monday-day-availability'],
   fieldset: {
     legend: {
       text: "Monday",
@@ -30,14 +31,15 @@
       classes: "govuk-fieldset__legend--m"
     }
   },
+
   items: [
     {
-      value: "Open",
-      text: "Open"
+      text: "Open",
+      value: "Open"
     },
     {
-      value: "Closed",
-      text: "Closed"
+      text: "Closed",
+      value: "Closed"
     }
   ]
 }) }}
@@ -46,8 +48,8 @@
       id: "open-close-times",
       namePrefix: "open-close-times",
       items: [
-        {label: "Opening time", name: "opening-time", classes:"govuk-input--width-4"},
-        {label: "Closing time", name: "closing-time", classes:"govuk-input--width-4"}
+        {label: "Opening time", name: "opening-time", value: data['shed-c-monday-start-1'], classes:"govuk-input--width-4"},
+        {label: "Closing time", name: "closing-time", value: data['shed-c-monday-end-1'], classes:"govuk-input--width-4"}
       ]
     }) }}
 
