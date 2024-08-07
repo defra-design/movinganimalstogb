@@ -1,12 +1,165 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
 {% endblock %}
 
 {% block content %}
 
+      <h1 class="govuk-heading-l">
+        Table test 07.08.24
+      </h1>
 
+{% from "govuk/components/table/macro.njk" import govukTable %}
 
+{{ govukTable({
+  firstCellIsHeader: true,
+  classes: "govuk-table--small-text-until-tablet",
+  head: [
+    {
+      text: "Reference number"
+    },
+    {
+      text: "Time"
+    },
+    {
+      text: "Shed"
+    },
+    {
+      text: "Summary"
+    },
+    {
+      text: "Status"
+    },
+    {
+      text: "VRN"
+    },
+    {
+      text: "CHED"
+    },
+    {
+      text: "Organisation"
+    },
+    {
+      text: "Change"
+    },
+    {
+      text: "Cancel"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "5060 AULD"
+      },
+      {
+        text: "8:00 - 8:30am"
+      },
+      {
+        text: "C"
+      },
+      {
+        text: "11 Dogs, 2 Cats"
+      },
+      {
+        text: "Pending"
+      },
+      {
+        text: "2-EHY-849"
+      },
+      {
+        text: "490045 667863"
+      },
+       {
+        text: "EuroAnimal Transit"
+      },
+      { 
+        html: '<a href="/page">Change</a>'
+      },
+      {
+        html: '<a href="/page">Cancel</a>'
+      }
+    ],
+     [
+      {
+        text: "5060 AULD"
+      },
+      {
+        text: "8:00 - 8:30am"
+      },
+      {
+        text: "C"
+      },
+      {
+        text: "11 Dogs, 2 Cats"
+      },
+      {
+        text: "Pending"
+      },
+      {
+        text: "2-EHY-849"
+      },
+      {
+        text: "490045 667863"
+      },
+       {
+        text: "EuroAnimal Transit"
+      },
+      { 
+        html: '<a href="/page">Change</a>'
+      },
+      {
+        html: '<a href="/page">Cancel</a>'
+      }
+    ],
+     [
+      {
+        text: "5060 AULD"
+      },
+      {
+        text: "8:00 - 8:30am"
+      },
+      {
+        text: "C"
+      },
+      {
+        text: "11 Dogs, 2 Cats"
+      },
+      {
+        text: "Pending"
+      },
+      {
+        text: "2-EHY-849"
+      },
+      {
+        text: "490045 667863"
+      },
+       {
+        text: "EuroAnimal Transit"
+      },
+      { 
+        html: '<a href="/page">Change</a>'
+      },
+      {
+        html: '<a href="/page">Cancel</a>'
+      }
+    ]
+  ]
+}) }}
 
 {% endblock %}
