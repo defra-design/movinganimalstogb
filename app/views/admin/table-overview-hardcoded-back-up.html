@@ -38,24 +38,35 @@
 
 {% block content %}
 
-<div class="govuk-grid-row">
-<div class="govuk-grid-column-full">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
 
-<h1 class="govuk-heading-l">All inspections</h1>
+      <h1 class="govuk-heading-l">
+        All inspections
+      </h1>
 
-<div class=search-box>
+      <div class=search-box>
+
+<div class="moj-search">
+  <form action="#" method="post">
+    <div class="govuk-form-group">
+      <h2 class="govuk-heading-m">Search for an inspection</h2>
+      <p>Search by reference number, animal type, or CHED</p>
+      <input class="govuk-input moj-search__input " id="search" name="search" type="search" aria-describedby="search-hint">
+    </div>
+    <button type="submit" class="govuk-button moj-search__button " data-module="govuk-button">
+      Search
+    </button>
+  </form>
+  <p> </p>
+
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
 <div class="govuk-form-group">
-<form action="#" method="post">
-
-<main class="govuk-main-wrapper">
-<div class="govuk-grid-row">
-<div class="govuk-grid-column-two-thirds">
-<h2 class="govuk-heading-m">Search by ref number, animal type, or CHED</h2>
-<input class="govuk-input" id="event-name" name="eventName" type="text">
-</div>
-
-<div class="govuk-grid-column-one-third">
-  <h2 class="govuk-heading-m">Filter by shed</h2>
+      <h2 class="govuk-heading-m">Filter by shed</h2>
   <select class="govuk-select" id="sort" name="sort">
     <option value="published" selected>All sheds</option>
     <option value="Shed C">Shed C</option>
@@ -63,7 +74,8 @@
     <option value="Shed E">Shed E</option>
   </select>
 </div>
-</div>
+    </div>
+  </main>
 </div>
 
 <h2 class="govuk-heading-m">Filter by date</h2>
@@ -104,6 +116,7 @@
   </div>
 
   <div class="govuk-grid-column-one-half">
+    <div class="govuk-form-group">
         <h3 class="govuk-heading-s">To</h3>
   <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
     <div class="govuk-date-input" id="passport-issued">
@@ -129,19 +142,23 @@
             Year
           </label>
           <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+        </div>
            </div>
               </div>
               </div>
-              </div>
 
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
  <button type="submit" class="govuk-button" data-module="govuk-button">
   Apply filter
 </button>
       </div>
     </div>
-  </div>
-  </form>
+  </main>
+</div>
              
 
 </div>
@@ -149,12 +166,126 @@
 </div>
 </div>
 
-
 <p>11 results for ‘dog’ in ‘Shed C’ between 11.04.2024 and 11.06.204</p>
 
-  </main>
+      {%- from "govuk/components/table/macro.njk" import govukTable -%}
 
-      
+{{ govukTable({
+  attributes: {
+    'data-module': 'moj-sortable-table'
+  },
+  head: [
+    {
+      text: "Ref number",
+      attributes: {
+        "aria-sort": "ascending"
+      }
+    },
+    {
+      text: "Time",
+      attributes: {
+        "aria-sort": "ascending"
+      }
+    },
+    {
+      text: "Shed",
+      attributes: {
+        "aria-sort": "ascending"
+      }
+    },
+    {
+      text: "Summary",
+      attributes: {
+        "aria-sort": "ascending"
+      }
+    },
+    {
+      text: "Location",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Vehicle registration number",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Status",
+      attributes: {
+        "aria-sort": "none"
+      }
+    }
+  ],
+  rows: [
+    [
+    {
+        text: "5060 AULD",
+                attributes: {
+          "data-sort-value": "6961"
+        }
+      },
+      {
+        text: "8:00-8:30",
+        attributes: {
+          "data-sort-value": "8"
+        }
+      },
+      {
+        text: "C",
+            attributes: {
+          "data-sort-value": "C"
+        }
+      },
+      {
+        text: "11 Dogs",
+        attributes: {
+          "data-sort-value": "Dogs"
+        }
+      },
+      {
+        text: "Departed"
+      },
+      {
+        text: "2-EHY-849",
+        attributes: {
+          "data-sort-value": "6961"
+        }
+      },
+      {
+        text: "Done"
+      }
+    ]
+  ]
+}) }}
+
+<td class="govuk-table__cell">
+        {{govukTag({
+          text: "Pending",
+          classes: "govuk-tag--blue"
+        })}}
+      </td>
+
+      {{ govukTag({
+  text: "Completed"
+}) }}
+
+      {{ govukTag({
+  text: "Pending"
+}) }}
+
+      {{ govukTag({
+  text: "Pending"
+}) }}
+
+
+<strong class="govuk-tag govuk-tag--grey">
+          Inactive
+        </strong>
+        
+<p>I haven't worked out how to display a tag within the table.</p>
+
     </div>
   </div>
 

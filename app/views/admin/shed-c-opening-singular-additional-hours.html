@@ -22,9 +22,7 @@
 
 {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
-{% set _openDayValue = data['shed-c-monday-day-availability'] or "Open" %}
 {{ govukRadios({
-  id: "shed-c-monday-day-availability",
   classes: "govuk-radios--inline",
   name: "shed-c-monday-day-availability",
   value: data['shed-c-monday-day-availability'],
@@ -39,11 +37,11 @@
   items: [
     {
       text: "Open",
-      value: "_openDayValue"
+      value: "Open"
     },
     {
       text: "Closed",
-      value: "_openDayValue"
+      value: "Closed"
     }
   ]
 }) }}
@@ -59,17 +57,25 @@
       ]
     }) }}
 
-    <p><a href='shed-c-opening-singular-additional-hours'>Add more hours</a></p>
+    {{ govukDateInput({
+      id: "open-close-times",
+      namePrefix: "open-close-times",
+      items: [
+        {label: "Opening time", name: "opening-time",
+        classes:"govuk-input--width-4"},
+        {label: "Closing time", name: "closing-time", classes:"govuk-input--width-4"}
+      ]
+    }) }}
 
+    <p><a href='#'>Add more hours</a></p>
+
+    </div>
+  </div>
+  
 <button type="submit" class="govuk-button" data-module="govuk-button">
   Save changes
 </button>
 
-  <p><a href="close-bays-sheds">Cancel</a></p>
-
- </form>
-
-    </div>
-  </div>
+  <p><a href="shed-opening-availability-singular">Cancel</a></p>
 
 {% endblock %}
