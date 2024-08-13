@@ -25,8 +25,10 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">
-        Change how long an inspection lasts
+        Change how long a dog inspection lasts
       </h1>
+
+<form method="post" action="confirm-inspection-length" novalidate>
 
 {% from "govuk/components/input/macro.njk" import govukInput %}
 
@@ -40,7 +42,8 @@
   suffix: {
     text: "mins"
   },
-  spellcheck: false
+  spellcheck: false,
+  value: "30"
 }) }}
 
 {% from "govuk/components/input/macro.njk" import govukInput %}
@@ -55,7 +58,8 @@
   suffix: {
     text: "mins"
   },
-  spellcheck: false
+  spellcheck: false,
+  value: "30"
 }) }}
 
 {% from "govuk/components/input/macro.njk" import govukInput %}
@@ -70,7 +74,8 @@
   suffix: {
     text: "mins"
   },
-  spellcheck: false
+  spellcheck: false,
+    value: "30"
 }) }}
 
 {% from "govuk/components/input/macro.njk" import govukInput %}
@@ -85,7 +90,8 @@
   suffix: {
     text: "mins"
   },
-  spellcheck: false
+  spellcheck: false,
+    value: "30"
 }) }}
 
         <div class="govuk-form-group">
@@ -96,11 +102,9 @@
 <p>240 minutes</p>
 </div>
 
- <a href="confirm-inspection-length" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+<button type="submit" class="govuk-button" data-module="govuk-button">
   Save and continue
-    <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
-  </svg>
-</a>
+</button>
 
       </form>
 
