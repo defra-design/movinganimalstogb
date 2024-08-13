@@ -21,8 +21,8 @@
 
 {% from "govuk/components/table/macro.njk" import govukTable %}
 
-{% set _openTimesValue = data['open-close-times-opening-time'] or "8:00am" %}
-{% set _closeTimesValue = data['open-close-times-closing-time'] or "6:00pm" %}
+{% set _openTimesValue = data['open-close-times-opening-time'] or "8am" %}
+{% set _closeTimesValue = data['open-close-times-closing-time'] or "6pm" %}
 
 {{ govukTable({
   caption: "Shed C: Small animals",
@@ -45,7 +45,7 @@
         text: "Monday"
       },
       {
-        text: "8am to 6pm"
+        text: _openTimesValue + " to " + _closeTimesValue
       },
        { 
         html: '<a href="shed-c-opening-singular">Change</a>'

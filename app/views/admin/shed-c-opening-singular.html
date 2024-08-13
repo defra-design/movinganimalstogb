@@ -48,8 +48,8 @@
   ]
 }) }}
 
-{% set _openTimesValue = data['open-close-times-opening-time'] or "8:00am" %}
-{% set _closeTimesValue = data['open-close-times-closing-time'] or "6:00pm" %}
+{% set _openTimesValue = data['open-close-times-opening-time'] or "7am" %}
+{% set _closeTimesValue = data['open-close-times-closing-time'] or "7pm" %}
 {{ govukDateInput({
       id: "open-close-times",
       namePrefix: "open-close-times",
