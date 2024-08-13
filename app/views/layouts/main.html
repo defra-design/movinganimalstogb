@@ -5,9 +5,9 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 {% extends "govuk-prototype-kit/layouts/govuk-branded.html" %}
 {% block header %}
 {{ govukHeader({
-  homepageUrl: "#",
+  homepageUrl: "/index",
   serviceName: "Book a live animal inspection",
-  serviceUrl: "#",
+  serviceUrl: "/admin/today-dashboard",
   navigation: [
     {
       href: "today-dashboard.html",
@@ -17,6 +17,10 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
     {
       href: "#2",
       text: "Manage account"
+    },
+    {
+      href: "/admin/super-admin-controls",
+      text: "Site operations"
     },
     {
       href: "admin-signed-out.html",
