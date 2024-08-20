@@ -1,0 +1,82 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+ Holiday {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">View breaks during the day</h1>
+
+      <p>These are breaks booked in during the day. These slots will be unavailable for new inspection bookings.</p>
+
+      {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+
+{{ govukWarningText({
+  text: "Booking a break does not effect current inspection bookings. To cancel existing bookings, head to 'All inspections'.",
+  iconFallbackText: "Warning"
+}) }}
+
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Date</th>
+      <th scope="col" class="govuk-table__header">Time</th>
+      <th scope="col" class="govuk-table__header">Recurrance</th>
+      <th scope="col" class="govuk-table__header">Sheds</th>
+      <th scope="col" class="govuk-table__header">Note</th>
+      <th scope="col" class="govuk-table__header">Cancel</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">23th August 2024</th>
+      <td class="govuk-table__cell">Recurs every week</td>
+      <td class="govuk-table__cell">10am - 11am</td>
+      <td class="govuk-table__cell">Shed C</td>
+      <td class="govuk-table__cell">Fire drill</td>
+      <td class="govuk-table__cell"><a href='#'>Cancel</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">9th July 2024</th>
+      <td class="govuk-table__cell">Recurs every month</td>
+      <td class="govuk-table__cell">8am - 8.30am</td>
+      <td class="govuk-table__cell">All sheds</td>
+      <td class="govuk-table__cell">Staff meeting</td>
+            <td class="govuk-table__cell"><a href='#'>Cancel</a></td>
+    </tr>
+        <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">1st September 2024</th>
+      <td class="govuk-table__cell">Does not recur</td>
+      <td class="govuk-table__cell">8am - 8.30am</td>
+      <td class="govuk-table__cell">Shed D</td>
+      <td class="govuk-table__cell">Cleaning</td>
+            <td class="govuk-table__cell"><a href='#'>Cancel</a></td>
+    </tr>
+  </tbody>
+</table>
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Add another date",
+  href: "new-holiday"
+}) }}
+
+{% endblock %}
