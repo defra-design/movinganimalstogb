@@ -18,7 +18,7 @@
 
 <h1 class="govuk-heading-l">Change Shed C Monday opening times</h1>
 
-<form method="post" action="shed-opening-availability-singular" novalidate>
+<form method="post" action="shed-c-opening-singular-check-answers" novalidate>
 
 {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
@@ -41,8 +41,8 @@
       checked: true
     },
     {
-      text: "Close",
-      value: "Close"
+      text: "Closed",
+      value: "Closed"
     }
   ]
 }) }}
@@ -53,8 +53,8 @@
       id: "open-close-times",
       namePrefix: "open-close-times",
       items: [
-        {label: "Opening time", name: "opening-time", value: _openTimesValue, classes:"govuk-input--width-4"},
-        {label: "Closing time", name: "closing-time", value: _closeTimesValue, classes:"govuk-input--width-4"}
+        {label: "Open", name: "opening-time", value: _openTimesValue, classes:"govuk-input--width-4"},
+        {label: "Closed", name: "closing-time", value: _closeTimesValue, classes:"govuk-input--width-4"}
       ]
     }) }}
 
@@ -62,9 +62,9 @@
       id: "open-close-times",
       namePrefix: "open-close-times",
       items: [
-        {label: "Opening time", name: "opening-time",
+        {label: "Open", name: "opening-time",
         classes:"govuk-input--width-4"},
-        {label: "Closing time", name: "closing-time", classes:"govuk-input--width-4"}
+        {label: "Closed", name: "closing-time", classes:"govuk-input--width-4"}
       ]
     }) }}
 
