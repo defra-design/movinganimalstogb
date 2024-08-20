@@ -40,13 +40,13 @@
       <th scope="col" class="govuk-table__header">Time</th>
       <th scope="col" class="govuk-table__header">Recurrance</th>
       <th scope="col" class="govuk-table__header">Sheds</th>
-      <th scope="col" class="govuk-table__header">Note</th>
+      <th scope="col" class="govuk-table__header">Reason</th>
       <th scope="col" class="govuk-table__header">Cancel</th>
     </tr>
   </thead>
   <tbody class="govuk-table__body">
     <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">23th August 2024</th>
+      <th scope="row" class="govuk-table__header">23rd August 2024</th>
       <td class="govuk-table__cell">Recurs every week</td>
       <td class="govuk-table__cell">10am - 11am</td>
       <td class="govuk-table__cell">Shed C</td>
@@ -75,8 +75,8 @@
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
 {{ govukButton({
-  text: "Add another date",
-  href: "new-holiday"
+  text: "Add another break",
+  href: "breaks-select-shed"
 }) }}
 
 {% endblock %}

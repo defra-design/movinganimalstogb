@@ -16,14 +16,14 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="/path/of/next/page" method="post">
+      <form class="form" action="breaks-date" method="post">
 
-  
 {{ govukRadios({
-  name: "ShedToClose",
+  name: "ShedToCloseForBreak",
+  value: data['ShedToCloseForBreak'],
   fieldset: {
     legend: {
-      text: "Which shed would you like to close?",
+      text: "Where do you need the break to place?",
       isPageHeading: true,
       classes: "govuk-fieldset__legend--l"
     }
@@ -44,9 +44,11 @@
   ]
 }) }}
 
-        {{ govukButton({
-          text: "Continue"
-        }) }}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Save and continue"
+}) }}
 
       </form>
 

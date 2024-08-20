@@ -23,19 +23,6 @@
     <div class="govuk-grid-column-two-thirds">
       {% from "govuk/components/date-input/macro.njk" import govukDateInput %}
 
-      --
-          {{ govukInput({
-      label: {
-        text: "Animal species",
-        classes: "govuk-label"
-      },
-      name: 'animal-species',
-      value: data['animal-species'],
-      classes:"govuk-input govuk-input--width-10",
-      autocomplete:"off"
-  }) }}
-  --
-
 {{ govukDateInput({
   id: "holiday",
   name: "holiday",

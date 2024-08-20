@@ -1,0 +1,107 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">
+        Check the inspection break you're adding
+      </h1>
+
+      {{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              text: "Date"
+            },
+            value: {
+              text: "23th August 2028"
+            },
+            actions: {
+              items: [
+                {
+                  href: "breaks-date",
+                  text: "Change",
+                  visuallyHiddenText: "Date"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Time"
+            },
+            value: {
+              text: "8am to 10am"
+            },
+            actions: {
+              items: [
+                {
+                  href: "breaks-time",
+                  text: "Change",
+                  visuallyHiddenText: "Break time"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Shed"
+            },
+            value: {
+              text: data['ShedToCloseForBreak']
+            },
+            actions: {
+              items: [
+                {
+                  href: "breaks-select-shed",
+                  text: "Change",
+                  visuallyHiddenText: "Question 3"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Reason"
+            },
+            value: {
+              text: data['breakReason'] 
+            },
+            actions: {
+              items: [
+                {
+                  href: "breaks-note",
+                  text: "Change",
+                  visuallyHiddenText: "Date"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      <form action="breaks-view-all" method="post" novalidate>
+
+        {{ govukButton({
+          text: "Confirm break"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}
