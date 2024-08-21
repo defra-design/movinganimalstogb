@@ -22,9 +22,9 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">View all bookings pauses</h1>
+      <h1 class="govuk-heading-l">View scheduled breaks</h1>
 
-      <p>These are times when the sheds are not available. At these times and dates, the sheds will be unavailable for new inspection bookings.</p>
+      <p>Schedule breaks are times when new bookings cannot be made. You can schedule a break for a few hours or days. Breaks can be one-offs or recurring.</p>
 
       {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
 
@@ -75,7 +75,7 @@
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
 {{ govukButton({
-  text: "Add another pause",
+  text: "Schedule another break",
   href: "breaks-note"
 }) }}
 
