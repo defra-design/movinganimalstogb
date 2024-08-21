@@ -22,14 +22,14 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">Pause new bookings for less than a day</h1>
+      <h1 class="govuk-heading-l">View all bookings pauses</h1>
 
-      <p>These are breaks booked in during the day. These slots will be unavailable for new inspection bookings.</p>
+      <p>These are times when the sheds are not available. At these times and dates, the sheds will be unavailable for new inspection bookings.</p>
 
       {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
 
 {{ govukWarningText({
-  text: "Booking a break does not effect current inspection bookings. To cancel existing bookings, head to 'All inspections'.",
+  text: "Booking a new pause does not effect current inspection bookings. To cancel existing bookings, head to 'All inspections'.",
   iconFallbackText: "Warning"
 }) }}
 
@@ -39,7 +39,7 @@
       <th scope="col" class="govuk-table__header">Date</th>
       <th scope="col" class="govuk-table__header">Time</th>
       <th scope="col" class="govuk-table__header">Recurrance</th>
-      <th scope="col" class="govuk-table__header">Sheds</th>
+      <th scope="col" class="govuk-table__header">Shed</th>
       <th scope="col" class="govuk-table__header">Reason</th>
       <th scope="col" class="govuk-table__header">Cancel</th>
     </tr>
@@ -47,24 +47,24 @@
   <tbody class="govuk-table__body">
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">23rd August 2024</th>
-      <td class="govuk-table__cell">Recurs every week</td>
       <td class="govuk-table__cell">10am - 11am</td>
+     <td class="govuk-table__cell">Recurs every week</td>
       <td class="govuk-table__cell">Shed C</td>
       <td class="govuk-table__cell">Fire drill</td>
       <td class="govuk-table__cell"><a href='#'>Cancel</a></td>
     </tr>
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">9th July 2024</th>
-      <td class="govuk-table__cell">Recurs every month</td>
       <td class="govuk-table__cell">8am - 8.30am</td>
+      <td class="govuk-table__cell">Recurs every month</td>
       <td class="govuk-table__cell">All sheds</td>
       <td class="govuk-table__cell">Staff meeting</td>
             <td class="govuk-table__cell"><a href='#'>Cancel</a></td>
     </tr>
         <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">1st September 2024</th>
-      <td class="govuk-table__cell">Does not recur</td>
       <td class="govuk-table__cell">8am - 8.30am</td>
+      <td class="govuk-table__cell">Does not recur</td>
       <td class="govuk-table__cell">Shed D</td>
       <td class="govuk-table__cell">Cleaning</td>
             <td class="govuk-table__cell"><a href='#'>Cancel</a></td>
@@ -75,7 +75,7 @@
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
 {{ govukButton({
-  text: "Add another break",
+  text: "Add another pause",
   href: "breaks-note"
 }) }}
 

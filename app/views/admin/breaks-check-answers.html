@@ -26,7 +26,7 @@
               text: "Date"
             },
             value: {
-              text: "23th August 2028"
+              text: data['BreakStartDate'] - data['BreakEndDate']
             },
             actions: {
               items: [
@@ -79,7 +79,7 @@
               text: "Reason"
             },
             value: {
-              text: data['breakReason'] 
+              text: data['BreakNote'] 
             },
             actions: {
               items: [
@@ -93,10 +93,10 @@
           },
           {
             key: {
-              text: "Recurrance"
+              text: "Recurrence"
             },
             value: {
-              text: data['breakReason'] 
+              text: data['BreakRecurrence'] 
             },
             actions: {
               items: [

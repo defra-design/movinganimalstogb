@@ -13,14 +13,14 @@
 
 {% block content %}
 
-<form class="form" action="breaks-all-day" method="post">
+<form class="form" action="break-all-day" method="post">
 
 {% from "govuk/components/date-input/macro.njk" import govukDateInput %}
 
 {{ govukDateInput({
-  id: "break-date",
-  namePrefix: "break-date",
-  value: data['DateToCloseForBreak'],
+  id: "break-start-date",
+  namePrefix: "break-start-date",
+  value: data['BreakStartDate'],
   fieldset: {
     legend: {
       text: "Enter the start date",
