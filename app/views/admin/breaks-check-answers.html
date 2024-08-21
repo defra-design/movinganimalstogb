@@ -16,7 +16,7 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">
 
       <h1 class="govuk-heading-xl">
-        Check the inspection break you're adding
+        Check details
       </h1>
 
       {{ govukSummaryList({
@@ -77,6 +77,23 @@
           {
             key: {
               text: "Reason"
+            },
+            value: {
+              text: data['breakReason'] 
+            },
+            actions: {
+              items: [
+                {
+                  href: "breaks-note",
+                  text: "Change",
+                  visuallyHiddenText: "Date"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Recurrance"
             },
             value: {
               text: data['breakReason'] 

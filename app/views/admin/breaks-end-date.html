@@ -13,39 +13,24 @@
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<form class="form" action="breaks-recurrence" method="post">
 
-      <form class="form" action="breaks-date" method="post">
+{% from "govuk/components/date-input/macro.njk" import govukDateInput %}
 
-{{ govukRadios({
-  name: "ShedToCloseForBreak",
-  value: data['ShedToCloseForBreak'],
+{{ govukDateInput({
+  id: "break-end-date",
+  namePrefix: "break-end-date",
+  value: data['BreakEndDate'],
   fieldset: {
     legend: {
-      text: "Select the shed",
+      text: "When do bookings resume?",
       isPageHeading: true,
       classes: "govuk-fieldset__legend--l"
     }
   },
-  items: [
-    {
-      value: "Shed C",
-      text: "Shed C"
-    },
-    {
-      value: "Shed D",
-      text: "Shed D"
-    },
-    {
-      value: "Shed E",
-      text: "Shed E"
-    },
-    {
-      value: "All sheds",
-      text: "All sheds"
-    }
-  ]
+  hint: {
+    text: "For example, 27 3 2007"
+  }
 }) }}
 
 {% from "govuk/components/button/macro.njk" import govukButton %}
@@ -55,7 +40,6 @@
 }) }}
 
       </form>
-
     </div>
   </div>
 

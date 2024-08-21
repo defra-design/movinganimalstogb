@@ -16,13 +16,13 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="breaks-check-answers" method="post">
+      <form class="form" action="breaks-select-shed" method="post">
 
 {% from "govuk/components/input/macro.njk" import govukInput %}
 
 {{ govukInput({
   label: {
-    text: "What is the reason for the break?",
+    text: "What is the reason",
     classes: "govuk-label--l",
     isPageHeading: true
   },

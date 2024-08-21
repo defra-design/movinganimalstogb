@@ -19,31 +19,35 @@
       <form class="form" action="breaks-date" method="post">
 
 {{ govukRadios({
-  name: "ShedToCloseForBreak",
-  value: data['ShedToCloseForBreak'],
+  name: "BreakRecurrence",
+  value: data['BreakRecurrence'],
   fieldset: {
     legend: {
-      text: "Select the shed",
+      text: "How often does it recur?",
       isPageHeading: true,
       classes: "govuk-fieldset__legend--l"
     }
   },
   items: [
     {
-      value: "Shed C",
-      text: "Shed C"
+      value: "Daily",
+      text: "Daily"
     },
     {
-      value: "Shed D",
-      text: "Shed D"
+      value: "Weekly",
+      text: "Weekly"
     },
     {
-      value: "Shed E",
-      text: "Shed E"
+      value: "Monthly",
+      text: "Monthly"
     },
     {
-      value: "All sheds",
-      text: "All sheds"
+      value: "Annually",
+      text: "Annually"
+    },
+    {
+      value: "Does not recur",
+      text: "Does not recur"
     }
   ]
 }) }}

@@ -13,7 +13,7 @@
 
 {% block content %}
 
-<form class="form" action="breaks-time" method="post">
+<form class="form" action="breaks-all-day" method="post">
 
 {% from "govuk/components/date-input/macro.njk" import govukDateInput %}
 
@@ -23,7 +23,7 @@
   value: data['DateToCloseForBreak'],
   fieldset: {
     legend: {
-      text: "What date do you want the break to take place?",
+      text: "Enter the start date",
       isPageHeading: true,
       classes: "govuk-fieldset__legend--l"
     }

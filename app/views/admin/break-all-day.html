@@ -13,37 +13,26 @@
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-
-      <form class="form" action="breaks-date" method="post">
+<form class="form" action="breaks-end-date" method="post">
 
 {{ govukRadios({
-  name: "ShedToCloseForBreak",
-  value: data['ShedToCloseForBreak'],
+  name: "BreakAllDay",
+  value: data['BreakAllDay'],
   fieldset: {
     legend: {
-      text: "Select the shed",
+      text: "Is this an all-day event?",
       isPageHeading: true,
       classes: "govuk-fieldset__legend--l"
     }
   },
   items: [
     {
-      value: "Shed C",
-      text: "Shed C"
+      value: "All day",
+      text: "All day"
     },
     {
-      value: "Shed D",
-      text: "Shed D"
-    },
-    {
-      value: "Shed E",
-      text: "Shed E"
-    },
-    {
-      value: "All sheds",
-      text: "All sheds"
+      value: "Not all day",
+      text: "Not all day"
     }
   ]
 }) }}
@@ -55,7 +44,6 @@
 }) }}
 
       </form>
-
     </div>
   </div>
 
