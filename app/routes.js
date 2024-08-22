@@ -39,3 +39,15 @@ router.post('/animal-number', function(request, response) {
         response.redirect("/animal-number")
     }
 })
+
+router.post('/BreakAllDay-answer', function(request, response) {
+
+    var BreakAllDay = request.session.data['BreakAllDay']
+    if (BreakAllDay == "AllDay"){
+        response.redirect("/admin/breaks-end-date")
+    } 
+    else 
+    {
+        response.redirect("/admin/breaks-time")
+    }
+})
