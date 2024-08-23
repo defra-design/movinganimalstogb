@@ -5,12 +5,6 @@
 {% endblock %}
 
 {% block beforeContent %}
-{{ govukPhaseBanner({
-  tag: {
-    text: "Beta"
-  },
-  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-}) }}
   {{ govukBackLink({
   text: "Back",
   href: "javascript:window.history.back()"
@@ -25,32 +19,36 @@
       <form class="form" action="breaks-recurrence" method="post">
 
 <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="break-time">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
         What time is the break?
       </h1>
     </legend>
-    <div id="passport-issued-hint" class="govuk-hint">
+    <div id="break-time" class="govuk-hint">
       For example, 8am to 10am
     </div>
-    <div class="govuk-date-input" id="passport-issued">
+
+    <div class="govuk-date-input" id="break-time">
+
       <div class="govuk-date-input__item">
         <div class="govuk-form-group">
-          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+          <label class="govuk-label govuk-date-input__label" for="break-time-start">
             Start time
           </label>
-          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="break-time-start" name="break-time-start" type="text" inputmode="numeric">
         </div>
       </div>
+
       <div class="govuk-date-input__item">
         <div class="govuk-form-group">
-          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+          <label class="govuk-label govuk-date-input__label" for="break-time-end">
             End time
           </label>
-          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="break-time-end" name="break-time-end" type="text" inputmode="numeric">
         </div>
       </div>
+
     </div>
   </fieldset>
 </div>
