@@ -26,24 +26,40 @@
 {{ govukDateInput({
   id: "break-start-date",
   namePrefix: "break-start-date",
-  value: data['BreakStartDate'],
   fieldset: {
     legend: {
-      text: "Enter the start date",
+      text: "What date does the break start?",
       isPageHeading: true,
       classes: "govuk-fieldset__legend--l"
     }
   },
   hint: {
     text: "For example, 27 3 2007"
-  }
+  },
+  items: [
+    {
+      classes: "govuk-input--width-2",
+      name: "day",
+      value: data['break-start-day']
+    },
+    {
+      classes: "govuk-input--width-2",
+      name: "month",
+      value: data['break-start-month']
+    },
+    {
+      classes: "govuk-input--width-4",
+      name: "year",
+      value: data['break-start-year']
+    }
+  ]
 }) }}
 
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
-{{ govukButton({
-  text: "Save and continue"
-}) }}
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
 
       </form>
     </div>
