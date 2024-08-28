@@ -47,26 +47,375 @@
 
 <h1 class="govuk-heading-l">All inspections</h1>
 
-{{ mojSearch({
-  action: '#',
-  method: 'post',
-  input: {
-    id: 'search',
-    name: 'search'
-  },
-  label: {
-    text: 'Search for an inspection',
-    classes: 'govuk-!-font-weight-bold'
-  },
-  hint: {
-    text: 'Enter the reference number, animal type, or CHED'
-  },
-  button: {
-    text: 'Search'
-  }
-}) }}
-<br><br>
+<div class=search-box>
+<div class="govuk-form-group">
+<form action="#" method="post">
 
-<iframe class="airtable-embed" src="https://airtable.com/embed/appRMk0y4uZRjpeB3/shrz7qoQMASPuHIIA?viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds">
+<h2 class="govuk-heading-m">Search by ref number, animal type, or CHED</h2>
+<input class="govuk-input" id="event-name" name="eventName" type="text">
+</div>
+
+<div class="govuk-grid-column-one-third">
+  <h2 class="govuk-heading-m">Filter by shed</h2>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published" selected>All sheds</option>
+    <option value="Shed C">Shed C</option>
+    <option value="Shed D">Shed D</option>
+    <option value="Shed E">Shed E</option>
+  </select>
+</div>
+</div>
+</div>
+
+<h2 class="govuk-heading-m">Filter by date</h2>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+<div class="govuk-form-group">
+        <h3 class="govuk-heading-s">From</h3>
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+    <div class="govuk-date-input" id="passport-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+        </div>
+      </div>
+ </div>
+  </fieldset>
+</div>
+  </div>
+
+  <div class="govuk-grid-column-one-half">
+        <h3 class="govuk-heading-s">To</h3>
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+    <div class="govuk-date-input" id="passport-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+           </div>
+              </div>
+              </div>
+              </div>
+
+      <div class="govuk-grid-column-full">
+ <button type="submit" class="govuk-button" data-module="govuk-button">
+  Apply search and filter
+</button>
+      </div>
+    </div>
+  </div>
+  </form>
+
+  <p>11 results for ‘dog’ in ‘Shed C’ between 11 April 2025 and 11 June 2025.</p>
+
+<table class="govuk-table" data-module="moj-multi-select" data-multi-select-checkbox="#select-all">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col" id="select-all"></th>
+      <th class="govuk-table__header" scope="col">Reference number</th>
+      <th class="govuk-table__header" scope="col">Time</th>
+      <th class="govuk-table__header" scope="col">Date</th>
+      <th class="govuk-table__header" scope="col">Shed</th>
+      <th class="govuk-table__header" scope="col">Summary</th>
+      <th class="govuk-table__header" scope="col">VRN</th>
+      <th class="govuk-table__header" scope="col">CHED</th>
+      <th class="govuk-table__header" scope="col">Organisation</th>
+      <th class="govuk-table__header" scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row govuk-table__row--selected">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-aconcagua">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-aconcagua">
+            <span class="govuk-visually-hidden">Select inspection</span>
+          </label>
+        </div>
+      </td>
+
+      <td class="govuk-table__cell"><a href="admin/view-inspection">4392 BDKS</a></td>
+      <td class="govuk-table__cell">8 - 8.30pm</td>
+      <td class="govuk-table__cell">2 April 2024</td>
+      <td class="govuk-table__cell">C</td>
+      <td class="govuk-table__cell">28 Cattle</td>
+      <td class="govuk-table__cell">4-DNH-234</td>
+      <td class="govuk-table__cell">CHEDA.GB.2025.1869339</td>
+      <td class="govuk-table__cell">EuroAnimal Transit</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">
+          Pending
+        </strong></td>
+    </tr>
+
+        <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-denali" value="denali">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-denali">
+            <span class="govuk-visually-hidden">Select inspection</span>
+          </label>
+        </div>
+      </td>
+      </td>
+      <td class="govuk-table__cell"><a href="admin/view-inspection">8834 SUER</a></td>
+      <td class="govuk-table__cell">9 - 10.30am</td>
+      <td class="govuk-table__cell">2 April 2024</td>
+      <td class="govuk-table__cell">D</td>
+      <td class="govuk-table__cell">1 Horse</td>
+      <td class="govuk-table__cell">3-SDQ-234</td>
+      <td class="govuk-table__cell">CHEDA.GB.2025.1869339</td>
+      <td class="govuk-table__cell">Horse Passageways</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">
+          In progress
+        </strong></td>
+    </tr>
+
+        <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-denali" value="denali">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-denali">
+            <span class="govuk-visually-hidden">Select inspection</span>
+          </label>
+        </div>
+      </td>
+      </td>
+      <td class="govuk-table__cell"><a href="admin/view-inspection">5063 AULD</a></td>
+      <td class="govuk-table__cell">9.30 - 10.00am</td>
+      <td class="govuk-table__cell">2 April 2024</td>
+      <td class="govuk-table__cell">C</td>
+      <td class="govuk-table__cell">12 Dogs, 2 Iguanas</td>
+      <td class="govuk-table__cell">3-CHY-647</td>
+      <td class="govuk-table__cell">CHEDA.GB.2025.6786333</td>
+      <td class="govuk-table__cell">SaveThePets Limited</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">
+          In progress
+        </strong></td>
+    </tr>
+        <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-denali" value="denali">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-denali">
+            <span class="govuk-visually-hidden">Select inspection</span>
+          </label>
+        </div>
+      </td>
+      </td>
+      <td class="govuk-table__cell"><a href="admin/view-inspection">8732 NMPI</a></td>
+      <td class="govuk-table__cell">10 - 11am</td>
+      <td class="govuk-table__cell">2 April 2024</td>
+      <td class="govuk-table__cell">D</td>
+      <td class="govuk-table__cell">1 Horse</td>
+      <td class="govuk-table__cell">8-UUL-763</td>
+      <td class="govuk-table__cell">CHEDA.GB.2025.4326333</td>
+      <td class="govuk-table__cell">EuroAnimal Transit</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">
+          Pending
+        </strong></td>
+    </tr>
+        <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-denali" value="denali">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-denali">
+            <span class="govuk-visually-hidden">Select inspection</span>
+          </label>
+        </div>
+      </td>
+      </td>
+      <td class="govuk-table__cell"><a href="admin/view-inspection">5060 AULD</a></td>
+      <td class="govuk-table__cell">1 - 2pm</td>
+      <td class="govuk-table__cell">2 April 2024</td>
+      <td class="govuk-table__cell">C</td>
+      <td class="govuk-table__cell">3 Cats</td>
+      <td class="govuk-table__cell">2-EHY-849</td>
+      <td class="govuk-table__cell">CHEDA.GB.2025.4326333</td>
+      <td class="govuk-table__cell">EuroAnimal Transit</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">
+          Arrived
+        </strong></td>
+    </tr>
+        <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-denali" value="denali">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-denali">
+            <span class="govuk-visually-hidden">Select inspection</span>
+          </label>
+        </div>
+      </td>
+      </td>
+      <td class="govuk-table__cell"><a href="admin/view-inspection">8732 NMPI</a></td>
+      <td class="govuk-table__cell">2 - 3pm</td>
+      <td class="govuk-table__cell">2 April 2024</td>
+      <td class="govuk-table__cell">C</td>
+      <td class="govuk-table__cell">3 Llamas</td>
+      <td class="govuk-table__cell">7-YUX-815</td>
+      <td class="govuk-table__cell">CHEDA.GB.2025.1010233</td>
+      <td class="govuk-table__cell">EuroAnimal Transit</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">
+          Pending
+        </strong></td>
+    </tr>
+        <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-denali" value="denali">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-denali">
+            <span class="govuk-visually-hidden">Select inspection</span>
+          </label>
+        </div>
+      </td>
+      </td>
+      <td class="govuk-table__cell"><a href="admin/view-inspection">9797 LAUD</a></td>
+      <td class="govuk-table__cell">3 - 4pm</td>
+      <td class="govuk-table__cell">2 April 2024</td>
+      <td class="govuk-table__cell">E</td>
+      <td class="govuk-table__cell">4 Ferret, PP on load</td>
+      <td class="govuk-table__cell">8-UUL-763</td>
+      <td class="govuk-table__cell">CHEDA.GB.2025.1010233</td>
+      <td class="govuk-table__cell">Happy Pet Logistics</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">
+          In transit
+        </strong></td>
+    </tr>
+        <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-denali" value="denali">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-denali">
+            <span class="govuk-visually-hidden">Select inspection</span>
+          </label>
+        </div>
+      </td>
+      </td>
+      <td class="govuk-table__cell"><a href="admin/view-inspection">8732 NMPI</a></td>
+      <td class="govuk-table__cell">4 - 5pm</td>
+      <td class="govuk-table__cell">2 April 2024</td>
+      <td class="govuk-table__cell">E</td>
+      <td class="govuk-table__cell">9 dogs</td>
+      <td class="govuk-table__cell">3-CHY-647</td>
+      <td class="govuk-table__cell">CHEDA.GB.2025.1010233</td>
+      <td class="govuk-table__cell">EuroPet Movers</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">
+          Pending
+        </strong></td>
+    </tr>
+        <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-denali" value="denali">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-denali">
+            <span class="govuk-visually-hidden">Select inspection</span>
+          </label>
+        </div>
+      </td>
+      </td>
+      <td class="govuk-table__cell"><a href="admin/view-inspection">2352 UIWQ</a></td>
+      <td class="govuk-table__cell">8 - 8.30pm</td>
+      <td class="govuk-table__cell">2 April 2024</td>
+      <td class="govuk-table__cell">C</td>
+      <td class="govuk-table__cell">1 Horse</td>
+      <td class="govuk-table__cell">7-YUX-815</td>
+      <td class="govuk-table__cell">CHEDA.GB.2025.1010233</td>
+      <td class="govuk-table__cell">NeighMovers</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">
+          Pending
+        </strong></td>
+    </tr>
+
+        <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-denali" value="denali">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-denali">
+            <span class="govuk-visually-hidden">Select inspection</span>
+          </label>
+        </div>
+      </td>
+      </td>
+      <td class="govuk-table__cell"><a href="admin/view-inspection">5060 AULD</a></td>
+      <td class="govuk-table__cell">8 - 8.30pm</td>
+      <td class="govuk-table__cell">2 April 2024</td>
+      <td class="govuk-table__cell">C</td>
+      <td class="govuk-table__cell">11 Dogs, 2 Cats</td>
+      <td class="govuk-table__cell">2-EHY-849</td>
+      <td class="govuk-table__cell">490045 667863</td>
+      <td class="govuk-table__cell">EuroAnimal Transit</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">
+          Pending
+        </strong></td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-elbrus" value="elbrus">
+          <label class="govuk-label govuk-checkboxes__label" for="mountain-elbrus">
+            <span class="govuk-visually-hidden">Select inspection</span>
+          </label>
+        </div>
+      </td>
+
+      <td class="govuk-table__cell"><a href="admin/view-inspection">5060 AULD</a></td>
+      <td class="govuk-table__cell">8 - 8.30pm</td>
+      <td class="govuk-table__cell">2 April 2024</td>
+      <td class="govuk-table__cell">C</td>
+      <td class="govuk-table__cell">11 Dogs, 2 Cats</td>
+      <td class="govuk-table__cell">2-EHY-849</td>
+      <td class="govuk-table__cell">490045 667863</td>
+      <td class="govuk-table__cell">EuroAnimal Transit</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">
+          Pending
+        </strong></td>
+    </tr>
+  </tbody>
+
+
+
+</table>
+
 
 {% endblock %}
