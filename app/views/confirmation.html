@@ -25,6 +25,97 @@
         html: "Your reference number<br><strong>QE9 O06CB ADO</strong>"
       }) }}
 
+
+   {% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Copy reference number",
+  classes: "govuk-button--secondary"
+}) }}
+
+   {% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Print inspection confirmation",
+  classes: "govuk-button--secondary"
+}) }}
+
+      <h2 class="govuk-heading-m">
+        Your inspection details
+      </h2>
+
+{{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              text: "Border control post"
+            },
+            value: {
+              text: data['WhichBorderControlFacility']
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Vehicle type"
+            },
+            value: {
+              text: data['VehicleType']
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Vehicle unloading type"
+            },
+            value: {
+              text: data['VehicleLoad']
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Animal species "
+            },
+            value: {
+              text: data['animal-species']
+            }
+          },
+           {
+            key: {
+              text: "Number of animals"
+            },
+            value: {
+              text: data['animal-number']
+            }
+          },
+           {
+            key: {
+              text: "Time and date"
+            },
+            value: {
+              text: "30 January 2024, 11:30am"
+            }
+          },
+           {
+            key: {
+              text: "CHED number"
+            },
+            value: {
+              text: "CHEDA.GB.2024.1984055"
+            }
+          },
+          {
+            key: {
+              text: "Vehicle Registration Number (VRN)"
+            },
+            value: {
+              text: "WF10 3YG"
+            }
+          }
+        ]
+      }) }}
+
       <h2 class="govuk-heading-m">
         What happens next
       </h2>
