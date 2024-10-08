@@ -1,0 +1,90 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+{{ mojPrimaryNavigation({
+  label: 'Primary navigation',
+  items: [
+    {
+      text: 'Today',
+      href: 'today-dashboard',
+      active: true
+    },
+    {
+      text: 'Tomorrow',
+      href: 'tomorrow-dashboard'
+    },
+    {
+      text: 'All inspections',
+      href: 'all-inspections-dashboard'
+    }
+  ]
+}) }}
+
+{%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
+
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-l">View today's inspections</h1>
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-full">
+<div class="admin-box">
+<h2 class="govuk-heading-m">All inspections today</h2>
+<h1 class="govuk-heading-l">24</h1>
+<a href="today-table-overview">View all inspections today</a>
+</div>
+</div>
+
+<div class="govuk-grid-column-one-third">
+<div class="admin-box">
+<h2 class="govuk-heading-m">Shed C: Small animals</h2>
+<h1 class="govuk-heading-l">10</h1>
+<a href="today-table-overview">View all Shed C inspections</a>
+</div>
+</div>
+
+<div class="govuk-grid-column-one-third">
+<div class="admin-box">
+<h2 class="govuk-heading-m">Shed D: Equine</h2>
+<h1 class="govuk-heading-l">6</h1>
+<a href="today-table-overview">View all Shed D inspections</a>
+</div>
+</div>
+
+<div class="govuk-grid-column-one-third">
+<div class="admin-box">
+<h2 class="govuk-heading-m">Shed E: Livestock</h2>
+<h1 class="govuk-heading-l">8</h1>
+<a href="today-table-overview">View all Shed E inspections</a>
+</div>
+</div>
+</div>
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-full">
+
+    <a href="https://moving-animals-to-gb-f6ffdaf23605.herokuapp.com/declaration.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+  Book a new inspection
+    <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+  </svg>
+</a><br>
+
+</button>
+</div>
+</div>
+
+{% endblock %}

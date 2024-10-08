@@ -1,0 +1,62 @@
+{% extends "layouts/main-booker.html" %}
+
+{% block pageTitle %}
+  Confirmation – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+{{ govukPanel({
+        titleText: "Inspection details have been added",
+        html: "Your reference number<br><strong>QE9 O06CB ADO</strong>"
+      }) }}
+
+      <h2 class="govuk-heading-m">
+        Inspection details
+      </h2>
+
+<div class="govuk-inset-text">
+  <p><b>Reference number:</b> QE9 O06CB ADO<p>
+  <p><b>Inspection date and time:</b>30 January 2024, 11.30</p>
+  <p><b>Vehicle type:</b> Class C1: large van up to 7.5 tonnes</p>
+  <p><b>Animal species:</b> Cattle</p>
+  <p><b>Number of animals:</b> 30</p>
+</div>
+
+      <h2 class="govuk-heading-m">
+        What happens next
+      </h2>
+
+      <p>
+        The vehicle should arrive at the following location:
+      </p>
+
+  <p>Sevington Border Control Post</p>
+  <p>Ashford</p>
+  <p>TN25 6GE</p>
+
+    <h3 class="govuk-heading-s">Changes to your booking</h3>
+<p>You can change details about your booking, including time and date. You can also cancel your inspection and start again.</p>
+
+</div>
+    </div>
+  </main>
+</div>
+    
+    </div>
+{% endblock %}

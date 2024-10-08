@@ -1,0 +1,46 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Cancel inspection – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Are you sure you want to cancel selected inspections?
+      </h1>
+
+<p>The booking contacts for these inspections will receive an automated cancellation message to their email and phone.</p>
+
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-visually-hidden">Warning</span>
+    This action cannot be undone.
+  </strong>
+</div>
+
+<a href="bulk-cancel-success.html" button type="submit" class="govuk-button govuk-button--warning" data-module="govuk-button">
+  Yes, cancel selected inspections
+</a></button>
+
+</div>
+{% endblock %}

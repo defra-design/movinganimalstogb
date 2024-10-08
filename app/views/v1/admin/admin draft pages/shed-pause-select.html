@@ -1,7 +1,7 @@
-{% extends "layouts/main-booker.html" %}
+{% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Location {{ serviceName }}
+  Question page template – {{ serviceName }}
 {% endblock %}
 
 {% block beforeContent %}
@@ -16,49 +16,55 @@
   text: "Back",
   href: "javascript:window.history.back()"
 }) }}
+
 {% endblock %}
 
 {% block content %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form action="vehicle-type" method="post" novalidate>
-    
 
+      <form class="form" action="/path/of/next/page" method="post">
+
+<h1 class="govuk-heading-l">Pause new bookings</h1>
+
+<h1 class="govuk-heading-m">Which shed would you like to pause new bookings for?</h1>
+  
 {{ govukRadios({
-  name: "WhichBorderControlFacility",
-  value: data['WhichBorderControlFacility'],
+  name: "ShedToClose",
   fieldset: {
     legend: {
-      text: "Which border control post are you going to?",
       isPageHeading: true,
       classes: "govuk-fieldset__legend--l"
     }
   },
   items: [
     {
-      value: "Sevington, England",
-      text: "Sevington, England"
-    }, 
-    {
-      value: "Fishguard, Wales",
-      text: "Fishguard, Wales"
-    },
-     {
-      value: "Pembroke Dock, Wales",
-      text: "Pembroke Dock, Wales"
+      value: "Shed C",
+      text: "Shed C"
     },
     {
-      value: "Holyhead, Wales",
-      text: "Holyhead, Wales"
+      value: "Shed D",
+      text: "Shed D"
+    },
+    {
+      value: "Shed E",
+      text: "Shed E"
+    },
+        {
+      value: "All sheds",
+      text: "All sheds"
     }
   ]
 }) }}
 
-{{ govukButton({
-  text: "Save and continue"
-}) }}
-</form>
+        {{ govukButton({
+          text: "Continue",
+          href: "shed-pause-date-select"
+        }) }}
+
+      </form>
+
     </div>
   </div>
 

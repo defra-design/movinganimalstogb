@@ -1,0 +1,118 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Change inspection length
+      </h1>
+
+<h2 class="govuk-heading-m">
+  Dogs
+</h2>
+
+<form method="post" action="confirm-inspection-length" novalidate>
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "Marshalling"
+  },
+  classes: "govuk-input--width-5",
+  id: "minutes",
+  name: "minutes",
+  suffix: {
+    text: "mins"
+  },
+  spellcheck: false,
+  value: "30"
+}) }}
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "Set up"
+  },
+  classes: "govuk-input--width-5",
+  id: "minutes",
+  name: "minutes",
+  suffix: {
+    text: "mins"
+  },
+  spellcheck: false,
+  value: "30"
+}) }}
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "Inspection"
+  },
+  classes: "govuk-input--width-5",
+  id: "minutes",
+  name: "minutes",
+  suffix: {
+    text: "mins"
+  },
+  spellcheck: false,
+    value: "30"
+}) }}
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "Clean up"
+  },
+  classes: "govuk-input--width-5",
+  id: "minutes",
+  name: "minutes",
+  suffix: {
+    text: "mins"
+  },
+  spellcheck: false,
+    value: "30"
+}) }}
+
+        <div class="govuk-form-group">
+  <h2 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--m" for="event-name">
+      Total inspection time
+    </label>
+<p>240 minutes</p>
+</div>
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

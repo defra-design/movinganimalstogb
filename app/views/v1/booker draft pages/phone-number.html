@@ -1,0 +1,48 @@
+{% extends "layouts/main-booker.html" %}
+
+{% block pageTitle %}
+  Phone number {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        What is your phone number?
+      </h1>
+
+<p>We will only contact this number if there is an emergency with your booking. </p>
+      <form class="form" action="/path/of/next/page" method="post">
+
+        <div class="govuk-form-group">
+  <input class="govuk-input" id="event-name" name="eventName" type="text">
+</div>
+
+  
+
+      </form>
+
+    </div>
+  </div>
+
+  <a href="arrival-time.html" button type="submit" class="govuk-button" data-module="govuk-button">
+  Save</a>
+</button>
+
+{% endblock %}

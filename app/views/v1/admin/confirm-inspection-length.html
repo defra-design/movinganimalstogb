@@ -1,0 +1,91 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Cancel inspection – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form method="post" action="edit-inspection-lengths-new" novalidate>
+
+<h1 class="govuk-heading-l">Check your answers before saving this change</h1>
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-visually-hidden">Warning</span>
+    This change will only affect inspection length for future bookings.
+  </strong>
+</div>
+
+        <h2 class="govuk-heading-m">Inspection length: dogs</h2>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Marshalling
+            </dt>
+            <dd class="govuk-summary-list__value">
+              45 min
+            </dd>
+</div> 
+<div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Set up
+            </dt>
+            <dd class="govuk-summary-list__value">
+              30 min
+            </dd>
+</div> 
+<div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Inspection
+            </dt>
+            <dd class="govuk-summary-list__value">
+              30 min
+            </dd>
+</div>
+<div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Clean up
+            </dt>
+            <dd class="govuk-summary-list__value">
+              30 min
+            </dd>
+</div>
+<div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Total inspection length
+            </dt>
+            <dd class="govuk-summary-list__value">
+              135 min
+            </dd>
+</div>
+</dl>
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Save changes
+</button>
+
+  <p><a href="close-bays-sheds">Cancel</a></p>
+
+ </form>
+
+    </div>
+  </div>
+{% endblock %}

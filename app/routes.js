@@ -52,13 +52,37 @@ router.post('/BreakAllDay-answer', function(request, response) {
     }
 })
 
-router.post('/location', function(request, response) {
+router.post('location', function(request, response) {
 
     var checkLocation = request.session.data['whereDoYouLive']
     if (checkLocation == "england"){
-        response.redirect("/location")
+        response.redirect("location")
     } else {
         // redirect to an exit page TBD
-        response.redirect("/sign-in") 
+        response.redirect("sign-in") 
     }
 })
+
+// Nifty routing for handling versioning very cleanly
+
+// GET route for rendering the page
+router.get('/:version/:page', function (req, res) {
+  const version = req.params.version;
+  const page = req.params.page;
+
+  // When you add a new version, make sure to add to this array
+  const validVersions = ['v1', 'v2'];
+
+  if (validVersions.includes(version)) {
+    res.render(`${version}/${page}`);
+  } else if (version === 'admin') {
+    // Check if it's admin within a version or just admin folder
+    if (validVersions.includes(page)) {
+      res.render(`${page}/admin`);
+    } else {
+      res.render(`admin/${page}`);
+    }
+  } else {
+    res.status(404).send('Version not found');
+  }
+});

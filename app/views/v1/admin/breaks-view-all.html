@@ -1,0 +1,85 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+ Holiday {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">View closures</h1>
+
+      <p>Closures are times when new bookings cannot be made. You can add a closure for a few hours or days. Breaks can be one-offs or repeating.</p>
+
+      {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-visually-hidden">Warning</span>
+    Adding a closure will not cancel existing bookings. To cancel an existing booking, go to <a href="all-inspections-table-overview">All inspections</a>.
+  </strong>
+</div>
+
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Date</th>
+      <th scope="col" class="govuk-table__header">Time</th>
+      <th scope="col" class="govuk-table__header">Recurrance</th>
+      <th scope="col" class="govuk-table__header">Shed</th>
+      <th scope="col" class="govuk-table__header">Reason</th>
+      <th scope="col" class="govuk-table__header"></th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">23 August 2024</th>
+      <td class="govuk-table__cell">10am to 11am</td>
+     <td class="govuk-table__cell">Weekly</td>
+      <td class="govuk-table__cell">C</td>
+      <td class="govuk-table__cell">Fire drill</td>
+      <td class="govuk-table__cell"><a href='#'>Cancel</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">9 July 2024</th>
+      <td class="govuk-table__cell">8am to 8:30am</td>
+      <td class="govuk-table__cell">Monthly</td>
+      <td class="govuk-table__cell">All</td>
+      <td class="govuk-table__cell">Staff meeting</td>
+            <td class="govuk-table__cell"><a href='#'>Cancel</a></td>
+    </tr>
+        <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">1 September 2024</th>
+      <td class="govuk-table__cell">8am to 8:30am</td>
+      <td class="govuk-table__cell">Does not recur</td>
+      <td class="govuk-table__cell">D</td>
+      <td class="govuk-table__cell">Cleaning</td>
+            <td class="govuk-table__cell"><a href='#'>Cancel</a></td>
+    </tr>
+  </tbody>
+</table>
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Add a new closure",
+  href: "breaks-note"
+}) }}
+
+{% endblock %}

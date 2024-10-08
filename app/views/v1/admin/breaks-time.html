@@ -1,0 +1,65 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="breaks-recurrence" method="post">
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="break-time">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        What time does the closure start and end?
+      </h1>
+    </legend>
+    <div id="break-time" class="govuk-hint">
+      For example, 8am to 10am
+    </div>
+
+    <div class="govuk-date-input" id="break-time">
+
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="break-time-start">
+            Start time
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="break-time-start" name="break-time-start" type="text" inputmode="numeric">
+        </div>
+      </div>
+
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="break-time-end">
+            End time
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="break-time-end" name="break-time-end" type="text" inputmode="numeric">
+        </div>
+      </div>
+
+    </div>
+  </fieldset>
+</div>
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{#
+For guidance on how to use layouts see:
+https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
+#}
+{% extends "govuk-prototype-kit/layouts/govuk-branded.html" %}
+{% block header %}
+{{ govukHeader({
+  homepageUrl: "/index",
+  serviceName: "Book a live animal inspection",
+  serviceUrl: "/admin/today-dashboard",
+  navigation: [
+    {
+      href: "today-dashboard.html",
+      text: "Today's inspections",
+      active: true
+    },
+    {
+      href: "/admin/super-admin-controls",
+      text: "Site operations"
+    },
+    {
+      href: "#2",
+      text: "Manage account"
+    },
+    {
+      href: "admin-signed-out.html",
+      text: "Sign out"
+    }
+  ]
+}) }}
+{% endblock %}
+ 
+ 
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}

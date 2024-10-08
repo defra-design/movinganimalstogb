@@ -1,0 +1,73 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+
+{% endblock %}
+
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+{{ mojPrimaryNavigation({
+  label: 'Primary navigation',
+  items: [
+    {
+      text: 'Today',
+      href: 'today-table-overview'
+    },
+    {
+      text: 'Tomorrow',
+      href: 'tomorrow-table-overview'
+    },
+    {
+      text: 'All inspections',
+      href: 'all-inspections-table-overview',
+      active: true
+    }
+  ]
+}) }}
+
+{%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
+
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-l">All EuroAnimal Transit inspections</h1>
+
+
+{{ mojSearch({
+  action: '#',
+  method: 'post',
+  input: {
+    id: 'search',
+    name: 'search'
+  },
+  label: {
+    text: 'Search for an inspection',
+    classes: 'govuk-!-font-weight-bold'
+  },
+  hint: {
+    text: 'Enter the reference number, animal type, or CHED'
+  },
+  button: {
+    text: 'Search'
+  }
+}) }}
+<br><br>
+
+<iframe class="airtable-embed" src="https://airtable.com/embed/appRMk0y4uZRjpeB3/shrl5ZlVprtDGlzM2?viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+
+{% endblock %}

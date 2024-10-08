@@ -1,0 +1,19 @@
+{% extends "layouts/main-booker.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block content %}
+
+<a href="#" class="govuk-back-link">Back</a>
+
+<h1 class="govuk-heading-l">No inspections available</h1>
+
+<p>There are no inspections available within a 7-day window of the arrival date that you selected.</p>
+
+<a href="arrival-time" button type="submit" class="govuk-button" data-module="govuk-button">
+  Choose a new arrival date
+</a></button>
+
+{% endblock %}

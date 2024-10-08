@@ -1,0 +1,530 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers template – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-xl">
+        Change inspection lengths
+      </h1>
+<p> Changing the length of an inspection will affect all future bookings. To change the length of an inspection that is already booked, go to the individual inspection details page. 
+</p>
+</div>
+
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-m">
+        Shed C - small animals
+      </h2>
+
+      {{ govukSummaryList({
+        rows: [
+                  {
+            key: {
+              text: "Animal type"
+            },
+            value: {
+              text: "Total inspection length"
+            },
+            actions: {
+              items: [
+                {
+                  href: "change-inspection-length",
+                  text: "",
+                  visuallyHiddenText: "Captive birds"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Captive birds"
+            },
+            value: {
+              text: "240 minutes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "change-inspection-length",
+                  text: "Change",
+                  visuallyHiddenText: "Captive birds"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Cats"
+            },
+            value: {
+              text: "30 minutes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "change-inspection-length",
+                  text: "Change",
+                  visuallyHiddenText: "Cats"
+                }
+              ]
+            }
+          }
+          ,
+           {
+            key: {
+              text: "Dogs"
+            },
+            value: {
+              text: "30 minutes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "change-inspection-length",
+                  text: "Change",
+                  visuallyHiddenText: "Dogs"
+                }
+              ]
+            }
+          }
+          ,
+           {
+            key: {
+              text: "Ferrets"
+            },
+            value: {
+              text: "30 minutes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "change-inspection-length",
+                  text: "Change",
+                  visuallyHiddenText: "Ferrets"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Live fish"
+            },
+            value: {
+              text: "120 minutes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "change-inspection-length",
+                  text: "Change",
+                  visuallyHiddenText: "Live fish"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Aquatics"
+            },
+            value: {
+              text: "120 minutes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "change-inspection-length",
+                  text: "Change",
+                  visuallyHiddenText: "Aquatics"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Monkeys"
+            },
+            value: {
+              text: "120 minutes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "change-inspection-length",
+                  text: "Change",
+                  visuallyHiddenText: "Monkeys"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Other insects"
+            },
+            value: {
+              text: "20 minutes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "change-inspection-length",
+                  text: "Change",
+                  visuallyHiddenText: "Other inspects"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Other reptiles and amphibians"
+            },
+            value: {
+              text: "60 minutes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "change-inspection-length",
+                  text: "Change",
+                  visuallyHiddenText: "Other reptiles and amphibians"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Poultry"
+            },
+            value: {
+              text: "80 minutes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "change-inspection-length",
+                  text: "Change",
+                  visuallyHiddenText: "Poultry"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Poultry eggs"
+            },
+            value: {
+              text: "30 minutes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "change-inspection-length",
+                  text: "Change",
+                  visuallyHiddenText: "Poultry eggs"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Small game birds"
+            },
+            value: {
+              text: "240 minutes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "change-inspection-length",
+                  text: "Change",
+                  visuallyHiddenText: "Small game birds"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Small mammals"
+            },
+            value: {
+              text: "30 minutes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "change-inspection-length",
+                  text: "Change",
+                  visuallyHiddenText: "Small mammals"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-m">
+        Shed D - equine
+      </h2>
+
+      {{ govukSummaryList({
+        rows: [
+        {
+            key: {
+              text: "Animal type"
+            },
+            value: {
+              text: "Total inspection length"
+            },
+            actions: {
+              items: [
+                {
+                  href: "change-inspection-length",
+                  text: "",
+                  visuallyHiddenText: "Captive birds"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Equidae"
+            },
+            value: {
+              text: "120 minutes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "change-inspection-length",
+                  text: "Change",
+                  visuallyHiddenText: "Captive birds"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Ungulates - Camelids"
+            },
+            value: {
+              text: "30 minutes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "change-inspection-length",
+                  text: "Change",
+                  visuallyHiddenText: "Cats"
+                }
+              ]
+            }
+          }
+          ,
+           {
+            key: {
+              text: "Ungulates - Alpacas"
+            },
+            value: {
+              text: "30 minutes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "change-inspection-length",
+                  text: "Change",
+                  visuallyHiddenText: "Dogs"
+                }
+              ]
+            }
+          }
+          ,
+           {
+            key: {
+              text: "Ungulates - Deer"
+            },
+            value: {
+              text: "30 minutes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "change-inspection-length",
+                  text: "Change",
+                  visuallyHiddenText: "Ferrets"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-m">
+        Shed E - farmed livestock
+      </h2>
+
+      {{ govukSummaryList({
+        rows: [
+        {
+            key: {
+              text: "Animal type"
+            },
+            value: {
+              text: "Total inspection length"
+            },
+            actions: {
+              items: [
+                {
+                  href: "change-inspection-length",
+                  text: "",
+                  visuallyHiddenText: "Captive birds"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Farmed livestock - cattle"
+            },
+            value: {
+              text: "120 minutes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "change-inspection-length",
+                  text: "Change",
+                  visuallyHiddenText: "Captive birds"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Farmed livestock - bison"
+            },
+            value: {
+              text: "30 minutes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "change-inspection-length",
+                  text: "Change",
+                  visuallyHiddenText: "Cats"
+                }
+              ]
+            }
+          }
+          ,
+           {
+            key: {
+              text: "Farmed livestock - sheep"
+            },
+            value: {
+              text: "30 minutes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "change-inspection-length",
+                  text: "Change",
+                  visuallyHiddenText: "Dogs"
+                }
+              ]
+            }
+          }
+          ,
+                     {
+            key: {
+              text: "Farmed livestock - goats"
+            },
+            value: {
+              text: "30 minutes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "change-inspection-length",
+                  text: "Change",
+                  visuallyHiddenText: "Dogs"
+                }
+              ]
+            }
+          }
+          ,
+                     {
+            key: {
+              text: "Farmed livestock - pigs"
+            },
+            value: {
+              text: "30 minutes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "change-inspection-length",
+                  text: "Change",
+                  visuallyHiddenText: "Dogs"
+                }
+              ]
+            }
+          }
+          ,
+           {
+            key: {
+              text: "Farmed livestock - wild boar"
+            },
+            value: {
+              text: "30 minutes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "change-inspection-length",
+                  text: "Change",
+                  visuallyHiddenText: "Ferrets"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

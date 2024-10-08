@@ -1,7 +1,7 @@
-{% extends "layouts/main-booker.html" %}
+{% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Location {{ serviceName }}
+  Question page template – {{ serviceName }}
 {% endblock %}
 
 {% block beforeContent %}
@@ -11,7 +11,6 @@
   },
   html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
-
   {{ govukBackLink({
   text: "Back",
   href: "javascript:window.history.back()"
@@ -22,43 +21,51 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form action="vehicle-type" method="post" novalidate>
-    
+
+      <form class="form" action="breaks-check-answers" method="post">
 
 {{ govukRadios({
-  name: "WhichBorderControlFacility",
-  value: data['WhichBorderControlFacility'],
+  name: "BreakRecurrence",
+  value: data['BreakRecurrence'],
   fieldset: {
     legend: {
-      text: "Which border control post are you going to?",
+      text: "How often does it repeat?",
       isPageHeading: true,
       classes: "govuk-fieldset__legend--l"
     }
   },
   items: [
     {
-      value: "Sevington, England",
-      text: "Sevington, England"
-    }, 
-    {
-      value: "Fishguard, Wales",
-      text: "Fishguard, Wales"
-    },
-     {
-      value: "Pembroke Dock, Wales",
-      text: "Pembroke Dock, Wales"
+      value: "Daily",
+      text: "Daily"
     },
     {
-      value: "Holyhead, Wales",
-      text: "Holyhead, Wales"
+      value: "Weekly on Tuesdays",
+      text: "Weekly on Tuesdays"
+    },
+    {
+      value: "Monthly on the 25th",
+      text: "Monthly on the 25th"
+    },
+    {
+      value: "Annually on 25 December",
+      text: "Annually on 25 December"
+    },
+    {
+      value: "Does not repeat",
+      text: "Does not repeat"
     }
   ]
 }) }}
 
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
 {{ govukButton({
   text: "Save and continue"
 }) }}
-</form>
+
+      </form>
+
     </div>
   </div>
 

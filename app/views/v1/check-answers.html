@@ -1,0 +1,191 @@
+{% extends "layouts/main-booker.html" %}
+
+{% block pageTitle %}
+  Check your answers – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">
+        Check your answers
+      </h1>
+
+      {{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              text: "Border control post"
+            },
+            value: {
+              text: data['WhichBorderControlFacility']
+            },
+            actions: {
+              items: [
+                {
+                  href: "location",
+                  text: "",
+                  visuallyHiddenText: "Border control post"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Vehicle type"
+            },
+            value: {
+              text: data['VehicleType']
+            },
+            actions: {
+              items: [
+                {
+                  href: "vehicle-type",
+                  text: "Change",
+                  visuallyHiddenText: "Type of vehicle"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Vehicle unloading type"
+            },
+            value: {
+              text: data['VehicleLoad']
+            },
+            actions: {
+              items: [
+                {
+                  href: "vehicle-type-side-loader",
+                  text: "Change",
+                  visuallyHiddenText: "Vehicle unloading type"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Animal species "
+            },
+            value: {
+              text: data['animal-species']
+            },
+            actions: {
+              items: [
+                {
+                  href: "animal-selection",
+                  text: "Change",
+                  visuallyHiddenText: "Animal species"
+                }
+              ]
+            }
+          },
+           {
+            key: {
+              text: "Number of animals"
+            },
+            value: {
+              text: data['animal-number']
+            },
+            actions: {
+              items: [
+                {
+                  href: "animal-number",
+                  text: "Change",
+                  visuallyHiddenText: "Number of animals"
+                }
+              ]
+            }
+          },
+           {
+            key: {
+              text: "Time and date"
+            },
+            value: {
+              text: "30 January 2024, 11:30am"
+            },
+            actions: {
+              items: [
+                {
+                  href: "booking",
+                  text: "Change",
+                  visuallyHiddenText: "Time and date"
+                }
+              ]
+            }
+          },
+           {
+            key: {
+              text: "CHED number"
+            },
+            value: {
+              text: "CHEDA.GB.2024.1984055"
+            },
+            actions: {
+              items: [
+                {
+                  href: "ched-number-flow1",
+                  text: "Change",
+                  visuallyHiddenText: "Ched number"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Vehicle Registration Number (VRN)"
+            },
+            value: {
+              text: "WF10 3YG"
+            },
+            actions: {
+              items: [
+                {
+                  href: "vehicle-registration-number-flow1",
+                  text: "Change",
+                  visuallyHiddenText: "Vehicle Registration Number"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-m">
+        Now, book your inspection
+      </h2>
+
+      <p>
+        By doing so, you are confirming that you will not make more bookings than you need. You understand that doing so may result in penalty.
+      </p>
+
+      <form action="confirmation" method="post" novalidate>
+
+        {{ govukButton({
+          text: "Accept and book"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

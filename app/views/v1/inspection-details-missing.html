@@ -1,0 +1,184 @@
+{% extends "layouts/main-booker.html" %}
+
+{% block pageTitle %}
+  Inspection details {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">
+        Inspection details
+      </h1>
+
+      {{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              text: "Border control post"
+            },
+            value: {
+              text: data['WhichBorderControlFacility']
+            },
+            actions: {
+              items: [
+                {
+                  href: "location",
+                  text: "",
+                  visuallyHiddenText: "Border control post"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Vehicle type"
+            },
+            value: {
+              text: data['VehicleType']
+            },
+            actions: {
+              items: [
+                {
+                  href: "vehicle-type?route=UpcomingBooking",
+                  text: "Change",
+                  visuallyHiddenText: "Vehicle type"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Vehicle unloading"
+            },
+            value: {
+              text: data['VehicleLoad']
+            },
+            actions: {
+              items: [
+                {
+                  href: "vehicle-type-side-loader",
+                  text: "Change",
+                  visuallyHiddenText: "Vehicle unloading"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Animal species"
+            },
+            value: {
+              text: data['animal-species']
+            },
+            actions: {
+              items: [
+                {
+                  href: "animal-selection?route=UpcomingBooking",
+                  text: "Change",
+                  visuallyHiddenText: "Animal species"
+                }
+              ]
+            }
+          },
+           {
+            key: {
+              text: "Number of animals"
+            },
+            value: {
+              text: data['animal-number']
+            },
+            actions: {
+              items: [
+                {
+                  href: "animal-number?route=UpcomingBooking",
+                  text: "Change",
+                  visuallyHiddenText: "Number of animals"
+                }
+              ]
+            }
+          },
+           {
+            key: {
+              text: "Time and date"
+            },
+            value: {
+              text: "30 January 2024, 11:30am"
+            },
+            actions: {
+              items: [
+                {
+                  href: "booking",
+                  text: "Change",
+                  visuallyHiddenText: "Time and date of your inspection"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "CHED Number"
+            },
+            value: {
+              text: "Missing"
+            },
+            actions: {
+              items: [
+                {
+                  href: "ched-number-flow1",
+                  text: "Change",
+                  visuallyHiddenText: "Time and date of your inspection"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Vehicle Reference Number (VRN)"
+            },
+            value: {
+              text: "Missing"
+            },
+            actions: {
+              items: [
+                {
+                  href: "vehicle-registration-number-flow1",
+                  text: "Change",
+                  visuallyHiddenText: "Time and date of your inspection"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+<h2 class="govuk-heading-m">What to do if you're delayed</h2>
+
+<p>If your vehicle is delayed more than 30 minutes, please notify us.</p>
+
+
+<a href="notify-of-delay" button type="submit" class="govuk-button" data-module="govuk-button">
+  Notify us about a delay</a>
+</button>
+
+    </div>
+  </div>
+{% endblock %}

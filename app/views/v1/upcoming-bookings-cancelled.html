@@ -1,0 +1,36 @@
+{% extends "layouts/main-booker.html" %}
+
+{% block pageTitle %}
+  Upcoming bookings {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Your upcoming inspections
+      </h1>
+
+<p>You have no upcoming inspections.</p>
+
+<a href="declaration.html" button class="govuk-button" data-module="govuk-button" >
+  Book an inspection
+</a>
+</button>
+
+    </div>
+  </div>
+
+{% endblock %}

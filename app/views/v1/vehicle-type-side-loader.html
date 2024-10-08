@@ -1,7 +1,7 @@
 {% extends "layouts/main-booker.html" %}
 
 {% block pageTitle %}
-  Location {{ serviceName }}
+  Vehicle type {{ serviceName }}
 {% endblock %}
 
 {% block beforeContent %}
@@ -22,35 +22,29 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form action="vehicle-type" method="post" novalidate>
-    
-
+      <form action="animal-selection" method="post" novalidate>
 {{ govukRadios({
-  name: "WhichBorderControlFacility",
-  value: data['WhichBorderControlFacility'],
+  name: "VehicleLoad",
+  value: data['VehicleLoad'],
   fieldset: {
     legend: {
-      text: "Which border control post are you going to?",
+      text: "How will your vehicle unload animals?",
       isPageHeading: true,
       classes: "govuk-fieldset__legend--l"
     }
   },
   items: [
     {
-      value: "Sevington, England",
-      text: "Sevington, England"
-    }, 
-    {
-      value: "Fishguard, Wales",
-      text: "Fishguard, Wales"
-    },
-     {
-      value: "Pembroke Dock, Wales",
-      text: "Pembroke Dock, Wales"
+      value: "Unload from rear",
+      text: "Unload from rear"
     },
     {
-      value: "Holyhead, Wales",
-      text: "Holyhead, Wales"
+      value: "Unload from side",
+      text: "Unload from side"
+    },
+    {
+      value: "Unload from either side or rear",
+      text: "Unload from either side or rear"
     }
   ]
 }) }}

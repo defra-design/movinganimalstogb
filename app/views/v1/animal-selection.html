@@ -1,0 +1,68 @@
+{% extends "layouts/main-booker.html" %}
+
+{% block pageTitle %}
+  Animal species – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="animal-number" method="post">
+
+        <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        What animal species will you be transporting?
+      </h1>
+    </legend>
+
+           <p>You can add multiple animal species.</p>
+
+              <input type="hidden" name="q" id="q-hidden" class="js-commodity-picker-target" autocomplete="off" />
+              <input type="hidden" name="resource_id" id="resource-id-hidden" class="js-commodity-picker-resource-id" autocomplete="off" />
+
+      <div class="govuk-form-group">
+    {{ govukInput({
+      label: {
+        text: "Animal species",
+        classes: "govuk-label"
+      },
+      name: 'animal-species',
+      value: data['animal-species'],
+      classes:"govuk-input govuk-input--width-10",
+      autocomplete:"off"
+  }) }}
+  </div></fieldset></div>
+
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    Add another animal species
+  </button>
+  <br>
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

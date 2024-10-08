@@ -1,0 +1,64 @@
+{% extends "layouts/main-booker.html" %}
+
+{% block pageTitle %}
+  Number of animals – {{ serviceName }}
+{% endblock %}
+
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        How many animals will you be transporting?
+      </h1>
+
+      <form class="form" action="arrival-time" method="post">
+
+        <p>
+          This number can be an estimate. You can update it later on, too.
+        </p>
+
+  <div class="govuk-form-group">
+    </label>
+
+{{ govukInput({
+  label: {
+    text: "Number of animals"
+  },
+  classes: "govuk-input--width-3",
+  id: "width-3",
+  name: "animal-number",
+  value: data['animal-number'],
+  autocomplete:"off"
+}) }}
+  </div>
+
+
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Save and continue</a>
+</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<form class="form" action="break-all-day" method="post">
+
+{% from "govuk/components/date-input/macro.njk" import govukDateInput %}
+
+{{ govukDateInput({
+  id: "break-start-date",
+  namePrefix: "break-start-date",
+  fieldset: {
+    legend: {
+      text: "What date does the closure start?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  hint: {
+    text: "For example, 27 3 2007"
+  },
+  items: [
+    {
+      classes: "govuk-input--width-2",
+      name: "day",
+      value: data['break-start-day']
+    },
+    {
+      classes: "govuk-input--width-2",
+      name: "month",
+      value: data['break-start-month']
+    },
+    {
+      classes: "govuk-input--width-4",
+      name: "year",
+      value: data['break-start-year']
+    }
+  ]
+}) }}
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

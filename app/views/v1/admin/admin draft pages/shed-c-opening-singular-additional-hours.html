@@ -1,0 +1,82 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<h1 class="govuk-heading-l">Change Shed C Monday opening times</h1>
+
+<form method="post" action="shed-c-opening-singular-check-answers" novalidate>
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  name: "shed-c-monday-day-availability",
+  value: data['shed-c-monday-day-availability'],
+  fieldset: {
+    legend: {
+      text: "Monday",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+
+  items: [
+    {
+      text: "Open",
+      value: "Open",
+      checked: true
+    },
+    {
+      text: "Closed",
+      value: "Closed"
+    }
+  ]
+}) }}
+
+{% set _openTimesValue = data['open-close-times-opening-time'] or "8am" %}
+{% set _closeTimesValue = data['open-close-times-closing-time'] or "6pm" %}
+{{ govukDateInput({
+      id: "open-close-times",
+      namePrefix: "open-close-times",
+      items: [
+        {label: "Open", name: "opening-time", value: _openTimesValue, classes:"govuk-input--width-4"},
+        {label: "Closed", name: "closing-time", value: _closeTimesValue, classes:"govuk-input--width-4"}
+      ]
+    }) }}
+
+    {{ govukDateInput({
+      id: "open-close-times",
+      namePrefix: "open-close-times",
+      items: [
+        {label: "Open", name: "opening-time",
+        classes:"govuk-input--width-4"},
+        {label: "Closed", name: "closing-time", classes:"govuk-input--width-4"}
+      ]
+    }) }}
+
+    <p><a href='#'>Add more hours</a></p>
+
+    </div>
+  </div>
+  
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Save changes
+</button>
+
+  <p><a href="shed-opening-availability-singular">Cancel</a></p>
+
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends "layouts/main-booker.html" %}
+
+{% block pageTitle %}
+  Sign in to {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Sign in using your DEFRA account
+      </h1>
+
+      <form class="form" action="/path/of/next/page" method="post">
+
+        <div class="govuk-form-group">
+  <h3 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--m" for="event-name">
+      Government Gateway ID
+    </label>
+  </h3>
+  <input class="govuk-input" id="event-name" name="eventName" type="text">
+</div>
+
+        <div class="govuk-form-group">
+  <h3 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--m" for="event-name">
+      Password
+    </label>
+  </h3>
+  <input class="govuk-input" id="event-name" name="eventName" type="text">
+</div>
+
+      </form>
+
+    </div>
+  </div>
+
+  <a href="upcoming-bookings-cancelled.html" button type="submit" class="govuk-button" data-module="govuk-button">
+  Sign in</a>
+</button>
+
+{% endblock %}

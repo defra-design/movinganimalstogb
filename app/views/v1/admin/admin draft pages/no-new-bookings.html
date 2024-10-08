@@ -1,0 +1,65 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+<h1 class="govuk-heading-l">Pause new bookings</h1>
+
+<p>Select Pause to stop all new inspection bookings. Select Unpause to resume. To cancel existing inspections, go to <a href="all-inspections-table-overview">All inspections</a>.</p>
+
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  name: "NewBookingsAbility",
+  fieldset: {
+    legend: {
+      text: "New inspection bookings",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "Pause",
+      text: "Pause"
+    },
+    {
+      value: "Unpause",
+      text: "Unpause"
+    }
+  ]
+}) }}
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+<a href="confirm-no-new-bookings" button type="submit" class="govuk-button" data-module="govuk-button">
+  Save</a>
+</button>
+
+<p><a href="super-admin-controls">Cancel</a></p>
+
+  </div>
+</div>
+
+
+{% endblock %}

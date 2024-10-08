@@ -1,0 +1,222 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers template – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        View shed opening times
+      </h1>
+
+{% from "govuk/components/table/macro.njk" import govukTable %}
+
+{% set _openTimesValue = data['open-close-times-opening-time'] or "8am" %}
+{% set _closeTimesValue = data['open-close-times-closing-time'] or "6pm" %}
+
+{{ govukTable({
+  caption: "Shed C: Small animals",
+  captionClasses: "govuk-table__caption--m",
+  firstCellIsHeader: true,
+  head: [
+    {
+      text: "Day"
+    },
+        {
+      text: "Opening times"
+    },
+    {
+      text: "Change"
+    }
+  ],
+  rows: [
+  [
+      {
+        text: "Monday"
+      },
+      {
+        text: _openTimesValue + " to " + _closeTimesValue
+      },
+       { 
+        html: '<a href="shed-c-opening-singular">Change</a>'
+      }
+    ],
+    [
+      {
+        text: "Tuesday"
+      },
+      {
+        text: "8am to 6pm"
+      },
+      { 
+        html: '<a href="shed-c-opening-singular">Change</a>'
+      }
+
+    ],
+    [
+      {
+        text: "Wednesday"
+      },
+      {
+        text: "8am to 6pm"
+      },
+      { 
+        html: '<a href="shed-c-opening-singular">Change</a>'
+      }
+    ],
+    [
+      {
+        text: "Thursday"
+      },
+      {
+        text: "8am to 6pm"
+      },
+      { 
+        html: '<a href="shed-c-opening-singular">Change</a>'
+      }
+    ],
+    [
+      {
+        text: "Friday"
+      },
+      {
+        text: "8am to 6pm"
+      },
+      { 
+        html: '<a href="shed-c-opening-singular">Change</a>'
+      }
+    ],
+      [
+      {
+        text: "Saturday"
+      },
+      {
+        text: "8am to 6pm"
+      },
+            { 
+        html: '<a href="shed-c-opening-singular">Change</a>'
+      }
+    ],
+    [
+      {
+        text: "Sunday"
+      },
+      {
+        text: "8am to 6pm"
+      },
+            { 
+        html: '<a href="shed-c-opening-singular">Change</a>'
+      }
+    ]
+  ]
+}) }}
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Shed D: Equine</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Day</th>
+      <th scope="col" class="govuk-table__header">Opening times</th>
+            <th scope="col" class="govuk-table__header">Change</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Monday</th>
+      <td class="govuk-table__cell">9am to 5pm</td>
+     <td class="govuk-table__cell"><a href="#">Change</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Tuesday</th>
+      <td class="govuk-table__cell">9am to 5pm</td>
+           <td class="govuk-table__cell"><a href="#">Change</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Wednesday</th>
+      <td class="govuk-table__cell">9am to 5pm</td>
+           <td class="govuk-table__cell"><a href="#">Change</a></td>
+    </tr>
+        <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Thursday</th>
+      <td class="govuk-table__cell">9am to 5pm</td>
+           <td class="govuk-table__cell"><a href="#">Change</a></td>
+    </tr>
+        <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Friday</th>
+      <td class="govuk-table__cell">9am to 5pm</td>
+           <td class="govuk-table__cell"><a href="#">Change</a></td>
+    </tr>
+        <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Saturday</th>
+      <td class="govuk-table__cell">9am to 5pm</td>
+           <td class="govuk-table__cell"><a href="#">Change</a></td>
+    </tr>
+        <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Sunday</th>
+      <td class="govuk-table__cell">9am to 5pm</td>
+           <td class="govuk-table__cell"><a href="#">Change</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Shed E: Livestock</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Day</th>
+      <th scope="col" class="govuk-table__header">Opening times</th>
+      <th scope="col" class="govuk-table__header">Change</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Monday</th>
+      <td class="govuk-table__cell">10am to 10pm</td>
+           <td class="govuk-table__cell"><a href="#">Change</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Tuesday</th>
+      <td class="govuk-table__cell">10am to 10pm</td>
+           <td class="govuk-table__cell"><a href="#">Change</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Wednesday</th>
+      <td class="govuk-table__cell">10am to 10pm</td>
+           <td class="govuk-table__cell"><a href="#">Change</a></td>
+    </tr>
+        <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Thursday</th>
+      <td class="govuk-table__cell">10am to 10pm</td>
+           <td class="govuk-table__cell"><a href="#">Change</a></td>
+    </tr>
+        <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Friday</th>
+      <td class="govuk-table__cell">10am to 10pm</td>
+           <td class="govuk-table__cell"><a href="#">Change</a></td>
+    </tr>
+        <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Saturday</th>
+      <td class="govuk-table__cell">Closed</td>
+           <td class="govuk-table__cell"><a href="#">Change</a></td>
+    </tr>
+        <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Sunday</th>
+      <td class="govuk-table__cell">Closed</td>
+           <td class="govuk-table__cell"><a href="#">Change</a></td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,82 @@
+{% extends "layouts/main-booker.html" %}
+
+{% block pageTitle %}
+  Check contact details – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">
+        Are these the right contact details?
+      </h1>
+
+      <p>We will use this email address to confirm your booking.
+
+      {{ govukSummaryList({
+        rows: [
+      
+          {
+            key: {
+              text: "Name"
+            },
+            value: {
+              text: "David"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: ""
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Email address"
+            },
+            value: {
+              text: "david.jones@cargomove.com"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Contact number"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      <form action="/confirmation" method="post" novalidate>
+
+    <a href="phone-number.html" button type="submit" class="govuk-button" data-module="govuk-button">
+  Save</a>
+</button>
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

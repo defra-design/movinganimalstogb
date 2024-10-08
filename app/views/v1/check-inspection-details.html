@@ -1,0 +1,123 @@
+{% extends "layouts/main-booker.html" %}
+
+{% block pageTitle %}
+  Check inspection details – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">
+        Check that these details are correct
+      </h1>
+
+            {{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              text: "Border control post"
+            },
+            value: {
+              text: data['WhichBorderControlFacility']
+            },
+            actions: {
+              items: [
+                {
+                  href: "location",
+                  text: "",
+                  visuallyHiddenText: "Border control post"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Type of vehicle"
+            },
+            value: {
+              text: data['VehicleType']
+            },
+            actions: {
+              items: [
+                {
+                  href: "vehicle-type",
+                  text: "Change",
+                  visuallyHiddenText: "Type of vehicle"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Summary "
+            },
+            value: {
+              text: data['summary']
+            },
+            actions: {
+              items: [
+                {
+                  href: "summary",
+                  text: "Change",
+                  visuallyHiddenText: "Summary"
+                }
+              ]
+            }
+          },
+           
+           {
+            key: {
+              text: "Date and time"
+            },
+            value: {
+              text: "30 January 2024, 11:30am"
+            },
+            actions: {
+              items: [
+                {
+                  href: "booking",
+                  text: "Change",
+                  visuallyHiddenText: "Date and time"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-m">
+        Confirm your booking
+      </h2>
+
+      <p>
+        By confirming your booking, you agree to not book more inspections than necessary. Once you confirm, your time slot will be reserved. You will need to add details about your booking 24 hours before.
+      </p>
+
+      <form action="/confirmation" method="post" novalidate>
+
+        {{ govukButton({
+          text: "Confirm booking"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

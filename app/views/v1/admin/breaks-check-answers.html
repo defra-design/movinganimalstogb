@@ -1,0 +1,129 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers template – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">
+        Check your details
+      </h1>
+
+      {{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              text: "Date"
+            },
+            value: {
+              text: "23 October 2025"},
+            actions: {
+              items: [
+                {
+                  href: "breaks-date",
+                  text: "Change",
+                  visuallyHiddenText: "Date"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Time"
+            },
+            value: {
+              text: "8:00 - 10:00"
+            },
+            actions: {
+              items: [
+                {
+                  href: "breaks-time",
+                  text: "Change",
+                  visuallyHiddenText: "Break time"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Shed"
+            },
+            value: {
+              text: data['ShedToCloseForBreak']
+            },
+            actions: {
+              items: [
+                {
+                  href: "breaks-select-shed",
+                  text: "Change",
+                  visuallyHiddenText: "Question 3"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Reason"
+            },
+            value: {
+              text: data['BreakNote'] 
+            },
+            actions: {
+              items: [
+                {
+                  href: "breaks-note",
+                  text: "Change",
+                  visuallyHiddenText: "Date"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Recurrence"
+            },
+            value: {
+              text: data['BreakRecurrence'] 
+            },
+            actions: {
+              items: [
+                {
+                  href: "breaks-note",
+                  text: "Change",
+                  visuallyHiddenText: "Date"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      <form action="breaks-view-all" method="post" novalidate>
+
+        {{ govukButton({
+          text: "Save closure"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}
