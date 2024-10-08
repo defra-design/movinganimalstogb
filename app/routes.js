@@ -51,3 +51,13 @@ router.post('/BreakAllDay-answer', function(request, response) {
         response.redirect("/admin/breaks-time")
     }
 })
+
+router.post('/location', function(request, response) {
+
+    var checkLocation = request.session.data['whereDoYouLive']
+    if (checkLocation == "england"){
+        response.redirect("/location")
+    } else {
+        response.redirect("/sign-in")
+    }
+})
