@@ -58,6 +58,7 @@ router.post('/location', function(request, response) {
     if (checkLocation == "england"){
         response.redirect("/location")
     } else {
-        response.redirect("/sign-in")
+        // redirect to an exit page TBD
+        response.redirect("/sign-in") 
     }
 })
